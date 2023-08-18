@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { MobileMenu } from "./mobile-menu";
 import { HeaderIcons } from "./header-icons";
 
 export function Header() {
   return (
-    <header className="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-8">
+    <header className="mx-auto mb-8 flex max-w-screen-xl items-center justify-between px-4 pt-8">
       <div className="flex">
         <Link href={"/"} className="group flex items-center">
           <Image
@@ -54,9 +54,11 @@ export function Header() {
         </nav>
       </div>
       <div className="flex flex-1 items-center justify-end space-x-2">
-        <Button className="hidden rounded-full font-semibold sm:flex">
-          Kontakt
-        </Button>
+        <Link href={"/kontakt"}>
+          <Button className="hidden rounded-full font-semibold sm:flex">
+            Kontakt
+          </Button>
+        </Link>
         <nav className="hidden space-x-2 xl:flex">
           <HeaderIcons />
         </nav>

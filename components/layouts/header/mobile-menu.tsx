@@ -2,7 +2,7 @@
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import Link from "next/link";
 import { HeaderIcons } from "./header-icons";
 import { useMediaQuery } from "usehooks-ts";
@@ -65,7 +65,7 @@ export function MobileMenu() {
               Preiskalkulation
             </Link>
             <Link
-              href={"/preiskalkulation"}
+              href={"/kontakt"}
               onClick={() => setIsOpen(false)}
               className="py-3 transition-colors duration-500 hover:text-primary"
             >

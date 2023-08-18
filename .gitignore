@@ -8,6 +8,12 @@
 # testing
 /coverage
 
+# react-email
+/.react-email/node_modules
+/.react-email/.next/
+/.react-email/public/
+
+
 # next.js
 /.next/
 /out/
