@@ -94,7 +94,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="flex w-full flex-col items-center rounded-lg border py-4 shadow-2xl md:items-start xl:mx-12">
+    <div className="flex w-full flex-col items-center rounded-lg border py-4 shadow-2xl md:items-start">
       <Toaster position="bottom-right" />
       <Form {...form}>
         <form
