@@ -14,7 +14,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-interface WelcomeEmailProps {
+interface Props {
   username: string;
   message: string;
   updatedDate?: Date;
@@ -28,7 +28,7 @@ export const ContactForm = ({
   username,
   message,
   updatedDate = new Date(),
-}: WelcomeEmailProps) => {
+}: Props) => {
   const formattedDate = new Intl.DateTimeFormat("de", {
     dateStyle: "medium",
     timeStyle: "medium",
