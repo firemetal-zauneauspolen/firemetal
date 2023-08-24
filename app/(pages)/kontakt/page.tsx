@@ -9,7 +9,8 @@ export default function KontaktPage() {
     <section className="mt-8 flex flex-col items-center justify-center px-8">
       <h1 className="max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
         <Balancer>
-          Wybierz najwygodniejszą dla siebie forme kontaktu i skontaktuj się z
+          Wybierz najwygodniejszą dla siebie{" "}
+          <span className="text-ring">forme kontaktu</span> i skontaktuj się z
           nami. My zajmiemy się resztą 🤗.
         </Balancer>
       </h1>
