@@ -863,7 +863,7 @@ export function PriceCalculator() {
               name="klingel"
               render={({ field }) => (
                 <FormItem className="space-y-3">
-                  <FormLabel>Czy chcesz skrzynke na listy?</FormLabel>
+                  <FormLabel>Czy chcesz dzwonek do domu?</FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
