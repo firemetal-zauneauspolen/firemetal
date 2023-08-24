@@ -815,6 +815,84 @@ export function PriceCalculator() {
                 </FormItem>
               )}
             />
+
+            <FormField
+              control={form.control}
+              name="briefkasten"
+              render={({ field }) => (
+                <FormItem className="space-y-3">
+                  <FormLabel>Czy chcesz skrzynke na listy?</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                      className="flex flex-col space-y-1"
+                    >
+                      <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormControl>
+                          <RadioGroupItem value="Ohne Briefkasten" />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          Ohne Briefkasten
+                        </FormLabel>
+                      </FormItem>
+                      <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormControl>
+                          <RadioGroupItem value="Eingebaut im Zaun" />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          Eingebaut im Zäun
+                        </FormLabel>
+                      </FormItem>
+                      <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormControl>
+                          <RadioGroupItem value="Mit Stützen" />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          Mit Stützen
+                        </FormLabel>
+                      </FormItem>
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="klingel"
+              render={({ field }) => (
+                <FormItem className="space-y-3">
+                  <FormLabel>Czy chcesz skrzynke na listy?</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                      className="flex flex-col space-y-1"
+                    >
+                      <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormControl>
+                          <RadioGroupItem value="Ohne Klingel" />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          Ohne Klingel
+                        </FormLabel>
+                      </FormItem>
+                      <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormControl>
+                          <RadioGroupItem value="Klingel w plocie" />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          Klingel w plocie
+                        </FormLabel>
+                      </FormItem>
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
             <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
               <FormField
                 control={form.control}
@@ -959,84 +1037,6 @@ export function PriceCalculator() {
                         autoComplete="false"
                       />
                     </p>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="briefkasten"
-              render={({ field }) => (
-                <FormItem className="space-y-3">
-                  <FormLabel>Czy chcesz skrzynke na listy?</FormLabel>
-                  <FormControl>
-                    <RadioGroup
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                      className="flex flex-col space-y-1"
-                    >
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="Ohne Briefkasten" />
-                        </FormControl>
-                        <FormLabel className="font-normal">
-                          Ohne Briefkasten
-                        </FormLabel>
-                      </FormItem>
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="Eingebaut im Zaun" />
-                        </FormControl>
-                        <FormLabel className="font-normal">
-                          Eingebaut im Zäun
-                        </FormLabel>
-                      </FormItem>
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="Mit Stützen" />
-                        </FormControl>
-                        <FormLabel className="font-normal">
-                          Mit Stützen
-                        </FormLabel>
-                      </FormItem>
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="klingel"
-              render={({ field }) => (
-                <FormItem className="space-y-3">
-                  <FormLabel>Czy chcesz skrzynke na listy?</FormLabel>
-                  <FormControl>
-                    <RadioGroup
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                      className="flex flex-col space-y-1"
-                    >
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="Ohne Klingel" />
-                        </FormControl>
-                        <FormLabel className="font-normal">
-                          Ohne Klingel
-                        </FormLabel>
-                      </FormItem>
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="Klingel w plocie" />
-                        </FormControl>
-                        <FormLabel className="font-normal">
-                          Klingel w plocie
-                        </FormLabel>
-                      </FormItem>
-                    </RadioGroup>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
