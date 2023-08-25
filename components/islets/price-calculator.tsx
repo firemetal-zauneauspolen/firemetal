@@ -25,7 +25,6 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import { Checkbox } from "../ui/checkbox";
 import { items } from "@/lib/const-data/price-calculator/price-calculator-data";
 import { materials } from "@/lib/const-data/price-calculator/price-calculator-data";
@@ -36,29 +35,6 @@ const FormSchema = z
   .object({
     items: z.array(z.string()).refine((value) => value.some((item) => item), {
       message: "You have to select at least one item.",
-    }),
-    briefkasten: z.enum(briefkasten, {
-      required_error: "You need to select a briefkasten option.",
-    }),
-    klingel: z.enum(klingel, {
-      required_error: "You have to select at klingel option.",
-    }),
-    material: z.string({
-      required_error: "Please select material.",
-    }),
-    message: z
-      .string()
-      .min(15, {
-        message: "Message must be at least 15 characters.",
-      })
-      .max(1200, {
-        message: "Message is too long.",
-      }),
-    username: z.string().min(2, {
-      message: "Username must be at least 2 characters.",
-    }),
-    email: z.string().email({
-      message: "Write correct email address.",
     }),
     zauneLength: z.string().optional(),
     zauneHeight: z.string().optional(),
@@ -76,6 +52,41 @@ const FormSchema = z
     doppelstabmattenHeight: z.string().optional(),
     gitterLength: z.string().optional(),
     gitterHeight: z.string().optional(),
+    material: z.string({
+      required_error: "Please select material.",
+    }),
+    briefkasten: z.enum(briefkasten, {
+      required_error: "You need to select a briefkasten option.",
+    }),
+    klingel: z.enum(klingel, {
+      required_error: "You have to select at klingel option.",
+    }),
+    username: z.string().min(2, {
+      message: "Username must be at least 2 characters.",
+    }),
+    address: z.string().min(2, {
+      message: "Address must be at least 2 characters.",
+    }),
+    ort: z.string().min(2, {
+      message: "Ort must be at least 2 characters.",
+    }),
+    postleitzahl: z.string().min(2, {
+      message: "Ort must be at least 2 characters.",
+    }),
+    phone: z.string().min(2, {
+      message: "Ort must be at least 2 characters.",
+    }),
+    email: z.string().email({
+      message: "Write correct email address.",
+    }),
+    message: z
+      .string()
+      .min(15, {
+        message: "Message must be at least 15 characters.",
+      })
+      .max(1200, {
+        message: "Message is too long.",
+      }),
   })
   .refine(
     (schema) => (schema.items.includes("zaune") ? !!schema.zauneLength : true),
@@ -211,12 +222,14 @@ const FormSchema = z
   );
 
 export function PriceCalculator() {
-  const [emailSent, setEmailSent] = useState<boolean>(false);
-
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       items: [""],
+      phone: "",
+      ort: "",
+      address: "",
+      postleitzahl: "",
       username: "",
       message: "",
       email: "",
@@ -224,42 +237,57 @@ export function PriceCalculator() {
   });
 
   const isLoading = form.formState.isSubmitting;
+  const emailSent = form.formState.isSubmitSuccessful;
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     const toastLoadingId = toast.loading("Sending email...");
-
     try {
-      await fetch("/api/sendContactForm", {
+      await fetch("/api/sendConfirmPriceCalculatorForm", {
         method: "POST",
         body: JSON.stringify({
+          items: data.items,
+          zauneLength: data.zauneLength,
+          zauneHeight: data.zauneHeight,
+          toreLength: data.toreLength,
+          toreHeight: data.toreHeight,
+          pforteLength: data.pforteLength,
+          pforteHeight: data.pforteHeight,
+          gelanderLength: data.gelanderLength,
+          gelanderHeight: data.gelanderHeight,
+          uberdachungenLength: data.uberdachungenLength,
+          uberdachungenHeight: data.uberdachungenHeight,
+          carportsLength: data.carportsLength,
+          carportsHeight: data.carportsHeight,
+          doppelstabmattenLength: data.doppelstabmattenLength,
+          doppelstabmattenHeight: data.doppelstabmattenHeight,
+          gitterLength: data.gitterLength,
+          gitterHeight: data.gitterHeight,
+          material: data.material,
+          briefkasten: data.briefkasten,
+          klingel: data.klingel,
           username: data.username,
+          address: data.address,
+          ort: data.ort,
+          postleitzahl: data.postleitzahl,
+          phone: data.phone,
           email: data.email.toLowerCase(),
           message: data.message,
         }),
       });
-      setEmailSent(true);
+
+      await fetch("/api/sendPriceCalculatorForm", {
+        method: "POST",
+        body: JSON.stringify({
+          username: data.username,
+          email: data.email.toLowerCase(),
+        }),
+      });
+
       toast.success("Sent email success", {
         id: toastLoadingId,
         duration: 3500,
       });
       form.reset();
-    } catch (error) {
-      console.error("Failed to send email: ", error);
-      toast.error("Sent email error", {
-        id: toastLoadingId,
-        duration: 3500,
-      });
-    }
-
-    try {
-      await fetch("/api/sendConfirmContanctForm", {
-        method: "POST",
-        body: JSON.stringify({
-          username: data.username,
-          email: data.email.toLowerCase(),
-          message: data.message,
-        }),
-      });
     } catch (error) {
       console.error("Failed to send email: ", error);
       toast.error("Sent email error", {
@@ -357,7 +385,7 @@ export function PriceCalculator() {
                             {...field}
                             id="zauneLength"
                             name="zauneLength"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -379,7 +407,7 @@ export function PriceCalculator() {
                             {...field}
                             id="zauneHeight"
                             name="zauneHeight"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -413,7 +441,7 @@ export function PriceCalculator() {
                             {...field}
                             id="toreLength"
                             name="toreLength"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -435,7 +463,7 @@ export function PriceCalculator() {
                             {...field}
                             id="toreHeight"
                             name="toreHeight"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -468,7 +496,7 @@ export function PriceCalculator() {
                             {...field}
                             id="pforteLength"
                             name="pforteLength"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -490,7 +518,7 @@ export function PriceCalculator() {
                             {...field}
                             id="pforteHeight"
                             name="pforteHeight"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -523,7 +551,7 @@ export function PriceCalculator() {
                             {...field}
                             id="gelanderLength"
                             name="gelanderLength"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -545,7 +573,7 @@ export function PriceCalculator() {
                             {...field}
                             id="gelanderHeight"
                             name="gelanderHeight"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -578,7 +606,7 @@ export function PriceCalculator() {
                             {...field}
                             id="uberdachungenLength"
                             name="uberdachungenLength"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -600,7 +628,7 @@ export function PriceCalculator() {
                             {...field}
                             id="uberdachungenHeight"
                             name="uberdachungenHeight"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -634,7 +662,7 @@ export function PriceCalculator() {
                             {...field}
                             id="carportsLength"
                             name="carportsLength"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -656,7 +684,7 @@ export function PriceCalculator() {
                             {...field}
                             id="carportsHeight"
                             name="carportsHeight"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -689,7 +717,7 @@ export function PriceCalculator() {
                             {...field}
                             id="doppelstabmattenLength"
                             name="doppelstabmattenLength"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -711,7 +739,7 @@ export function PriceCalculator() {
                             {...field}
                             id="doppelstabmattenHeight"
                             name="doppelstabmattenHeight"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -745,7 +773,7 @@ export function PriceCalculator() {
                             {...field}
                             id="gitterLength"
                             name="gitterLength"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -767,7 +795,7 @@ export function PriceCalculator() {
                             {...field}
                             id="gitterHeight"
                             name="gitterHeight"
-                            autoComplete="true"
+                            autoComplete="off"
                             className="sm:w-[25.7rem]"
                           />
                         </FormControl>
@@ -821,7 +849,9 @@ export function PriceCalculator() {
               name="briefkasten"
               render={({ field }) => (
                 <FormItem className="space-y-3">
-                  <FormLabel>Czy chcesz skrzynke na listy?</FormLabel>
+                  <FormLabel htmlFor="tore">
+                    Czy chcesz skrzynke na listy?
+                  </FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -863,7 +893,9 @@ export function PriceCalculator() {
               name="klingel"
               render={({ field }) => (
                 <FormItem className="space-y-3">
-                  <FormLabel>Czy chcesz dzwonek do domu?</FormLabel>
+                  <FormLabel htmlFor="pforte">
+                    Czy chcesz dzwonek do domu?
+                  </FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -906,7 +938,7 @@ export function PriceCalculator() {
                         {...field}
                         id="username"
                         name="username"
-                        autoComplete="true"
+                        autoComplete="on"
                         className="sm:w-[25.7rem]"
                       />
                     </FormControl>
@@ -916,19 +948,19 @@ export function PriceCalculator() {
               />
               <FormField
                 control={form.control}
-                name="username"
+                name="address"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel htmlFor="username">
+                    <FormLabel htmlFor="address">
                       Straße und Hausnummer
                     </FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Napisz swoj Straße und Hausnummer..."
                         {...field}
-                        id="username"
-                        name="username"
-                        autoComplete="true"
+                        id="address"
+                        name="address"
+                        autoComplete="on"
                         className="sm:w-[25.7rem]"
                       />
                     </FormControl>
@@ -940,17 +972,17 @@ export function PriceCalculator() {
             <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
               <FormField
                 control={form.control}
-                name="username"
+                name="ort"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel htmlFor="username">Ort</FormLabel>
+                    <FormLabel htmlFor="ort">Ort</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Napisz swoj Ort..."
                         {...field}
-                        id="username"
-                        name="username"
-                        autoComplete="true"
+                        id="ort"
+                        name="ort"
+                        autoComplete="on"
                         className="sm:w-[25.7rem]"
                       />
                     </FormControl>
@@ -960,17 +992,17 @@ export function PriceCalculator() {
               />
               <FormField
                 control={form.control}
-                name="username"
+                name="postleitzahl"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel htmlFor="username">Postleitzahl</FormLabel>
+                    <FormLabel htmlFor="postleitzahl">Postleitzahl</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Napisz swoj Postleitzahl..."
                         {...field}
-                        id="username"
-                        name="username"
-                        autoComplete="true"
+                        id="postleitzahl"
+                        name="postleitzahl"
+                        autoComplete="on"
                         className="sm:w-[25.7rem]"
                       />
                     </FormControl>
@@ -982,17 +1014,17 @@ export function PriceCalculator() {
             <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
               <FormField
                 control={form.control}
-                name="username"
+                name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel htmlFor="username">Numer telefonu</FormLabel>
+                    <FormLabel htmlFor="phone">Numer telefonu</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Napisz swoj numer telefonu..."
                         {...field}
-                        id="username"
-                        name="username"
-                        autoComplete="true"
+                        id="phone"
+                        name="phone"
+                        autoComplete="on"
                         className="sm:w-[25.7rem]"
                       />
                     </FormControl>
@@ -1012,7 +1044,7 @@ export function PriceCalculator() {
                         {...field}
                         id="email"
                         name="email"
-                        autoComplete="true"
+                        autoComplete="on"
                         className="sm:w-[25.7rem]"
                       />
                     </FormControl>
@@ -1034,7 +1066,7 @@ export function PriceCalculator() {
                         {...field}
                         id="message"
                         name="message"
-                        autoComplete="false"
+                        autoComplete="off"
                       />
                     </p>
                   </FormControl>

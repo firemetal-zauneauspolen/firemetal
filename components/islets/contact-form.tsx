@@ -36,8 +36,6 @@ const FormSchema = z.object({
 });
 
 export function ContactForm() {
-  const [emailSent, setEmailSent] = useState<boolean>(false);
-
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -48,6 +46,7 @@ export function ContactForm() {
   });
 
   const isLoading = form.formState.isSubmitting;
+  const emailSent = form.formState.isSubmitSuccessful;
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     const toastLoadingId = toast.loading("Sending email...");
@@ -61,21 +60,6 @@ export function ContactForm() {
           message: data.message,
         }),
       });
-      setEmailSent(true);
-      toast.success("Sent email success", {
-        id: toastLoadingId,
-        duration: 3500,
-      });
-      form.reset();
-    } catch (error) {
-      console.error("Failed to send email: ", error);
-      toast.error("Sent email error", {
-        id: toastLoadingId,
-        duration: 3500,
-      });
-    }
-
-    try {
       await fetch("/api/sendConfirmContanctForm", {
         method: "POST",
         body: JSON.stringify({
@@ -84,6 +68,11 @@ export function ContactForm() {
           message: data.message,
         }),
       });
+      toast.success("Sent email success", {
+        id: toastLoadingId,
+        duration: 3500,
+      });
+      form.reset();
     } catch (error) {
       console.error("Failed to send email: ", error);
       toast.error("Sent email error", {
