@@ -1,4 +1,4 @@
-import { ContactForm } from "@/components/islets/contact-form";
+import { ContactForm } from "@/components/islets/pages/kontakt/contact-form";
 import { Button } from "@/components/ui/button";
 import Balancer from "react-wrap-balancer";
 import { BiSolidPhone, BiLogoWhatsapp, BiEnvelope } from "react-icons/bi";

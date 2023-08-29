@@ -25,7 +25,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
-import { Checkbox } from "../ui/checkbox";
+import { Checkbox } from "../../../ui/checkbox";
 import { items } from "@/lib/const-data/price-calculator/price-calculator-data";
 import { materials } from "@/lib/const-data/price-calculator/price-calculator-data";
 import { briefkasten } from "@/lib/const-data/price-calculator/price-calculator-data";

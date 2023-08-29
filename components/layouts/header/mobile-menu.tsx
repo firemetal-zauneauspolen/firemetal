@@ -44,18 +44,18 @@ export function MobileMenu() {
               Angebot
             </Link>
             <Link
-              href={"/unsere-projekte"}
-              onClick={() => setIsOpen(false)}
-              className="py-3 transition-colors duration-500 hover:text-primary"
-            >
-              Unsere Projekte
-            </Link>
-            <Link
               href={"/galerie"}
               onClick={() => setIsOpen(false)}
               className="py-3 transition-colors duration-500 hover:text-primary"
             >
               Galerie
+            </Link>
+            <Link
+              href={"/metamorphose"}
+              onClick={() => setIsOpen(false)}
+              className="py-3 transition-colors duration-500 hover:text-primary"
+            >
+              Metamorphose
             </Link>
             <Link
               href={"/preiskalkulation"}

@@ -1,4 +1,4 @@
-import { PriceCalculator } from "@/components/islets/price-calculator";
+import { PriceCalculator } from "@/components/islets/pages/price-calculator/price-calculator";
 import { Balancer } from "react-wrap-balancer";
 
 export default function PreisKalkulkationPage() {

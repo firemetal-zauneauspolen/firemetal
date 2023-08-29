@@ -34,16 +34,16 @@ export function Header() {
             Angebot
           </Link>
           <Link
-            href={"/unsere-projekte"}
-            className="transition-colors duration-500 hover:text-primary"
-          >
-            Unsere Projekte
-          </Link>
-          <Link
             href={"/galerie"}
             className="transition-colors duration-500 hover:text-primary"
           >
             Galerie
+          </Link>
+          <Link
+            href={"/metamorphose"}
+            className="transition-colors duration-500 hover:text-primary"
+          >
+            Metamorphose
           </Link>
           <Link
             href={"/preiskalkulation"}
