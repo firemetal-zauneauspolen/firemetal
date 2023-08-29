@@ -9,7 +9,7 @@ export function Metamorphose() {
           <h2 className="mb-5 mt-8 text-xl font-bold sm:text-2xl lg:text-4xl">
             <span className="text-ring">#</span>Projekte {metamorphose.id}
           </h2>
-          <div className="flex flex-col gap-5 px-8 xl:flex-row">
+          <div className="flex flex-col gap-5 px-4 xl:flex-row">
             <div>
               <h3 className="flex justify-center text-lg font-bold sm:text-xl lg:text-2xl xl:justify-start xl:p-2">
                 <span className="text-ring">#</span>Vor
