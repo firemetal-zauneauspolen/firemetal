@@ -1,15 +1,20 @@
 import GalerieGrid from "@/components/islets/pages/galerie/galerie-grid";
 import cloudinary from "cloudinary";
-import Link from "next/link";
 
 export type SearchResult = {
   public_id: string;
   tags: string[];
 };
 
-export default async function GaleriePage() {
+export default async function GalerieFolderPage({
+  params: { galerieFolder },
+}: {
+  params: {
+    galerieFolder: string;
+  };
+}) {
   const results = (await cloudinary.v2.search
-    .expression("resource_type:image")
+    .expression(`resource_type:image AND folder=${galerieFolder}`)
     .sort_by("created_at", "desc")
     .with_field("tags")
     .max_results(50)
