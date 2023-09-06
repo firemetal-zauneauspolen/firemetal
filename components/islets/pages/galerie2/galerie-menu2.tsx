@@ -2,17 +2,15 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { galerieLinksData } from "@/lib/const-data/galerie/galerie-links";
+import { galerieLinks } from "@/lib/consts";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-export type Folder = { name: string; path: string };
-
-export function GalerieMenu() {
+export function GalerieMenu2() {
   const currentPath = usePathname();
   return (
     <div className="mb-10 block px-4 text-center">
-      {galerieLinksData.map((item) => (
+      {galerieLinks.map((item) => (
         <Link key={item.label} href={item.path}>
           <Button
             variant={"transparent"}

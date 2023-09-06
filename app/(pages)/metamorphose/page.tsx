@@ -1,4 +1,4 @@
-import { Metamorphose } from "@/components/islets/pages/metmorphose/metamorphose";
+import { Metamorphose } from "@/components/islets/pages/metamorphose/metamorphose";
 import { Balancer } from "react-wrap-balancer";
 
 export default function MetamorphosePage() {

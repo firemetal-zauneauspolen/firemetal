@@ -57,3 +57,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+.lg-backdrop {
+  background-color: red;
+}
+
+#lightboxOverlay {
+  background-color: white;
+}
+
+#lg-thumb-outer {
+  background-color: red;
+}
