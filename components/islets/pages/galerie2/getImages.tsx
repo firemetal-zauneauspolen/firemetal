@@ -1,13 +1,6 @@
 import cloudinary from "cloudinary";
 import type { Images } from "@/lib/types";
 import { ViewFavoriteImages } from "./viewFavoriteImages";
-import { useFavoriteImagesStore } from "@/lib/store/useFavoriteImagesStore";
-
-const listaZdjec = [
-  "zaun_207-1_u6dkw2",
-  "zaun_204_tz6s8o",
-  "zaun_205-3_k4r9vi",
-];
 
 export async function GetImages() {
   const images = (await cloudinary.v2.search
