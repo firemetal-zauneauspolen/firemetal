@@ -5,7 +5,6 @@ import type { Images } from "@/lib/types";
 import { ViewFavoriteImages } from "./viewFavoriteImages";
 import { useFavoriteImagesStore } from "@/lib/store/useFavoriteImagesStore";
 import useStore from "@/lib/store/useStore";
-import { favoriteImagesStore } from "@/lib/store/favorite-list-store";
 import { GetImages } from "./getImages";
 
 type Props = {
