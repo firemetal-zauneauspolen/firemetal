@@ -21,7 +21,10 @@ export const useFavoriteImagesStore = create<FavoriteImagesStore>()(
             (favoriteImage) => favoriteImage !== image
           ),
         }),
-      clearFavoriteImages: () => set({ favoriteImages: [] }),
+      clearFavoriteImages: () =>
+        set({
+          favoriteImages: [],
+        }),
     }),
     {
       name: "favoriteImages-storage",

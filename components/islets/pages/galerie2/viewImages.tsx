@@ -20,6 +20,23 @@ export function ViewImages(props: Props) {
   const { addImageToFavorites, removeImageFromFavorites } =
     useFavoriteImagesStore();
 
+  function isFavorite(
+    image_public_id: string,
+    favoriteImages: Images[]
+  ): boolean {
+    let imageIsInFavorite = false;
+    favoriteImages.map((favoriteImage) => {
+      if (favoriteImage.public_id === image_public_id) {
+        imageIsInFavorite = true;
+      }
+    });
+    return imageIsInFavorite;
+  }
+
+  if (favoriteImages === undefined) {
+    return null;
+  }
+
   return (
     <div className="flex flex-col items-center">
       <div className="space-y-4 sm:columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
@@ -40,7 +57,7 @@ export function ViewImages(props: Props) {
               }}
               className={cn(
                 "absolute right-3 top-3 z-50 h-7 w-7 cursor-pointer stroke-none",
-                favoriteImages?.includes(image)
+                isFavorite(image.public_id, favoriteImages)
                   ? "fill-red-500 sm:hover:stroke-neutral-800"
                   : "fill-white sm:hover:stroke-neutral-800"
               )}

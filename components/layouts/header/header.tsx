@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MobileMenu } from "./mobile-menu";
 import { HeaderIcons } from "./header-icons";
+import { FavoritesHeart } from "./favorites-heart";
 
 export function Header() {
   return (
@@ -59,6 +60,7 @@ export function Header() {
             Kontakt
           </Button>
         </Link>
+        <FavoritesHeart />
         <nav className="hidden space-x-2 xl:flex">
           <HeaderIcons />
         </nav>

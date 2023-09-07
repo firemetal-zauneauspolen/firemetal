@@ -6,12 +6,10 @@ import { HeartIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useFavoriteImagesStore } from "@/lib/store/useFavoriteImagesStore";
 import useStore from "@/lib/store/useStore";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
 
-type Props = {
-  images: Images[];
-};
-
-export function ViewFavoriteImages(props: Props) {
+export function ViewFavoriteImages() {
   const favoriteImages = useStore(
     useFavoriteImagesStore,
     (state) => state.favoriteImages
@@ -30,7 +28,7 @@ export function ViewFavoriteImages(props: Props) {
               width={400}
               height={300}
               alt="photo"
-              className="rounded-xl transition-all duration-500 hover:rounded-none"
+              className="cursor-pointer rounded-xl transition-all duration-500 hover:rounded-none"
             />
             <HeartIcon
               onClick={() => {

@@ -14,7 +14,6 @@ export default async function FavoritesPage() {
 
   return (
     <section className="flex flex-col items-center justify-center">
-      <ForceRefresh />
       <div className="flex justify-center px-4">
         <FavoritesList initialResources={results.resources} />
       </div>

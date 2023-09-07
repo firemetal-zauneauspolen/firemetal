@@ -1,6 +1,6 @@
 import cloudinary from "cloudinary";
 import type { Images } from "@/lib/types";
-import { ViewFavoriteImages } from "./viewFavoriteImages";
+import { ViewImages } from "./viewImages";
 
 export async function GetImages() {
   const images = (await cloudinary.v2.search
@@ -12,7 +12,7 @@ export async function GetImages() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex justify-center px-4">
-        <ViewFavoriteImages images={images.resources} />
+        <ViewImages images={images.resources} />
       </div>
     </div>
   );
