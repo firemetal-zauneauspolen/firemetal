@@ -7,6 +7,7 @@ import Link from "next/link";
 import { HeaderIcons } from "./header-icons";
 import { useMediaQuery } from "usehooks-ts";
 import { useEffect, useState } from "react";
+import { menuLinks } from "@/lib/consts";
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,46 +29,21 @@ export function MobileMenu() {
       </SheetTrigger>
       <SheetContent side={"top"} className="h-screen">
         <div className="flex flex-col items-center justify-center pt-8">
-          <nav className="flex w-64 flex-col divide-y pt-8 text-center">
-            <Link
-              href={"/uber-uns"}
-              onClick={() => setIsOpen(false)}
-              className="py-3 transition-colors duration-500 hover:text-primary"
-            >
-              Über uns
-            </Link>
-            <Link
-              href={"/angebot"}
-              onClick={() => setIsOpen(false)}
-              className="py-3 transition-colors duration-500 hover:text-primary"
-            >
-              Angebot
-            </Link>
-            <Link
-              href={"/galerie"}
-              onClick={() => setIsOpen(false)}
-              className="py-3 transition-colors duration-500 hover:text-primary"
-            >
-              Galerie
-            </Link>
-            <Link
-              href={"/metamorphose"}
-              onClick={() => setIsOpen(false)}
-              className="py-3 transition-colors duration-500 hover:text-primary"
-            >
-              Metamorphose
-            </Link>
-            <Link
-              href={"/preiskalkulation"}
-              onClick={() => setIsOpen(false)}
-              className="py-3 transition-colors duration-500 hover:text-primary"
-            >
-              Preiskalkulation
-            </Link>
+          <nav className="flex w-64 flex-col divide-y pt-8 text-center text-base font-semibold">
+            {menuLinks.map((menuLink, idx) => (
+              <Link
+                key={idx}
+                href={menuLink.path}
+                onClick={() => setIsOpen(false)}
+                className="py-3 transition-colors duration-500 hover:text-primary"
+              >
+                {menuLink.label}
+              </Link>
+            ))}
             <Link
               href={"/kontakt"}
               onClick={() => setIsOpen(false)}
-              className="py-3 transition-colors duration-500 hover:text-primary"
+              className="py-5 transition-colors duration-500 hover:text-primary"
             >
               <Button className="rounded-full font-semibold">Kontakt</Button>
             </Link>

@@ -18,7 +18,7 @@ export function Header() {
             height={"50"}
             className="mr-3"
           />
-          <span className="mr-3 text-3xl font-bold transition-colors duration-500  group-hover:text-primary">
+          <span className="mr-3 text-2xl font-bold transition-colors duration-500 group-hover:text-primary  sm:text-3xl">
             FireMetal
           </span>
         </Link>
@@ -36,7 +36,7 @@ export function Header() {
       </div>
       <div className="flex flex-1 items-center justify-end space-x-2">
         <Link href={"/kontakt"}>
-          <Button className="hidden rounded-full font-semibold sm:flex">
+          <Button className="hidden rounded-full font-semibold xl:flex">
             Kontakt
           </Button>
         </Link>
