@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { useFavoriteImagesStore } from "@/lib/store/useFavoriteImagesStore";
 import useStore from "@/lib/store/useStore";
 import { HeartIcon } from "lucide-react";

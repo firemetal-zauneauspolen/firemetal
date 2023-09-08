@@ -10,8 +10,8 @@ export function GalerieMenu() {
   const currentPath = usePathname();
   return (
     <div className="mb-10 block px-4 text-center">
-      {galerieLinks.map((item) => (
-        <Link key={item.label} href={item.path}>
+      {galerieLinks.map((item, idx) => (
+        <Link key={idx} href={item.path}>
           <Button
             variant={"transparent"}
             className={cn(

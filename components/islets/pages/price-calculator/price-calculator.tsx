@@ -317,9 +317,9 @@ export function PriceCalculator() {
                     </FormLabel>
                   </div>
                   <div className="flex flex-col space-y-2.5 lg:flex-row lg:space-y-0">
-                    {items.map((item) => (
+                    {items.map((item, idx) => (
                       <FormField
-                        key={item.id}
+                        key={idx}
                         control={form.control}
                         name="items"
                         render={({ field }) => {

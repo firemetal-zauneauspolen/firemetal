@@ -4,6 +4,7 @@ import { CldImage } from "next-cloudinary";
 import { useFavoriteImagesStore } from "@/lib/store/useFavoriteImagesStore";
 import useStore from "@/lib/store/useStore";
 import { ViewHeartIconFavorite } from "./view-hear-icon-favorite";
+import { Suspense } from "react";
 
 export function ViewFavoriteImages() {
   const favoriteImages = useStore(

@@ -1,3 +1,3 @@
-export default function MusterPage() {
-  return <div>uber-uns</div>;
+export default function UberUnsPage() {
+  return <div></div>;
 }
