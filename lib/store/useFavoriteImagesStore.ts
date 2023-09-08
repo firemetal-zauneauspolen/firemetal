@@ -1,11 +1,10 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Images } from "../types";
 
 type FavoriteImagesStore = {
-  favoriteImages: Images[];
-  addImageToFavorites: (image: Images) => void;
-  removeImageFromFavorites: (image: Images) => void;
+  favoriteImages: string[];
+  addImageToFavorites: (public_id: string) => void;
+  removeImageFromFavorites: (public_id: string) => void;
   clearFavoriteImages: () => void;
 };
 
@@ -13,21 +12,18 @@ export const useFavoriteImagesStore = create<FavoriteImagesStore>()(
   persist(
     (set, get) => ({
       favoriteImages: [],
-      addImageToFavorites: (image: Images) =>
-        set({ favoriteImages: [...get().favoriteImages, image] }),
-      removeImageFromFavorites: (image: Images) =>
+      addImageToFavorites: (public_id: string) =>
+        set({ favoriteImages: [...get().favoriteImages, public_id] }),
+      removeImageFromFavorites: (public_id: string) =>
         set({
           favoriteImages: get().favoriteImages.filter(
-            (favoriteImage) => favoriteImage !== image
+            (favoriteImage) => favoriteImage !== public_id
           ),
         }),
-      clearFavoriteImages: () =>
-        set({
-          favoriteImages: [],
-        }),
+      clearFavoriteImages: () => set({ favoriteImages: [] }),
     }),
     {
-      name: "favoriteImages-storage",
+      name: "favoriteImages-storage", // name of item in the storage (must be unique)
     }
   )
 );

@@ -14,7 +14,7 @@ export function FavoritesHeart() {
   return (
     <Link href={"/galerie2/favorites"} className="relative flex">
       <HeartIcon className="h-10 w-10 fill-primary stroke-none hover:fill-primary/80" />
-      <div className="absolute -right-0.5 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-neutral-900 text-white dark:bg-white dark:font-bold dark:text-neutral-900">
+      <div className="absolute -right-0.5 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-neutral-900 text-xs text-white dark:bg-white dark:font-bold dark:text-neutral-900">
         {favoriteImages ? favoriteImages?.length.toString() : "0"}
       </div>
     </Link>

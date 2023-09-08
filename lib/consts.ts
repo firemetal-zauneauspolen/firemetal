@@ -1,43 +1,70 @@
+export const menuLinks = [
+  {
+    label: "Über uns",
+    path: "/uber-uns",
+  },
+  {
+    label: "Angebot",
+    path: "/angebot",
+  },
+  {
+    label: "Galerie",
+    path: "/galerie",
+  },
+  {
+    label: "Muster",
+    path: "/muster",
+  },
+  {
+    label: "Metamorphose",
+    path: "/metamorphose",
+  },
+  {
+    label: "Preiskalkulation",
+    path: "/preiskalkulation",
+  },
+] as const;
+
 export const galerieLinks = [
   {
     label: "Alles",
-    path: "/galerie2",
+    path: "/galerie",
   },
   {
     label: "Zäune",
-    path: "/galerie2/zaune",
+    path: "/galerie/zaune",
   },
   {
     label: "Tore",
-    path: "/galerie2/tore",
+    path: "/galerie/tore",
   },
   {
     label: "Pforte",
-    path: "/galerie2/pforte",
+    path: "/galerie/pforte",
   },
   {
     label: "Geländer",
-    path: "/galerie2/gelander",
+    path: "/galerie/gelander",
   },
   {
     label: "Überdachungen",
-    path: "/galerie2/uberdachungen",
+    path: "/galerie/uberdachungen",
   },
   {
     label: "Carports",
-    path: "/galerie2/carports",
+    path: "/galerie/carports",
   },
   {
     label: "Doppelstabmatten",
-    path: "/galerie2/doppelstabmatten",
+    path: "/galerie/doppelstabmatten",
   },
   {
     label: "Gitter",
-    path: "/galerie2/gitter",
+    path: "/galerie/gitter",
   },
   {
     label: "❤ Twoje Ulubione",
-    path: "/galerie2/favorites",
+    path: "/galerie/favorites",
   },
 ] as const;
 

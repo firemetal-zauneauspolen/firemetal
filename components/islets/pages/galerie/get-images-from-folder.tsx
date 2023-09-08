@@ -1,16 +1,14 @@
 import cloudinary from "cloudinary";
 import type { Images } from "@/lib/types";
-import { ViewImages } from "@/components/islets/pages/galerie2/viewImages";
+import { ViewImages } from "./view-images";
 
-export default async function GalerieFolderPage({
-  params: { galerieFolder },
-}: {
-  params: {
-    galerieFolder: string;
-  };
-}) {
+type Props = {
+  galerieFolder: string;
+};
+
+export async function GetImagesFromFolder(props: Props) {
   const images = (await cloudinary.v2.search
-    .expression(`resource_type:image AND folder=${galerieFolder}`)
+    .expression(`resource_type:image AND folder=${props.galerieFolder}`)
     .sort_by("created_at", "desc")
     .with_field("tags")
     .max_results(50)

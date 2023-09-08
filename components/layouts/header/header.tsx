@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { MobileMenu } from "./mobile-menu";
 import { HeaderIcons } from "./header-icons";
 import { FavoritesHeart } from "./favorites-heart";
+import { menuLinks } from "@/lib/consts";
 
 export function Header() {
   return (
@@ -22,36 +23,15 @@ export function Header() {
           </span>
         </Link>
         <nav className="hidden items-center space-x-6 text-base font-semibold lg:flex">
-          <Link
-            href={"/uber-uns"}
-            className="transition-colors duration-500 hover:text-primary"
-          >
-            Über uns
-          </Link>
-          <Link
-            href={"/angebot"}
-            className="transition-colors duration-500 hover:text-primary"
-          >
-            Angebot
-          </Link>
-          <Link
-            href={"/galerie"}
-            className="transition-colors duration-500 hover:text-primary"
-          >
-            Galerie
-          </Link>
-          <Link
-            href={"/metamorphose"}
-            className="transition-colors duration-500 hover:text-primary"
-          >
-            Metamorphose
-          </Link>
-          <Link
-            href={"/preiskalkulation"}
-            className="transition-colors duration-500 hover:text-primary"
-          >
-            Preiskalkulation
-          </Link>
+          {menuLinks.map((link, idx) => (
+            <Link
+              key={idx}
+              href={link.path}
+              className="transition-colors duration-500 hover:text-primary"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       </div>
       <div className="flex flex-1 items-center justify-end space-x-2">

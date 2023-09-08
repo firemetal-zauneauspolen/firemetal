@@ -1,25 +1,11 @@
-import GalerieGrid from "@/components/islets/pages/galerie/galerie-grid";
-import cloudinary from "cloudinary";
-import Link from "next/link";
+import { GetImages } from "@/components/islets/pages/galerie/get-images";
 
-export type SearchResult = {
-  public_id: string;
-  tags: string[];
-};
-
-export default async function GaleriePage() {
-  const results = (await cloudinary.v2.search
-    .expression("resource_type:image")
-    .sort_by("created_at", "desc")
-    .with_field("tags")
-    .max_results(50)
-    .execute()) as { resources: SearchResult[] };
-
+export default function Galerie2Page() {
   return (
-    <section className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <div className="flex justify-center px-4">
-        <GalerieGrid images={results.resources} />
+        <GetImages />
       </div>
-    </section>
+    </div>
   );
 }

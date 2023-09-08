@@ -1,6 +1,6 @@
 import cloudinary from "cloudinary";
 import type { Images } from "@/lib/types";
-import { ViewImages } from "./viewImages";
+import { ViewImages } from "./view-images";
 
 export async function GetImages() {
   const images = (await cloudinary.v2.search
