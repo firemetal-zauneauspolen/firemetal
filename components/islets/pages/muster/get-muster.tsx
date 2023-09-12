@@ -9,7 +9,7 @@ type Props = {
 export async function GetMuster(props: Props) {
   const images = (await cloudinary.v2.search
     .expression(`resource_type:image AND folder=${props.galerieFolder}`)
-    .sort_by("created_at", "desc")
+    .sort_by("uploaded_at", "asc")
     .with_field("tags")
     .max_results(50)
     .execute()) as { resources: Images[] };
