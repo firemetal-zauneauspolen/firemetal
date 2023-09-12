@@ -29,8 +29,8 @@ export function ViewHeartIcon(props: Props) {
       className={cn(
         "absolute right-3 top-3 z-50 h-7 w-7 cursor-pointer stroke-none",
         favoriteImages?.includes(props.image.public_id)
-          ? "fill-primary sm:hover:stroke-neutral-800"
-          : "fill-white sm:hover:stroke-neutral-800"
+          ? "fill-primary stroke-neutral-800"
+          : "fill-white stroke-neutral-800"
       )}
     />
   );
