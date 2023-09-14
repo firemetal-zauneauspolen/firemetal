@@ -6,7 +6,7 @@ export default function GaleriePage() {
   return (
     <section>
       <div className="flex flex-col items-center justify-center">
-        <div className="flex justify-center px-4">
+        <div className="flex justify-center">
           <Suspense
             fallback={<Spinner label="Loading..." aria-label="Loding..." />}
           >

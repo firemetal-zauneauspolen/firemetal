@@ -18,7 +18,13 @@ export default function RootLayout({
   return (
     <html lang="de" suppressHydrationWarning>
       <body className={montserrat.className}>
-        <Providers themeProps={{ attribute: "class", defaultTheme: "system" }}>
+        <Providers
+          themeProps={{
+            attribute: "class",
+            defaultTheme: "system",
+            enableSystem: true,
+          }}
+        >
           <Header />
           {children}
         </Providers>

@@ -11,7 +11,7 @@ export async function GetImages() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="flex justify-center px-4">
+      <div className="flex justify-center">
         <ViewImages images={images.resources} />
       </div>
     </div>

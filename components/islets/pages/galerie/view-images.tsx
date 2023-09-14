@@ -21,7 +21,7 @@ export function ViewImages(props: Props) {
               alt="photo"
               className="rounded-xl transition-all duration-500 hover:rounded-none"
             />
-            <ViewHeartIcon image={image} />
+            <ViewHeartIcon image={image} className="right-3 top-3" />
           </div>
         ))}
       </div>

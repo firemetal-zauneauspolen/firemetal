@@ -15,7 +15,7 @@ export function ViewMuster(props: Props) {
       <div className="columns-1 space-y-4">
         {props.images.map((image, idx) => (
           <div
-            className="relative cursor-pointer rounded-xl bg-white p-6 transition-all duration-500 hover:rounded-none"
+            className="relative cursor-pointer rounded-xl bg-white px-4 py-6 transition-all duration-500 hover:rounded-none sm:px-6"
             key={idx}
           >
             <CldImage
@@ -24,7 +24,7 @@ export function ViewMuster(props: Props) {
               height={300}
               alt="photo"
             />
-            <ViewHeartIcon image={image} />
+            <ViewHeartIcon image={image} className="right-2.5 top-1" />
             <ViewMusterName fileName={image.filename} />
           </div>
         ))}

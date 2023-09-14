@@ -7,7 +7,8 @@ import { HeartIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Props = {
-  image: Images;
+  image?: Images;
+  className?: string;
 };
 
 export function ViewHeartIcon(props: Props) {
@@ -22,13 +23,13 @@ export function ViewHeartIcon(props: Props) {
   return (
     <HeartIcon
       onClick={() => {
-        favoriteImages?.includes(props.image.public_id)
-          ? removeImageFromFavorites(props.image.public_id)
-          : addImageToFavorites(props.image.public_id);
+        favoriteImages?.includes(props.image?.public_id || "")
+          ? removeImageFromFavorites(props.image?.public_id || "")
+          : addImageToFavorites(props.image?.public_id || "");
       }}
       className={cn(
-        "absolute right-3 top-3 z-50 h-7 w-7 cursor-pointer stroke-none",
-        favoriteImages?.includes(props.image.public_id)
+        `absolute z-50 h-7 w-7 cursor-pointer stroke-none ${props.className}`,
+        favoriteImages?.includes(props.image?.public_id || "")
           ? "fill-primary stroke-neutral-800"
           : "fill-white stroke-neutral-800"
       )}

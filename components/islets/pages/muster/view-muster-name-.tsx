@@ -1,7 +1,5 @@
 "use client";
 
-import { cleanUpMusterName } from "@/lib/functions";
-
 type Props = {
   fileName: string;
 };

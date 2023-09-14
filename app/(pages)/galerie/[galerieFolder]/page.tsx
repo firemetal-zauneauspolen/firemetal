@@ -10,7 +10,7 @@ export default function GalerieFolderPage({
   return (
     <section>
       <div className="flex flex-col items-center justify-center">
-        <div className="flex justify-center px-4">
+        <div className="flex justify-center">
           <GetImagesFromFolder galerieFolder={galerieFolder} />
         </div>
       </div>

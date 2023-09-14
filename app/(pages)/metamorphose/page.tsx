@@ -1,5 +1,7 @@
-import { Metamorphose } from "@/components/islets/pages/metamorphose/metamorphose";
+import { Suspense } from "react";
 import { Balancer } from "react-wrap-balancer";
+import { Spinner } from "@nextui-org/spinner";
+import { GetMetamorphose } from "@/components/islets/pages/metamorphose/get-metamorphose";
 
 export default function MetamorphosePage() {
   return (
@@ -12,7 +14,14 @@ export default function MetamorphosePage() {
           tutaj <span className="text-ring">Twój wymarzony projekt.</span>
         </Balancer>
       </h1>
-      <Metamorphose />
+
+      <Suspense
+        fallback={
+          <Spinner label="Loading..." aria-label="Loding..." className="py-8" />
+        }
+      >
+        <GetMetamorphose />
+      </Suspense>
     </section>
   );
 }
