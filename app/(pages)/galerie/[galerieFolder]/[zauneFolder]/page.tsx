@@ -3,16 +3,16 @@ import { Suspense } from "react";
 import { Spinner } from "@nextui-org/spinner";
 import { ZauneMenu } from "@/components/islets/pages/shared/zaune-menu";
 
-export default function GalerieFolderPage({
-  params: { galerieFolder },
+export default function ZauneFolderPage({
+  params: { zauneFolder },
 }: {
   params: {
-    galerieFolder: string;
+    zauneFolder: string;
   };
 }) {
   return (
     <section>
-      {galerieFolder === "zaune" ? <ZauneMenu /> : null}
+      <ZauneMenu />
       <div className="flex flex-col items-center justify-center">
         <div className="flex justify-center px-4">
           <Suspense
@@ -24,7 +24,7 @@ export default function GalerieFolderPage({
               />
             }
           >
-            <GetImagesFromFolder galerieFolder={galerieFolder + "/*"} />
+            <GetImagesFromFolder galerieFolder={`zaune/${zauneFolder}`} />
           </Suspense>
         </div>
       </div>

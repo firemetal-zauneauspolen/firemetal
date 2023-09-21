@@ -8,8 +8,8 @@ type Props = {
 
 export async function GetImagesFromFolder(props: Props) {
   const images = (await cloudinary.v2.search
-    .expression(`resource_type:image AND folder=${props.galerieFolder}`)
-    .sort_by("created_at", "desc")
+    .expression(`resource_type:image AND folder=galerie/${props.galerieFolder}`)
+    .sort_by("filename", "desc")
     .with_field("tags")
     .max_results(50)
     .execute()) as { resources: Images[] };

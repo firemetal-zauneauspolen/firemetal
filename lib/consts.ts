@@ -47,10 +47,6 @@ export const galerieLinks = [
     path: "/galerie/gelander",
   },
   {
-    label: "Überdachungen",
-    path: "/galerie/uberdachungen",
-  },
-  {
     label: "Carports",
     path: "/galerie/carports",
   },
@@ -59,26 +55,22 @@ export const galerieLinks = [
     path: "/galerie/doppelstabmatten",
   },
   {
-    label: "Gitter",
-    path: "/galerie/gitter",
-  },
-  {
     label: "❤ Twoje Ulubione",
     path: "/galerie/favorites",
   },
 ] as const;
 
-export const metamorphoseData = [
+export const zauneLinks = [
   {
-    id: "2",
-    category: "zaune",
-    pathToVorImage: "/img/metamorphose/vor-metamorphose-2.webp",
-    pathToNachImage: "/img/metamorphose/nach-metamorphose-2.webp",
+    label: "Moderne",
+    path: "/galerie/zaune/moderne",
   },
   {
-    id: "1",
-    category: "zaune",
-    pathToVorImage: "/img/metamorphose/vor-metamorphose-1.webp",
-    pathToNachImage: "/img/metamorphose/nach-metamorphose-1.webp",
+    label: "Classic",
+    path: "/galerie/zaune/calssic",
+  },
+  {
+    label: "Premium",
+    path: "/galerie/zaune/premium",
   },
 ] as const;
