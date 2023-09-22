@@ -35,12 +35,8 @@ export const galerieLinks = [
     path: "/galerie/zaune",
   },
   {
-    label: "Tore",
-    path: "/galerie/tore",
-  },
-  {
-    label: "Pforte",
-    path: "/galerie/pforte",
+    label: "Doppelstabmatten",
+    path: "/galerie/doppelstabmatten",
   },
   {
     label: "Geländer",
@@ -49,10 +45,6 @@ export const galerieLinks = [
   {
     label: "Carports",
     path: "/galerie/carports",
-  },
-  {
-    label: "Doppelstabmatten",
-    path: "/galerie/doppelstabmatten",
   },
   {
     label: "❤ Twoje Ulubione",
@@ -67,10 +59,14 @@ export const zauneLinks = [
   },
   {
     label: "Classic",
-    path: "/galerie/zaune/calssic",
+    path: "/galerie/zaune/classic",
   },
   {
-    label: "Premium",
-    path: "/galerie/zaune/premium",
+    label: "Kunststoffpaneele",
+    path: "/galerie/zaune/kunststoffpaneele",
+  },
+  {
+    label: "WPC",
+    path: "/galerie/zaune/wpc",
   },
 ] as const;
