@@ -13,6 +13,7 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import { changeImageUrlToHttps } from "@/lib/functions";
 
 type Props = {
   images: Images[];
@@ -57,8 +58,8 @@ export function ViewMuster(props: Props) {
           addClass="lg-thumb-outer"
           dynamic
           dynamicEl={props.images.map((image) => ({
-            src: image.url,
-            thumb: image.url,
+            src: changeImageUrlToHttps(image.url),
+            thumb: changeImageUrlToHttps(image.url),
             subHtml: image.filename,
           }))}
         />
