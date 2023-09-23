@@ -13,6 +13,7 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import { changeImageUrlToHttps } from "@/lib/functions";
 
 export function ViewFavoriteImages() {
   const lightboxRef = useRef<LightGallery | null>(null);
@@ -34,7 +35,7 @@ export function ViewFavoriteImages() {
         {favoriteImages.map((favoriteImage, idx) => (
           <div className="relative" key={idx}>
             <CldImage
-              src={favoriteImage}
+              src={favoriteImage.public_id}
               width={400}
               height={300}
               alt="photo"
@@ -60,10 +61,10 @@ export function ViewFavoriteImages() {
           plugins={[lgThumbnail, lgZoom]}
           addClass="lg-thumb-outer"
           dynamic
-          dynamicEl={favoriteImages.map((image) => ({
-            src: image.substring(8),
-            thumb: image.substring(8),
-            subHtml: image,
+          dynamicEl={favoriteImages.map((favoriteImage) => ({
+            src: changeImageUrlToHttps(favoriteImage.url),
+            thumb: changeImageUrlToHttps(favoriteImage.url),
+            subHtml: changeImageUrlToHttps(favoriteImage.filename),
           }))}
         />
       </div>

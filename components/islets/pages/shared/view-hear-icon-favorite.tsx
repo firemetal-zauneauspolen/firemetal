@@ -2,9 +2,10 @@
 
 import { useFavoriteImagesStore } from "@/lib/store/useFavoriteImagesStore";
 import { HeartIcon } from "lucide-react";
+import type { Images } from "@/lib/types";
 
 type Props = {
-  favoriteImage: string;
+  favoriteImage: Images;
 };
 
 export function ViewHeartIconFavorite(props: Props) {
