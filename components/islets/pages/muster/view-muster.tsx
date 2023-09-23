@@ -58,8 +58,8 @@ export function ViewMuster(props: Props) {
           addClass="lg-thumb-outer"
           dynamic
           dynamicEl={props.images.map((image) => ({
-            src: changeImageUrlToHttps(image.url),
-            thumb: changeImageUrlToHttps(image.url),
+            src: image.secure_url,
+            thumb: image.secure_url,
             subHtml: image.filename,
           }))}
         />

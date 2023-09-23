@@ -13,7 +13,6 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
-import { changeImageUrlToHttps } from "@/lib/functions";
 
 export function ViewFavoriteImages() {
   const lightboxRef = useRef<LightGallery | null>(null);
@@ -24,15 +23,11 @@ export function ViewFavoriteImages() {
   );
   const { clearFavoriteImages } = useFavoriteImagesStore();
 
-  if (!favoriteImages) {
-    return null;
-  }
-
   return (
     <div className="flex flex-col items-center">
       <button onClick={clearFavoriteImages}>WYCZYSC LISTE</button>
       <div className="space-y-4 sm:columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
-        {favoriteImages.map((favoriteImage, idx) => (
+        {favoriteImages?.map((favoriteImage, idx) => (
           <div className="relative" key={idx}>
             <CldImage
               src={favoriteImage.public_id}
@@ -61,10 +56,10 @@ export function ViewFavoriteImages() {
           plugins={[lgThumbnail, lgZoom]}
           addClass="lg-thumb-outer"
           dynamic
-          dynamicEl={favoriteImages.map((favoriteImage) => ({
-            src: changeImageUrlToHttps(favoriteImage.url),
-            thumb: changeImageUrlToHttps(favoriteImage.url),
-            subHtml: changeImageUrlToHttps(favoriteImage.filename),
+          dynamicEl={favoriteImages?.map((favoriteImage) => ({
+            src: favoriteImage.secure_url,
+            thumb: favoriteImage.secure_url,
+            subHtml: favoriteImage.filename,
           }))}
         />
       </div>
