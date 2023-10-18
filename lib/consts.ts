@@ -47,6 +47,10 @@ export const galerieLinks = [
     path: "/galerie/carports",
   },
   {
+    label: "Gitter",
+    path: "/galerie/gitter",
+  },
+  {
     label: "❤ Twoje Ulubione",
     path: "/galerie/favorites",
   },
