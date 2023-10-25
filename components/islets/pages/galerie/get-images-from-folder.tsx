@@ -1,15 +1,14 @@
 import type { Images } from "@/lib/types";
+import cloudinary from "cloudinary";
 import { ViewImages } from "./view-images";
 
-type Props = {
+export async function GetImagesFromFolder({
+  galerieFolder,
+}: {
   galerieFolder: string;
-};
-
-export async function GetImagesFromFolder(props: Props) {
-  const cloudinary = require("cloudinary").v2;
-
+}) {
   const images = (await cloudinary.v2.search
-    .expression(`resource_type:image AND folder=galerie/${props.galerieFolder}`)
+    .expression(`resource_type:image AND folder=galerie/${galerieFolder}`)
     .sort_by("filename", "desc")
     .with_field("tags")
     .max_results(50)

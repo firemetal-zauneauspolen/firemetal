@@ -1,6 +1,6 @@
-import { Button } from "../../ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ThemeToggle } from "./theme-toggle";
+import { ThemeToggle } from "@/components/layouts/header/theme-toggle";
 import { BiLogoGooglePlus, BiLogoFacebook } from "react-icons/bi";
 
 export function HeaderIcons() {

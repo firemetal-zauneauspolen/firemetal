@@ -46,6 +46,7 @@
     "encoding": "^0.1.13",
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.5",
+    "firemetal": "link:",
     "framer-motion": "^10.16.4",
     "lightgallery": "^2.7.2",
     "lucide-react": "^0.288.0",

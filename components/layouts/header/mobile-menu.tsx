@@ -24,7 +24,7 @@ export function MobileMenu() {
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <Button variant={"icon"} size={"icon"} className="flex xl:hidden">
-          <MenuIcon />
+          <MenuIcon className="z-30" />
         </Button>
       </SheetTrigger>
       <SheetContent side={"top"} className="h-screen">

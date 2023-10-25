@@ -56,6 +56,29 @@ export const galerieLinks = [
   },
 ] as const;
 
+export const angebotLinks = [
+  {
+    label: "Zäune",
+    path: "/angebot/zaune",
+  },
+  {
+    label: "Doppelstabmatten",
+    path: "/angebot/doppelstabmatten",
+  },
+  {
+    label: "Geländer",
+    path: "/angebot/gelander",
+  },
+  {
+    label: "Carports",
+    path: "/angebot/carports",
+  },
+  {
+    label: "Gitter",
+    path: "/angebot/gitter",
+  },
+] as const;
+
 export const zauneLinks = [
   {
     label: "Moderne",

@@ -16,9 +16,9 @@ export function Header() {
             alt={"firemetal metalbau metalzaune zaune logo"}
             width={"50"}
             height={"50"}
-            className="mr-3"
+            className="z-30 mr-3"
           />
-          <span className="mr-3 text-2xl font-bold transition-colors duration-500 group-hover:text-primary  sm:text-3xl">
+          <span className="z-30 mr-3 text-2xl font-bold transition-colors duration-500 group-hover:text-primary  sm:text-3xl">
             FireMetal
           </span>
         </Link>
@@ -27,7 +27,7 @@ export function Header() {
             <Link
               key={idx}
               href={link.path}
-              className="transition-colors duration-500 hover:text-primary"
+              className="z-30 transition-colors duration-1000 hover:text-primary hover:transition-colors hover:duration-1000"
             >
               {link.label}
             </Link>
@@ -36,7 +36,7 @@ export function Header() {
       </div>
       <div className="flex flex-1 items-center justify-end space-x-2">
         <Link href={"/kontakt"}>
-          <Button className="hidden rounded-full font-semibold xl:flex">
+          <Button className="z-30 hidden rounded-full font-semibold xl:flex">
             Kontakt
           </Button>
         </Link>
