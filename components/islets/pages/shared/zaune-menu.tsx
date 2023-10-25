@@ -16,7 +16,7 @@ export function ZauneMenu() {
             variant={"transparent"}
             className={cn(
               "text-xl hover:bg-primary",
-              currentPath === item.path ? "bg-ring" : ""
+              currentPath === item.path ? "bg-ring" : "",
             )}
           >
             {item.label}

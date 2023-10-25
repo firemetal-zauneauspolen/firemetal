@@ -1,6 +1,7 @@
 import type { Images } from "@/lib/types";
 import cloudinary from "cloudinary";
 import { ViewImages } from "./view-images";
+import { notFound } from "next/navigation";
 
 export async function GetImagesFromFolder({
   galerieFolder,
@@ -13,6 +14,10 @@ export async function GetImagesFromFolder({
     .with_field("tags")
     .max_results(50)
     .execute()) as { resources: Images[] };
+
+  if (!images.resources.length) {
+    return notFound();
+  }
 
   return (
     <div className="flex flex-col items-center justify-center">
