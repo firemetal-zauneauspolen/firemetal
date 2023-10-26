@@ -6,7 +6,7 @@ import { angebotLinks } from "@/lib/consts";
 
 export function Footer() {
   return (
-    <footer className="relative mx-auto flex max-w-screen-xl items-start justify-between px-4 py-24">
+    <footer className="relative mx-auto flex max-w-screen-xl flex-col items-center justify-between px-4 py-24 md:flex-row md:items-start">
       <div className="flex flex-col items-center">
         <Image
           src={"/img/logo/firemetal-logo.webp"}
@@ -15,11 +15,11 @@ export function Footer() {
           height={"50"}
           className="z-30 mr-3"
         />
-        <span className="z-30 mr-3 text-2xl font-bold transition-colors duration-500 group-hover:text-primary  sm:text-3xl">
+        <span className="z-30 mr-3 text-2xl font-bold transition-colors duration-500 group-hover:text-primary sm:text-3xl">
           FireMetal
         </span>
       </div>
-      <nav className="items-left flex flex-col font-semibold leading-8">
+      <nav className="flex flex-col items-center text-center font-semibold leading-8 md:items-start md:text-left">
         <p>Informacje kontaktowe</p>
         <span className="font-normal text-muted-foreground">
           <p>Firemetal – Przemysław Dereziński</p>
@@ -27,7 +27,7 @@ export function Footer() {
           <p>Tel: +49 015237096939, +48 515466388</p>
         </span>
       </nav>
-      <nav className="items-left flex flex-col font-semibold leading-8">
+      <nav className="flex flex-col items-center text-center font-semibold leading-8 md:items-start md:text-left">
         <p>Strony</p>
         <span className="flex flex-col font-normal text-muted-foreground">
           <Link
@@ -47,7 +47,7 @@ export function Footer() {
           ))}
         </span>
       </nav>
-      <nav className="items-left flex flex-col font-semibold leading-8">
+      <nav className="flex flex-col items-center text-center font-semibold leading-8 md:items-start md:text-left">
         <p>Angebot</p>
         <span className="flex flex-col font-normal text-muted-foreground">
           {angebotLinks.map((item, idx) => (
@@ -61,7 +61,7 @@ export function Footer() {
           ))}
         </span>
       </nav>
-      <div className="absolute bottom-24">
+      <div className="absolute bottom-4 flex flex-col items-center md:bottom-24">
         <nav className="flex items-center gap-2">
           <FooterIcons />
         </nav>
