@@ -13,17 +13,13 @@ import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
-type Props = {
-  images: Images[];
-};
-
-export function ViewImages(props: Props) {
+export function ViewImages({ images }: { images: Images[] }) {
   const lightboxRef = useRef<LightGallery | null>(null);
 
   return (
     <div className="flex flex-col items-center">
       <div className="space-y-4 sm:columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
-        {props.images.map((image, idx) => (
+        {images.map((image, idx) => (
           <div className="relative" key={idx}>
             <CldImage
               src={image.public_id}
@@ -52,7 +48,7 @@ export function ViewImages(props: Props) {
           plugins={[lgThumbnail, lgZoom]}
           addClass="lg-thumb-outer"
           dynamic
-          dynamicEl={props.images.map((image) => ({
+          dynamicEl={images.map((image) => ({
             src: image.secure_url,
             thumb: image.secure_url,
             subHtml: image.filename,
