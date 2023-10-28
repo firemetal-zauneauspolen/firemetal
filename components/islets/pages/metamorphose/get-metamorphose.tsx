@@ -9,13 +9,13 @@ export async function GetMetamorphose() {
   const vorMetamorphose = (await cloudinary.v2.search
     .expression(`resource_type:image AND folder=${vorFolder}`)
     .sort_by("created_at", "desc")
-    .max_results(50)
+    .max_results(550)
     .execute()) as { resources: Images[] };
 
   const nachMetamorphose = (await cloudinary.v2.search
     .expression(`resource_type:image AND folder=${nachFolder}`)
     .sort_by("created_at", "desc")
-    .max_results(50)
+    .max_results(550)
     .execute()) as { resources: Images[] };
 
   return (

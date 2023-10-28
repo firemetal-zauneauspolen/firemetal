@@ -6,7 +6,7 @@ export async function GetImages() {
   const images = (await cloudinary.v2.search
     .expression("resource_type:image")
     .sort_by("created_at", "desc")
-    .max_results(50)
+    .max_results(550)
     .execute()) as { resources: Images[] };
 
   return (

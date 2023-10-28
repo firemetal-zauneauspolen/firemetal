@@ -11,7 +11,7 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function ViewMetamorphose({
   vorMetamorphose,
@@ -25,6 +25,9 @@ export function ViewMetamorphose({
   const NUMBER_OF_IMAGE_SHIFT = 1;
 
   const lightboxRef = useRef<LightGallery | null>(null);
+  const [mergeMetamorphoses, setMergeMetamorphoses] = useState<
+    Images[] | undefined
+  >();
 
   function mergeArrays(vorMetamorphose: Images[], nachMetamorphose: Images[]) {
     const mergedArray = vorMetamorphose.map((element, idx) => {
@@ -38,12 +41,14 @@ export function ViewMetamorphose({
     return mergedArray.flat();
   }
 
-  const mergeMetamorphoses = mergeArrays(vorMetamorphose, nachMetamorphose);
+  useEffect(() => {
+    setMergeMetamorphoses(mergeArrays(vorMetamorphose, nachMetamorphose));
+  }, [vorMetamorphose, nachMetamorphose]);
 
   return (
     <div className="flex flex-col items-center">
       <div className="space-y-4 px-4 py-8">
-        {mergeMetamorphoses.map((image, idx) =>
+        {mergeMetamorphoses?.map((image, idx) =>
           idx % NUMBER_OF_IMAGES_TO_SKIP === 0 ? (
             <div key={idx} className="flex flex-col items-center">
               <h2 className="mb-5 mt-8 text-xl font-bold sm:text-2xl lg:text-4xl">
@@ -68,7 +73,6 @@ export function ViewMetamorphose({
                       className="absolute inset-0 h-full w-full cursor-pointer bg-transparent hover:bg-stone-900 hover:bg-opacity-10"
                       onClick={() => {
                         lightboxRef.current?.openGallery(idx);
-                        console.log(idx);
                       }}
                     ></div>
                   </div>
@@ -117,7 +121,7 @@ export function ViewMetamorphose({
           plugins={[lgThumbnail, lgZoom]}
           addClass="lg-thumb-outer"
           dynamic
-          dynamicEl={mergeMetamorphoses.map((image) => ({
+          dynamicEl={mergeMetamorphoses?.map((image) => ({
             src: image.secure_url,
             thumb: image.secure_url,
             subHtml: image.filename,
