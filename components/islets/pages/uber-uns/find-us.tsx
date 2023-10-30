@@ -3,20 +3,23 @@ import Link from "next/link";
 
 export function FindUsUberUns() {
   return (
-    <>
+    <section className="z-30 mt-8 flex flex-col items-center justify-center">
       <h2 className="z-30 py-8 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
         Znajdziesz nas na:
       </h2>
-      <div className="flex flex-col gap-8 sm:flex-row">
+      <div className="flex w-full flex-col items-center gap-8 pt-8 2xl:flex-row">
         <Card
           isPressable
-          className="flex w-64 items-center justify-center bg-white/5 py-4 shadow-2xl"
+          className="flex w-full items-center justify-center bg-white/5 py-4 shadow-2xl sm:w-96"
         >
           <CardHeader className="flex-col items-center pb-0">
-            <h3 className="text-large font-bold">Facebook</h3>
+            <h3 className="text-center text-lg font-semibold md:text-xl">
+              Facebook
+            </h3>
           </CardHeader>
+
           <Link target="_blank" href={"https://www.facebook.com/firemetaleu/"}>
-            <CardBody className="overflow-visible pt-4">
+            <CardBody className="flex items-center overflow-visible pt-4">
               <Image
                 isZoomed
                 alt="Card background"
@@ -29,14 +32,17 @@ export function FindUsUberUns() {
         </Card>
         <Card
           isPressable
-          className="flex w-64 items-center justify-center bg-white/5 py-4 shadow-2xl"
+          className="flex w-full items-center justify-center bg-white/5 py-4 shadow-2xl sm:w-96"
           shadow="lg"
         >
           <CardHeader className="flex-col items-center pb-0">
-            <h3 className="text-large font-bold">Google Profile</h3>
+            <h3 className="text-center text-lg font-semibold md:text-xl">
+              Google Profile
+            </h3>
           </CardHeader>
-          <Link target="_blank" href={"https://goo.gl/maps/BrZm7MDpNn8z7d5t9"}>
-            <CardBody className="overflow-visible pt-4">
+
+          <Link target="_blank" href={"https://www.facebook.com/firemetaleu/"}>
+            <CardBody className="flex items-center overflow-visible pt-4">
               <Image
                 isZoomed
                 alt="Card background"
@@ -48,6 +54,6 @@ export function FindUsUberUns() {
           </Link>
         </Card>
       </div>
-    </>
+    </section>
   );
 }

@@ -5,7 +5,7 @@ import { BiEnvelope, BiLogoWhatsapp, BiSolidPhone } from "react-icons/bi";
 
 export function KontaktUberUns() {
   return (
-    <section className="z-30 mt-8 flex flex-col items-center justify-center px-8">
+    <section className="z-30 mt-8 flex w-full flex-col items-center justify-center">
       <h2 className="z-30 pt-2 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
         Skontaktuj się z nami:
       </h2>
