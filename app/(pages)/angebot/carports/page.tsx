@@ -1,13 +1,10 @@
 import { FireBlobGradient } from "@/components/islets/blobs/fire-blob-gradient";
-import { CardsAngebot } from "@/components/islets/pages/angebot/cards";
-import { HeroAngebot } from "@/components/islets/pages/angebot/hero";
 
-export default function AngebotPage() {
+export default function CarportsPage() {
   return (
     <>
       <section className="flex flex-col items-center justify-center px-2">
-        <HeroAngebot />
-        <CardsAngebot />
+        Carports
       </section>
 
       <FireBlobGradient
