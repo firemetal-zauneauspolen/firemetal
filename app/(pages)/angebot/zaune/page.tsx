@@ -1,21 +1,21 @@
 import Link from "next/link";
+import NextImage from "next/image";
 import Balancer from "react-wrap-balancer";
 
 import { MousePointerClickIcon } from "lucide-react";
 import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
-import { FireBlobGradient } from "@/components/islets/blobs/fire-blob-gradient";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, Image } from "@nextui-org/react";
 
-export default function AngebotPage() {
+export default function ZaunePage() {
   return (
     <>
       <section className="flex flex-col items-start justify-start px-2 pl-2 sm:pl-12 lg:pl-24 xl:pl-48">
         <h1 className="z-30 pt-8 text-3xl font-bold text-primary sm:text-4xl">
           <Balancer>
-            Hochwertige Zäune aus Polen von Firemetal - Preise, Montage und
-            Mehr, inklusive Kunststoffpaneelen und WPC.
+            🔥 Hochwertige Zäune aus Polen von Firemetal - Preise, Montage und
+            Mehr, inklusive Kunststoffpaneelen und WPC. 🔥
           </Balancer>
         </h1>
         <p className="z-30 pl-2 pt-4 sm:pl-4">
@@ -35,7 +35,7 @@ export default function AngebotPage() {
           <div className="grid max-w-[1100px] grid-cols-1 place-items-center gap-4 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-4">
             <Card isPressable className="flex h-[350px] w-full">
               <Link
-                href="/angebot/zaune/moderne"
+                href="/galerie/zaune/moderne"
                 className="flex h-[350px] w-full"
               >
                 <CardHeader className="absolute top-1 z-10 flex-col !items-start">
@@ -44,17 +44,20 @@ export default function AngebotPage() {
                   </h3>
                 </CardHeader>
                 <Image
+                  as={NextImage}
                   removeWrapper
                   isZoomed
                   alt="moderne zaune aus polen"
                   className="z-0 h-full w-full object-cover"
                   src="/img/angebot/zaune/zaune-moderne.jpg"
+                  width={650}
+                  height={650}
                 />
               </Link>
             </Card>
             <Card isPressable className="flex h-[350px] w-full">
               <Link
-                href="/angebot/zaune/classic"
+                href="/galerie/zaune/classic"
                 className="flex h-[350px] w-full"
               >
                 <CardHeader className="absolute top-1 z-10 flex-col !items-start">
@@ -63,17 +66,20 @@ export default function AngebotPage() {
                   </h3>
                 </CardHeader>
                 <Image
+                  as={NextImage}
                   removeWrapper
                   isZoomed
                   alt="classic zaune aus polen"
                   className="z-0 h-full w-full object-cover"
                   src="/img/angebot/zaune/zaune-classic.jpg"
+                  width={650}
+                  height={650}
                 />
               </Link>
             </Card>
             <Card isPressable className="flex h-[350px] w-full">
               <Link
-                href="/angebot/zaune/kunststoffpaneele"
+                href="/galerie/zaune/kunststoffpaneele"
                 className="flex h-[350px] w-full"
               >
                 <CardHeader className="absolute top-1 z-10 flex-col !items-start">
@@ -82,27 +88,33 @@ export default function AngebotPage() {
                   </h3>
                 </CardHeader>
                 <Image
+                  as={NextImage}
                   removeWrapper
                   isZoomed
                   alt="kunststoffpaneelen aus polen"
                   className="z-0 h-full w-full object-cover"
                   src="/img/angebot/zaune/zaune-kunststoffpaneelen.jpg"
+                  width={650}
+                  height={650}
                 />
               </Link>
             </Card>
             <Card isPressable className="flex h-[350px] w-full">
-              <Link href="/angebot/zaune/wpc" className="flex h-[350px] w-full">
+              <Link href="/galerie/zaune/wpc" className="flex h-[350px] w-full">
                 <CardHeader className="absolute top-1 z-10 flex-col !items-start">
                   <h3 className="rounded-full bg-neutral-950/60 p-2 px-4 text-center text-lg font-semibold text-white backdrop-blur-sm md:text-xl">
                     WPC
                   </h3>
                 </CardHeader>
                 <Image
+                  as={NextImage}
                   removeWrapper
                   isZoomed
                   alt="wpc aus polen"
                   className="z-0 h-full w-full object-cover"
                   src="/img/angebot/zaune/zaune-wpc.jpg"
+                  width={650}
+                  height={650}
                 />
               </Link>
             </Card>
@@ -115,7 +127,7 @@ export default function AngebotPage() {
           </Link>
         </div>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          Unsere Zäune aus Polen:
+          🔥 Unsere Zäune aus Polen:
         </h2>
         <ul className="pl-2 pt-4 leading-8 sm:pl-4">
           <li>
@@ -151,7 +163,7 @@ export default function AngebotPage() {
           </li>
         </ul>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          Zäune aus Polen mit Montage
+          🔨 Zäune aus Polen mit Montage
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
@@ -161,7 +173,7 @@ export default function AngebotPage() {
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          Gartentore und Tore aus Polen
+          🚪 Gartentore und Tore aus Polen
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
@@ -182,7 +194,7 @@ export default function AngebotPage() {
           </Link>
         </div>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          Zufriedene Kunden
+          👫 Zufriedene Kunden
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
@@ -192,7 +204,7 @@ export default function AngebotPage() {
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          Moderne Lösungen
+          🏆 Moderne Lösungen
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
@@ -201,7 +213,7 @@ export default function AngebotPage() {
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          Kosten und Bestellung
+          💲 Kosten und Bestellung
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
@@ -221,15 +233,8 @@ export default function AngebotPage() {
           </Link>
         </div>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          Ihre Wahl für Zäune aus Polen
+          🔥 Firemetal - Ihr Partner für Zäune aus Polen! 🔥
         </h2>
-        <p className="pl-2 pt-4 sm:pl-4">
-          <Balancer>
-            Firemetal ist Ihr verlässlicher Partner für hochwertige Zäune und
-            Tore aus Polen. Wir bieten auch Metallzäune aus Polen mit Montage,
-            um Ihren Bedürfnissen gerecht zu werden.
-          </Balancer>
-        </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
             Skontaktuj sie:

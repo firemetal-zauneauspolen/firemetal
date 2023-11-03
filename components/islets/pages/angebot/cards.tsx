@@ -1,5 +1,7 @@
-import { Card, CardHeader, Image } from "@nextui-org/react";
+import NextImage from "next/image";
 import Link from "next/link";
+
+import { Card, CardHeader, Image } from "@nextui-org/react";
 
 export function CardsAngebot() {
   return (
@@ -13,11 +15,14 @@ export function CardsAngebot() {
               </h3>
             </CardHeader>
             <Image
+              as={NextImage}
               removeWrapper
               isZoomed
               alt="Card background"
               className="z-0 h-full w-full object-cover"
               src="/img/angebot/angebot-zaune.jpg"
+              width={650}
+              height={650}
             />
           </Link>
         </Card>
@@ -32,11 +37,14 @@ export function CardsAngebot() {
               </h3>
             </CardHeader>
             <Image
+              as={NextImage}
               removeWrapper
               isZoomed
               alt="Card background"
               className="z-0 h-full w-full object-cover"
               src="/img/angebot/angebot-doppelstabmatten.jpg"
+              width={650}
+              height={650}
             />
           </Link>
         </Card>
@@ -48,11 +56,14 @@ export function CardsAngebot() {
               </h3>
             </CardHeader>
             <Image
+              as={NextImage}
               removeWrapper
               isZoomed
               alt="Card background"
               className="z-0 h-full w-full object-cover"
               src="/img/angebot/angebot-gelander.jpg"
+              width={650}
+              height={650}
             />
           </Link>
         </Card>
@@ -64,11 +75,14 @@ export function CardsAngebot() {
               </h3>
             </CardHeader>
             <Image
+              as={NextImage}
               removeWrapper
               isZoomed
               alt="Card background"
               className="z-0 h-full w-full object-cover"
               src="/img/angebot/angebot-carport.jpg"
+              width={650}
+              height={650}
             />
           </Link>
         </Card>
@@ -80,11 +94,14 @@ export function CardsAngebot() {
               </h3>
             </CardHeader>
             <Image
+              as={NextImage}
               removeWrapper
               isZoomed
               alt="Card background"
               className="z-0 h-full w-full object-cover"
               src="/img/angebot/angebot-gitter.jpg"
+              width={650}
+              height={650}
             />
           </Link>
         </Card>
@@ -96,11 +113,14 @@ export function CardsAngebot() {
               </h3>
             </CardHeader>
             <Image
+              as={NextImage}
               removeWrapper
               isZoomed
               alt="Card background"
               className="z-0 h-full w-full object-cover"
               src="/img/angebot/angebot-other.jpg"
+              width={650}
+              height={650}
             />
           </Link>
         </Card>
