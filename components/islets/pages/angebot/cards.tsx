@@ -106,10 +106,10 @@ export function CardsAngebot() {
           </Link>
         </Card>
         <Card isPressable className="flex h-[350px] w-full">
-          <Link href="/angebot/other" className="flex h-[350px] w-full">
+          <Link href="/angebot/andere" className="flex h-[350px] w-full">
             <CardHeader className="absolute top-1 z-10 flex-col !items-start">
               <h3 className="rounded-full bg-neutral-950/60 p-2 px-4 text-center text-lg font-semibold text-white backdrop-blur-sm md:text-xl">
-                Other
+                Andere
               </h3>
             </CardHeader>
             <Image
@@ -118,7 +118,7 @@ export function CardsAngebot() {
               isZoomed
               alt="Card background"
               className="z-0 h-full w-full object-cover"
-              src="/img/angebot/angebot-other.jpg"
+              src="/img/angebot/angebot-andere.jpg"
               width={650}
               height={650}
             />
