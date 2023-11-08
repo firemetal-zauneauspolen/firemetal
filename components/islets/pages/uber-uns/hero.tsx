@@ -7,8 +7,8 @@ export function HeroUberUns() {
         <Image
           src={"/img/logo/firemetal-logo.webp"}
           alt={"firemetal metalbau metalzaune zaune logo"}
-          width={"100"}
-          height={"100"}
+          width={100}
+          height={100}
           className="z-30"
         />
         <h1 className="flex flex-col">

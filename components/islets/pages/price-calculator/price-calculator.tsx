@@ -93,28 +93,28 @@ const FormSchema = z
     {
       message: "Dlugosc plotu jest wymagana",
       path: ["zauneLength"],
-    }
+    },
   )
   .refine(
     (schema) => (schema.items.includes("zaune") ? !!schema.zauneHeight : true),
     {
       message: "Szerokosc plotu jest wymagana",
       path: ["zauneHeight"],
-    }
+    },
   )
   .refine(
     (schema) => (schema.items.includes("tore") ? !!schema.toreLength : true),
     {
       message: "Dlugosc tore jest wymagana",
       path: ["toreLength"],
-    }
+    },
   )
   .refine(
     (schema) => (schema.items.includes("tore") ? !!schema.toreHeight : true),
     {
       message: "Szerokosc tore jest wymagana",
       path: ["toreHeight"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -122,7 +122,7 @@ const FormSchema = z
     {
       message: "Szerokosc pforte jest wymagana",
       path: ["pforteLength"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -130,7 +130,7 @@ const FormSchema = z
     {
       message: "Szerokosc pforte jest wymagana",
       path: ["pforteHeight"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -138,7 +138,7 @@ const FormSchema = z
     {
       message: "Szerokosc gelander jest wymagana",
       path: ["gelanderLength"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -146,7 +146,7 @@ const FormSchema = z
     {
       message: "Szerokosc gelander jest wymagana",
       path: ["gelanderHeight"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -156,7 +156,7 @@ const FormSchema = z
     {
       message: "Szerokosc uberdachungen jest wymagana",
       path: ["uberdachungenLength"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -166,7 +166,7 @@ const FormSchema = z
     {
       message: "Szerokosc uberdachungen jest wymagana",
       path: ["uberdachungenHeight"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -174,7 +174,7 @@ const FormSchema = z
     {
       message: "Szerokosc carports jest wymagana",
       path: ["carportsLength"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -182,7 +182,7 @@ const FormSchema = z
     {
       message: "Szerokosc carports jest wymagana",
       path: ["carportsHeight"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -192,7 +192,7 @@ const FormSchema = z
     {
       message: "Szerokosc doppelstabmatten jest wymagana",
       path: ["doppelstabmattenLength"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -202,7 +202,7 @@ const FormSchema = z
     {
       message: "Szerokosc doppelstabmatten jest wymagana",
       path: ["doppelstabmattenHeight"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -210,7 +210,7 @@ const FormSchema = z
     {
       message: "Szerokosc gitter jest wymagana",
       path: ["gitterLength"],
-    }
+    },
   )
   .refine(
     (schema) =>
@@ -218,7 +218,7 @@ const FormSchema = z
     {
       message: "Szerokosc gitter jest wymagana",
       path: ["gitterHeight"],
-    }
+    },
   );
 
 export function PriceCalculator() {
@@ -299,7 +299,7 @@ export function PriceCalculator() {
 
   return (
     <div className="flex justify-center">
-      <div className="flex w-[54rem] flex-col items-center rounded-lg border py-4 shadow-2xl md:items-start">
+      <div className="flex flex-col items-center rounded-lg border py-4 shadow-2xl md:items-start">
         <Toaster position="bottom-right" />
         <Form {...form}>
           <form
@@ -341,8 +341,8 @@ export function PriceCalculator() {
                                         ])
                                       : field.onChange(
                                           field.value?.filter(
-                                            (value?) => value !== item.id
-                                          )
+                                            (value?) => value !== item.id,
+                                          ),
                                         );
                                   }}
                                   className="mr-1.5"
@@ -370,7 +370,7 @@ export function PriceCalculator() {
             />
             {form.watch("items").includes("zaune") ? (
               <div>
-                <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
                   <FormField
                     control={form.control}
                     name="zauneLength"
@@ -426,7 +426,7 @@ export function PriceCalculator() {
             )}
             {form.watch("items").includes("tore") ? (
               <div>
-                <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
                   <FormField
                     control={form.control}
                     name="toreLength"
@@ -481,7 +481,7 @@ export function PriceCalculator() {
             )}
             {form.watch("items").includes("pforte") ? (
               <div>
-                <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
                   <FormField
                     control={form.control}
                     name="pforteLength"
@@ -536,7 +536,7 @@ export function PriceCalculator() {
             )}
             {form.watch("items").includes("gelander") ? (
               <div>
-                <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
                   <FormField
                     control={form.control}
                     name="gelanderLength"
@@ -591,7 +591,7 @@ export function PriceCalculator() {
             )}
             {form.watch("items").includes("uberdachungen") ? (
               <div>
-                <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
                   <FormField
                     control={form.control}
                     name="uberdachungenLength"
@@ -647,7 +647,7 @@ export function PriceCalculator() {
             )}
             {form.watch("items").includes("carports") ? (
               <div>
-                <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
                   <FormField
                     control={form.control}
                     name="carportsLength"
@@ -702,7 +702,7 @@ export function PriceCalculator() {
             )}
             {form.watch("items").includes("doppelstabmatten") ? (
               <div>
-                <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
                   <FormField
                     control={form.control}
                     name="doppelstabmattenLength"
@@ -758,7 +758,7 @@ export function PriceCalculator() {
             )}
             {form.watch("items").includes("gitter") ? (
               <div>
-                <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
                   <FormField
                     control={form.control}
                     name="gitterLength"
@@ -815,7 +815,7 @@ export function PriceCalculator() {
               control={form.control}
               name="material"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="sm:w-[25.7rem]">
                   <FormLabel>Jaki materiał?</FormLabel>
                   <Select
                     name="material"
@@ -925,7 +925,7 @@ export function PriceCalculator() {
               )}
             />
 
-            <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+            <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
               <FormField
                 control={form.control}
                 name="username"
@@ -969,7 +969,7 @@ export function PriceCalculator() {
                 )}
               />
             </div>
-            <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+            <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
               <FormField
                 control={form.control}
                 name="ort"
@@ -1011,7 +1011,7 @@ export function PriceCalculator() {
                 )}
               />
             </div>
-            <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+            <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
               <FormField
                 control={form.control}
                 name="phone"
@@ -1057,7 +1057,7 @@ export function PriceCalculator() {
               control={form.control}
               name="message"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="sm:w-[25.7rem] lg:w-full">
                   <FormLabel htmlFor="message">Wiadomosc</FormLabel>
                   <FormControl>
                     <p className="first-letter:capitalize">

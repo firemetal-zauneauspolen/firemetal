@@ -20,8 +20,8 @@ export function CompaniesUberUns() {
               as={NextImage}
               src="/img/logo/sommer-logo.png"
               alt="firemetal sommer logo"
-              width="150"
-              height="150"
+              width={150}
+              height={150}
               isZoomed
             />
           </Link>
@@ -29,8 +29,8 @@ export function CompaniesUberUns() {
             <Image
               src="/img/logo/hormann-logo.png"
               alt="firemetal hormann logo"
-              width="200"
-              height="200"
+              width={200}
+              height={200}
               isZoomed
             />
           </Link>
@@ -39,8 +39,8 @@ export function CompaniesUberUns() {
               as={NextImage}
               src="/img/logo/zinq-logo.png"
               alt="firemetal zinq logo"
-              width="150"
-              height="150"
+              width={150}
+              height={150}
               isZoomed
             />
           </Link>
