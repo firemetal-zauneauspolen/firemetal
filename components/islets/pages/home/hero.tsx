@@ -29,10 +29,10 @@ export function HeroHome() {
             für hochwertige <strong>Metallzäune</strong>. Unsere Leidenschaft
             für das Design von Zäunen geht Hand in Hand mit{" "}
             <strong>attraktiven Preisen</strong>, die wir aufgrund unserer
-            Herkunft aus Polen bieten. Entdecken Sie unser Angebot an{" "}
+            Herkunft aus Polen anbieten können. Entdecken Sie unser Angebot an{" "}
             <strong>
-              Gartenzaun Metall, Metallzäune, Zäune, Doppelstabmatten, Geländer,
-              Carports, Gitter, Fenstergitter und viele andere
+              Gartenzäunen aus Metall, Metallzäunen, Zäunen, Doppelstabmatten,
+              Geländer, Carports, Gitter, Fenstergitter und vielen anderen
               Metallkonstruktionen.
             </strong>
           </Balancer>

@@ -11,12 +11,11 @@ export function HeroAngebot() {
 
         <p className="z-30 pt-4 text-center text-base xl:px-96 xl:text-xl">
           <Balancer>
-            Jesteśmy w stanie zaoferować naprawdę sporo. Nasza oferta składa się
-            z dużej ilości gotowych wzorów takch jak: klasyczne, nowoczesne czy
-            panelowe i wpc. Każdy wzór możemy dostosowac do Waszych potrzeb. W
-            naszej firme to Wy decydujecie jaki chcecie mieć wzór i z jakiego
-            materiału powinien być on wykonany. Przedstawaimy Wam najczęściej
-            wybierane kategorie.
+            Unser Angebot besteht aus einer großen Anzahl vorgefertigter
+            Designs, wie z. B. klassisch, modern, Paneel und WPC. Wir können
+            jedes Muster an Ihre Bedürfnisse anpassen. Bei uns entscheiden Sie,
+            welches Muster Sie wünschen und aus welchem Material es bestehen
+            soll. Wir stellen Ihnen die am häufigsten gewählten Kategorien vor.
           </Balancer>
         </p>
       </div>

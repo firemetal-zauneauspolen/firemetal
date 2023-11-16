@@ -11,13 +11,13 @@ export default function MusterPage() {
       <div className="flex flex-col items-center justify-center">
         <h1 className="max-w-sm px-8 text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
           <Balancer>
-            Prezentujemy Państwu nasze podstawowe{" "}
-            <span className="text-ring">wzory</span> płotów, paneli oraz
-            sztabmat. Dysponujemy szeroką gamą wzorów{" "}
-            <span className="text-ring">klasycznych</span>,{" "}
-            <span className="text-ring">nowoczesnych</span>, oraz{" "}
-            <span className="text-ring">premium</span>. Oferujemy również
-            możliwość dostosowania lub stworzenia wzoru na potrzeby klienta.{" "}
+            Wir stellen unsere <span className="text-ring">Grundmuster</span>{" "}
+            von Zäunen, Paneelen und Doppelstabmatten. Wir haben eine große
+            Auswahl an <span className="text-ring">klassischen</span>,{" "}
+            <span className="text-ring"> modernen</span>, und{" "}
+            <span className="text-ring">hochwertigen Designs</span>. Wir bieten
+            auch die Möglichkeit, ein Muster entsprechend den Bedürfnissen des
+            Kunden anzupassen oder zu erstellen.{" "}
           </Balancer>
         </h1>
         <div className="flex justify-center px-4 py-8">

@@ -14,10 +14,10 @@ export function MetamorphoseHome() {
 
         <p className="z-30 pb-8 pt-4 text-center text-base xl:px-96 xl:text-xl">
           <Balancer>
-            In Metamorphosen zeigen wir Veränderungen vor und nach unseren
-            Leistungen. Dieser faszinierende Transformationsprozess verwandelt
-            vernachlässigte Zäune in wunderschöne und moderne Bauwerke. Sehen
-            Sie, wie wir als Firemetal Räume verändern.
+            In Metamorphosen zeigen wir die Veränderungen. Dieser faszinierende
+            Transformationsprozess verwandelt vernachlässigte Zäune in
+            wunderschöne und moderne. Sehen Sie, wie wir als Firemetal die Zäune
+            verändern.
           </Balancer>
         </p>
         <Link href="/metamorphose">
@@ -58,7 +58,7 @@ export function MetamorphoseHome() {
         </Link>
         <Link href={"/metamorphose"}>
           <Button className="z-50 rounded-full pl-6 font-semibold sm:text-lg">
-            Prüfen Sie Metamorphosen
+            Metamorphosen Prüfen
             <ChevronRightIcon className="text-base sm:text-lg" />
           </Button>
         </Link>

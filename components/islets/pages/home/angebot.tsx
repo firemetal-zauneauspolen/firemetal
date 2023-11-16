@@ -15,13 +15,12 @@ export function AngebotHome() {
 
         <p className="z-30 pb-8 pt-4 text-center text-base xl:px-96 xl:text-xl">
           <Balancer>
-            Firemetal bietet eine breite Palette von Metallkonstruktionen, die
-            auf Ihre Bedürfnisse zugeschnitten sind. Unser Angebot umfasst
-            Metallgartenzaun, Metallzäune, Doppelstabmatten Gartenzaun Metall,
-            Metallzäune, Zäune, Doppelstabmatten, Geländer, Carports, Gitter,
-            FensterGitter und viele andere Metallkonstruktionen und vieles mehr.
-            Mit uns können Sie den perfekten Zaun gestalten, der zu Ihrem Stil
-            passt.
+            Firemetal bietet sehr viele Metallkonstruktionen, die auf Ihre
+            Bedürfnisse zugeschnitten sind. Unser Angebot umfasst
+            Metallgartenzäune, Metallzäune, Doppelstabmatten , Metallzäune,
+            Zäune, Doppelstabmatten, Geländer, Carports, Gitter, FensterGitter
+            und viele andere Metallkonstruktionen und vieles mehr. Mit uns
+            können Sie den perfekten Zaun entwerfen, der zu Ihrem Stil passt.
           </Balancer>
         </p>
         <div className="z-30 pb-8">
@@ -96,7 +95,7 @@ export function AngebotHome() {
         </h3>
         <Link href="/metamorphose">
           <Button className="z-50 rounded-full pl-6 font-semibold sm:text-lg">
-            Prüfen Sie Angebot
+            Angebot Prüfen
             <ChevronRightIcon className="text-base sm:text-lg" />
           </Button>
         </Link>

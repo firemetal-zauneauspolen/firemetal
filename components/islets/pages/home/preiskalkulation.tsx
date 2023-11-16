@@ -8,7 +8,7 @@ export function PreiskalkulationHome() {
     <>
       <section className="flex flex-col items-center">
         <h2 className="z-30 pt-8 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
-          Holen Sie sich ein erstes Angebot ein
+          Sichern Sie sich ein erstes Angebot
         </h2>
         <p className="z-30 pb-8 pt-4 text-center text-base xl:px-96 xl:text-xl">
           <Balancer>
@@ -20,11 +20,6 @@ export function PreiskalkulationHome() {
           </Balancer>
         </p>
         <PriceCalculator />
-
-        <Button className="z-50 mt-8 rounded-full pl-6 font-semibold sm:text-lg">
-          Prüfen Sie Preiskalkulation
-          <ChevronRightIcon className="text-base sm:text-lg" />
-        </Button>
       </section>
     </>
   );

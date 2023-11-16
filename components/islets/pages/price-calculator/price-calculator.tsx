@@ -34,7 +34,7 @@ import { klingel } from "@/lib/const-data/price-calculator/price-calculator-data
 const FormSchema = z
   .object({
     items: z.array(z.string()).refine((value) => value.some((item) => item), {
-      message: "You have to select at least one item.",
+      message: "Mindestens ein Artikel muss ausgewählt werden.",
     }),
     zauneLength: z.string().optional(),
     zauneHeight: z.string().optional(),
@@ -44,8 +44,6 @@ const FormSchema = z
     pforteHeight: z.string().optional(),
     gelanderLength: z.string().optional(),
     gelanderHeight: z.string().optional(),
-    uberdachungenLength: z.string().optional(),
-    uberdachungenHeight: z.string().optional(),
     carportsLength: z.string().optional(),
     carportsHeight: z.string().optional(),
     doppelstabmattenLength: z.string().optional(),
@@ -53,66 +51,66 @@ const FormSchema = z
     gitterLength: z.string().optional(),
     gitterHeight: z.string().optional(),
     material: z.string({
-      required_error: "Please select material.",
+      required_error: "Bitte wählen Sie die Materialart aus.",
     }),
     briefkasten: z.enum(briefkasten, {
-      required_error: "You need to select a briefkasten option.",
+      required_error: "Bitte wählen Sie Ihre Postfachoptionen aus.",
     }),
     klingel: z.enum(klingel, {
-      required_error: "You have to select at klingel option.",
+      required_error: " Bitte wählen Sie die Klingeltonoptionen aus.",
     }),
     username: z.string().min(2, {
-      message: "Username must be at least 2 characters.",
+      message: "Der Name muss mindestens 2 Zeichen haben.",
     }),
     address: z.string().min(2, {
-      message: "Address must be at least 2 characters.",
+      message: "Die Adresse muss mindestens 2 Zeichen haben.",
     }),
     ort: z.string().min(2, {
-      message: "Ort must be at least 2 characters.",
+      message: "Der Ort muss mindestens 2 Zeichen haben.",
     }),
     postleitzahl: z.string().min(2, {
-      message: "Ort must be at least 2 characters.",
+      message: "Die Postleitzahl muss mindestens 2 Zeichen haben.",
     }),
     phone: z.string().min(2, {
-      message: "Ort must be at least 2 characters.",
+      message: "Bitte geben Sie eine gültige Telefon an.",
     }),
     email: z.string().email({
-      message: "Write correct email address.",
+      message: "Bitte geben Sie eine gültige E-Mail-Adresse an.",
     }),
     message: z
       .string()
       .min(15, {
-        message: "Message must be at least 15 characters.",
+        message: "Die Nachricht muss mindestens 15 Zeichen haben.",
       })
       .max(1200, {
-        message: "Message is too long.",
+        message: "Die Nachricht ist zu lang.",
       }),
   })
   .refine(
     (schema) => (schema.items.includes("zaune") ? !!schema.zauneLength : true),
     {
-      message: "Dlugosc plotu jest wymagana",
+      message: "Bitte geben Sie die Länge des Zauns an",
       path: ["zauneLength"],
     },
   )
   .refine(
     (schema) => (schema.items.includes("zaune") ? !!schema.zauneHeight : true),
     {
-      message: "Szerokosc plotu jest wymagana",
+      message: "Bitte geben Sie die Breite des Zauns an",
       path: ["zauneHeight"],
     },
   )
   .refine(
     (schema) => (schema.items.includes("tore") ? !!schema.toreLength : true),
     {
-      message: "Dlugosc tore jest wymagana",
+      message: "Bitte geben Sie die Länge des Tors an",
       path: ["toreLength"],
     },
   )
   .refine(
     (schema) => (schema.items.includes("tore") ? !!schema.toreHeight : true),
     {
-      message: "Szerokosc tore jest wymagana",
+      message: "Bitte geben Sie die Breite des Tores ein",
       path: ["toreHeight"],
     },
   )
@@ -120,7 +118,7 @@ const FormSchema = z
     (schema) =>
       schema.items.includes("pforte") ? !!schema.pforteLength : true,
     {
-      message: "Szerokosc pforte jest wymagana",
+      message: "Bitte geben Sie die Länge des Pforte an",
       path: ["pforteLength"],
     },
   )
@@ -128,7 +126,7 @@ const FormSchema = z
     (schema) =>
       schema.items.includes("pforte") ? !!schema.pforteHeight : true,
     {
-      message: "Szerokosc pforte jest wymagana",
+      message: "Bitte geben Sie die Breite des Pforte ein",
       path: ["pforteHeight"],
     },
   )
@@ -136,7 +134,7 @@ const FormSchema = z
     (schema) =>
       schema.items.includes("gelander") ? !!schema.gelanderLength : true,
     {
-      message: "Szerokosc gelander jest wymagana",
+      message: "Bitte geben Sie die Länge des Geländer an",
       path: ["gelanderLength"],
     },
   )
@@ -144,35 +142,15 @@ const FormSchema = z
     (schema) =>
       schema.items.includes("gelander") ? !!schema.gelanderHeight : true,
     {
-      message: "Szerokosc gelander jest wymagana",
+      message: "Bitte geben Sie die Breite des Geländer ein",
       path: ["gelanderHeight"],
-    },
-  )
-  .refine(
-    (schema) =>
-      schema.items.includes("uberdachungen")
-        ? !!schema.uberdachungenLength
-        : true,
-    {
-      message: "Szerokosc uberdachungen jest wymagana",
-      path: ["uberdachungenLength"],
-    },
-  )
-  .refine(
-    (schema) =>
-      schema.items.includes("uberdachungen")
-        ? !!schema.uberdachungenHeight
-        : true,
-    {
-      message: "Szerokosc uberdachungen jest wymagana",
-      path: ["uberdachungenHeight"],
     },
   )
   .refine(
     (schema) =>
       schema.items.includes("carports") ? !!schema.carportsLength : true,
     {
-      message: "Szerokosc carports jest wymagana",
+      message: "Bitte geben Sie die Länge des Carporte an",
       path: ["carportsLength"],
     },
   )
@@ -180,7 +158,7 @@ const FormSchema = z
     (schema) =>
       schema.items.includes("carports") ? !!schema.carportsHeight : true,
     {
-      message: "Szerokosc carports jest wymagana",
+      message: "Bitte geben Sie die Breite des Carporte ein",
       path: ["carportsHeight"],
     },
   )
@@ -190,7 +168,7 @@ const FormSchema = z
         ? !!schema.doppelstabmattenLength
         : true,
     {
-      message: "Szerokosc doppelstabmatten jest wymagana",
+      message: "Bitte geben Sie die Länge des Doppelstabmatten an",
       path: ["doppelstabmattenLength"],
     },
   )
@@ -200,7 +178,7 @@ const FormSchema = z
         ? !!schema.doppelstabmattenHeight
         : true,
     {
-      message: "Szerokosc doppelstabmatten jest wymagana",
+      message: "Bitte geben Sie die Breite des Doppelstabmatten ein",
       path: ["doppelstabmattenHeight"],
     },
   )
@@ -208,7 +186,7 @@ const FormSchema = z
     (schema) =>
       schema.items.includes("gitter") ? !!schema.gitterLength : true,
     {
-      message: "Szerokosc gitter jest wymagana",
+      message: "Bitte geben Sie die Länge des Gitter an",
       path: ["gitterLength"],
     },
   )
@@ -216,7 +194,7 @@ const FormSchema = z
     (schema) =>
       schema.items.includes("gitter") ? !!schema.gitterHeight : true,
     {
-      message: "Szerokosc gitter jest wymagana",
+      message: "Bitte geben Sie die Breite des Gitter ein",
       path: ["gitterHeight"],
     },
   );
@@ -240,7 +218,7 @@ export function PriceCalculator() {
   const emailSent = form.formState.isSubmitSuccessful;
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    const toastLoadingId = toast.loading("Sending email...");
+    const toastLoadingId = toast.loading("Email senden...");
     try {
       await fetch("/api/sendConfirmPriceCalculatorForm", {
         method: "POST",
@@ -254,8 +232,6 @@ export function PriceCalculator() {
           pforteHeight: data.pforteHeight,
           gelanderLength: data.gelanderLength,
           gelanderHeight: data.gelanderHeight,
-          uberdachungenLength: data.uberdachungenLength,
-          uberdachungenHeight: data.uberdachungenHeight,
           carportsLength: data.carportsLength,
           carportsHeight: data.carportsHeight,
           doppelstabmattenLength: data.doppelstabmattenLength,
@@ -283,14 +259,14 @@ export function PriceCalculator() {
         }),
       });
 
-      toast.success("Sent email success", {
+      toast.success("E-Mail korrekt gesendet", {
         id: toastLoadingId,
         duration: 3500,
       });
       form.reset();
     } catch (error) {
       console.error("Failed to send email: ", error);
-      toast.error("Sent email error", {
+      toast.error("Beim Senden der E-Mail ist aufgetreten", {
         id: toastLoadingId,
         duration: 3500,
       });
@@ -313,7 +289,7 @@ export function PriceCalculator() {
                 <FormItem>
                   <div>
                     <FormLabel htmlFor="zaune" className="text-base">
-                      Co potrzebujesz?
+                      Was brauchen Sie?
                     </FormLabel>
                   </div>
                   <div className="flex flex-col space-y-2.5 lg:flex-row lg:space-y-0">
@@ -362,7 +338,7 @@ export function PriceCalculator() {
                     ))}
                   </div>
                   <FormDescription>
-                    Wybierz wszystko co chcesz, żebyśmy dla Ciebie zrobili.
+                    Wählen Sie aus, was wir für Sie tun sollen.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -377,11 +353,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="zauneLength">
-                          Podaj długość zaune
+                          Länge des Zauns
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj dlugosc zaune..."
+                            placeholder="Bitte geben Sie die Länge des Zauns an..."
                             {...field}
                             id="zauneLength"
                             name="zauneLength"
@@ -399,11 +375,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="zauneHeight">
-                          Podaj wysokosc zaune
+                          Höhe des Zauns
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj szerokosc zaune..."
+                            placeholder="Bitte geben Sie die Höhe des Zauns an..."
                             {...field}
                             id="zauneHeight"
                             name="zauneHeight"
@@ -417,8 +393,8 @@ export function PriceCalculator() {
                   />
                 </div>
                 <FormDescription className="mt-2">
-                  Podaj całkowitą długość swojego płotu oraz wysokość
-                  pojedyńczego przęsła.
+                  Geben Sie die Länge Des Zauns und die Höhe einer einzelnen
+                  Spannweite ein.
                 </FormDescription>
               </div>
             ) : (
@@ -433,11 +409,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="toreLength">
-                          Podaj długość tore
+                          Länge des Tore
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj dlugosc tore..."
+                            placeholder="Länge des Tore eingeben..."
                             {...field}
                             id="toreLength"
                             name="toreLength"
@@ -455,11 +431,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="toreHeight">
-                          Podaj wysokosc tore
+                          Höhe des Tore
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj szerokosc tore..."
+                            placeholder="Höhe des Tore eingeben..."
                             {...field}
                             id="toreHeight"
                             name="toreHeight"
@@ -473,7 +449,7 @@ export function PriceCalculator() {
                   />
                 </div>
                 <FormDescription className="mt-2">
-                  Podaj całkowitą długość swojej bramy oraz jej wysokosc.
+                  Geben Sie die Länge und die Höhe Des Tore.
                 </FormDescription>
               </div>
             ) : (
@@ -488,11 +464,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="pforteLength">
-                          Podaj długość pforte
+                          Länge des Pforte
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj dlugosc pforte..."
+                            placeholder="Länge des Pforte eingeben..."
                             {...field}
                             id="pforteLength"
                             name="pforteLength"
@@ -510,11 +486,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="pforteHeight">
-                          Podaj wysokosc pforte
+                          Höhe des Pforte
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj szerokosc pforte..."
+                            placeholder="Höhe des Pforte eingeben..."
                             {...field}
                             id="pforteHeight"
                             name="pforteHeight"
@@ -528,7 +504,7 @@ export function PriceCalculator() {
                   />
                 </div>
                 <FormDescription className="mt-2">
-                  Podaj całkowitą długość swojej pforte oraz jej wysokosc.
+                  Geben Sie die Länge und die Höhe Des Pforte.
                 </FormDescription>
               </div>
             ) : (
@@ -543,11 +519,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="gelanderLength">
-                          Podaj długość gelander
+                          Länge des Geländer
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj dlugosc gelander..."
+                            placeholder="Länge des Geländer eingeben..."
                             {...field}
                             id="gelanderLength"
                             name="gelanderLength"
@@ -565,11 +541,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="gelanderHeight">
-                          Podaj wysokosc gelander
+                          Höhe des Geländer
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj szerokosc gelander..."
+                            placeholder="Höhe des Geländer eingeben..."
                             {...field}
                             id="gelanderHeight"
                             name="gelanderHeight"
@@ -583,63 +559,7 @@ export function PriceCalculator() {
                   />
                 </div>
                 <FormDescription className="mt-2">
-                  Podaj całkowitą długość gelander oraz pojedyncza wysokosc.
-                </FormDescription>
-              </div>
-            ) : (
-              ""
-            )}
-            {form.watch("items").includes("uberdachungen") ? (
-              <div>
-                <div className="flex flex-col space-y-2 lg:flex-row lg:space-x-2 lg:space-y-0">
-                  <FormField
-                    control={form.control}
-                    name="uberdachungenLength"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel htmlFor="uberdachungenLength">
-                          Podaj długość uberdachungen
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Podaj dlugosc uberdachungen..."
-                            {...field}
-                            id="uberdachungenLength"
-                            name="uberdachungenLength"
-                            autoComplete="off"
-                            className="sm:w-[25.7rem]"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="uberdachungenHeight"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel htmlFor="uberdachungenHeight">
-                          Podaj wysokosc uberdachungen
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Podaj szerokosc uberdachungen..."
-                            {...field}
-                            id="uberdachungenHeight"
-                            name="uberdachungenHeight"
-                            autoComplete="off"
-                            className="sm:w-[25.7rem]"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                <FormDescription className="mt-2">
-                  Podaj całkowitą długość uberdachungen oraz pojedyncza
-                  wysokosc.
+                  Geben Sie die Länge und die Höhe Des Geländer.
                 </FormDescription>
               </div>
             ) : (
@@ -654,11 +574,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="carportsLength">
-                          Podaj długość carports
+                          Länge des Carports
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj dlugosc carports..."
+                            placeholder="Länge des Carports eingeben..."
                             {...field}
                             id="carportsLength"
                             name="carportsLength"
@@ -676,11 +596,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="carportsHeight">
-                          Podaj wysokosc carports
+                          Höhe des Carports
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj szerokosc carports..."
+                            placeholder="Höhe des Carports eingeben..."
                             {...field}
                             id="carportsHeight"
                             name="carportsHeight"
@@ -694,7 +614,7 @@ export function PriceCalculator() {
                   />
                 </div>
                 <FormDescription className="mt-2">
-                  Podaj całkowitą długość carports oraz pojedyncza wysokosc.
+                  Geben Sie die Länge und die Höhe Des Carports.
                 </FormDescription>
               </div>
             ) : (
@@ -709,11 +629,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="doppelstabmattenLength">
-                          Podaj długość doppelstabmatten
+                          Länge des Doppelstabmatten
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj dlugosc doppelstabmatten..."
+                            placeholder="Länge des Doppelstabmatten eingeben..."
                             {...field}
                             id="doppelstabmattenLength"
                             name="doppelstabmattenLength"
@@ -731,11 +651,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="doppelstabmattenHeight">
-                          Podaj wysokosc doppelstabmatten
+                          Höhe des Doppelstabmatten
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj szerokosc doppelstabmatten..."
+                            placeholder="Höhe des Doppelstabmatten eingeben..."
                             {...field}
                             id="doppelstabmattenHeight"
                             name="doppelstabmattenHeight"
@@ -749,8 +669,7 @@ export function PriceCalculator() {
                   />
                 </div>
                 <FormDescription className="mt-2">
-                  Podaj całkowitą długość doppelstabmatten oraz pojedyncza
-                  wysokosc.
+                  Geben Sie die Länge und die Höhe Des Doppelstabmatten.
                 </FormDescription>
               </div>
             ) : (
@@ -765,11 +684,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="gitterLength">
-                          Podaj długość gitter
+                          Länge des Gitter
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj dlugosc gitter..."
+                            placeholder="Länge des Gitter eingeben..."
                             {...field}
                             id="gitterLength"
                             name="gitterLength"
@@ -787,11 +706,11 @@ export function PriceCalculator() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel htmlFor="gitterHeight">
-                          Podaj wysokosc gitter
+                          Höhe des Gitter
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Podaj szerokosc gitter..."
+                            placeholder="Höhe des Gitter eingeben..."
                             {...field}
                             id="gitterHeight"
                             name="gitterHeight"
@@ -805,7 +724,7 @@ export function PriceCalculator() {
                   />
                 </div>
                 <FormDescription className="mt-2">
-                  Podaj całkowitą długość gitter oraz pojedyncza wysokosc.
+                  Geben Sie die Länge und die Höhe Des Gitter.
                 </FormDescription>
               </div>
             ) : (
@@ -816,7 +735,7 @@ export function PriceCalculator() {
               name="material"
               render={({ field }) => (
                 <FormItem className="sm:w-[25.7rem]">
-                  <FormLabel>Jaki materiał?</FormLabel>
+                  <FormLabel>Welches Material?</FormLabel>
                   <Select
                     name="material"
                     onValueChange={field.onChange}
@@ -824,7 +743,7 @@ export function PriceCalculator() {
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Wybierz materiał" />
+                        <SelectValue placeholder="Material auswählen" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -836,8 +755,8 @@ export function PriceCalculator() {
                     </SelectContent>
                   </Select>
                   <FormDescription>
-                    Wybierz materiał z jakiego chcesz mieć wykonaną swoją
-                    usługę.
+                    Wählen Sie das Material, aus dem Ihr Zaun gefertigt werden
+                    soll.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -849,8 +768,8 @@ export function PriceCalculator() {
               name="briefkasten"
               render={({ field }) => (
                 <FormItem className="space-y-3">
-                  <FormLabel htmlFor="tore">
-                    Czy chcesz skrzynke na listy?
+                  <FormLabel htmlFor="briefkasten">
+                    Möchten Sie einen Briefkasten haben?
                   </FormLabel>
                   <FormControl>
                     <RadioGroup
@@ -893,8 +812,8 @@ export function PriceCalculator() {
               name="klingel"
               render={({ field }) => (
                 <FormItem className="space-y-3">
-                  <FormLabel htmlFor="pforte">
-                    Czy chcesz dzwonek do domu?
+                  <FormLabel htmlFor="klingel">
+                    Möchten Sie Sie eine Klingel haben?
                   </FormLabel>
                   <FormControl>
                     <RadioGroup
@@ -915,7 +834,7 @@ export function PriceCalculator() {
                           <RadioGroupItem value="Klingel w plocie" />
                         </FormControl>
                         <FormLabel className="font-normal">
-                          Klingel w plocie
+                          Klingel im Zaun
                         </FormLabel>
                       </FormItem>
                     </RadioGroup>
@@ -931,10 +850,10 @@ export function PriceCalculator() {
                 name="username"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel htmlFor="username">Imie i nazwisko</FormLabel>
+                    <FormLabel htmlFor="username">Vorname</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Napisz swoje imie i naziwsko..."
+                        placeholder="Schreiben Sie Ihren Vorname..."
                         {...field}
                         id="username"
                         name="username"
@@ -956,7 +875,7 @@ export function PriceCalculator() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Napisz swoj Straße und Hausnummer..."
+                        placeholder="Geben Sie Ihre Straße und Hausnummer ein..."
                         {...field}
                         id="address"
                         name="address"
@@ -978,7 +897,7 @@ export function PriceCalculator() {
                     <FormLabel htmlFor="ort">Ort</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Napisz swoj Ort..."
+                        placeholder="Schreiben Sie Ihren Wohnort..."
                         {...field}
                         id="ort"
                         name="ort"
@@ -998,7 +917,7 @@ export function PriceCalculator() {
                     <FormLabel htmlFor="postleitzahl">Postleitzahl</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Napisz swoj Postleitzahl..."
+                        placeholder="Schreiben Sie Ihre Postleitzahl..."
                         {...field}
                         id="postleitzahl"
                         name="postleitzahl"
@@ -1017,10 +936,10 @@ export function PriceCalculator() {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel htmlFor="phone">Numer telefonu</FormLabel>
+                    <FormLabel htmlFor="phone">Ihre Telefonnummer</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Napisz swoj numer telefonu..."
+                        placeholder="Schreiben Sie Ihre Ihre Telefonnummer..."
                         {...field}
                         id="phone"
                         name="phone"
@@ -1040,7 +959,7 @@ export function PriceCalculator() {
                     <FormLabel htmlFor="email">Email</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Napisz swoj email..."
+                        placeholder="Schreiben Sie Ihre E-mail..."
                         {...field}
                         id="email"
                         name="email"
@@ -1058,11 +977,11 @@ export function PriceCalculator() {
               name="message"
               render={({ field }) => (
                 <FormItem className="sm:w-[25.7rem] lg:w-full">
-                  <FormLabel htmlFor="message">Wiadomosc</FormLabel>
+                  <FormLabel htmlFor="message">Nachricht</FormLabel>
                   <FormControl>
                     <p className="first-letter:capitalize">
                       <Textarea
-                        placeholder="Napisz swoja wiadomosc..."
+                        placeholder="Schreiben Sie Ihre Nachricht..."
                         {...field}
                         id="message"
                         name="message"
@@ -1084,8 +1003,8 @@ export function PriceCalculator() {
             </Button>
             {emailSent && (
               <div className="inline-flex p-4 text-xs text-muted-foreground">
-                Email zostal wyslany poprawnie. Sprawdz prosze swoja skrzynke
-                pocztowa.
+                Die E-Mail wurde erfolgreich gesendet. Bitte überprüfen Sie Ihre
+                E-Mail.
               </div>
             )}
           </form>

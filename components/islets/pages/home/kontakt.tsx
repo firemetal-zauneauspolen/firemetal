@@ -20,13 +20,13 @@ export function KontaktHome() {
           </Balancer>
         </p>
         <p className="pb-8 text-center lg:text-xl">
-          Kliknij w przycisk aby się z nami skontaktować
+          Drücken Sie den Knopf, um uns zu kontaktieren
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link href={"tel: +49015237096939"}>
             <Button className="rounded-full">
               <BiSolidPhone className={"h-6 w-6"} />
-              Zadzwoń
+              Anrufen
             </Button>
           </Link>
           <Link href={"mailto:firemetal.eu"}>

@@ -16,10 +16,6 @@ export const items = [
     label: "Geländer",
   },
   {
-    id: "uberdachungen",
-    label: "Überdachungen",
-  },
-  {
     id: "carports",
     label: "Carports",
   },

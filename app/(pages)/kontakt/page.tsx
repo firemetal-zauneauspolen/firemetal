@@ -9,19 +9,19 @@ export default function KontaktPage() {
     <section className="mt-8 flex flex-col items-center justify-center px-8">
       <h1 className="max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
         <Balancer>
-          Wybierz najwygodniejszą dla siebie{" "}
-          <span className="text-ring">forme kontaktu</span> i skontaktuj się z
-          nami. My zajmiemy się resztą 🤗.
+          Wählen Sie die bequemste{" "}
+          <span className="text-ring">Kontaktform</span> und kontaktieren Sie
+          uns. Wir kümmern uns um den Rest 🤗.
         </Balancer>
       </h1>
       <p className="mt-8 text-center lg:text-xl">
-        Kliknij w przycisk aby się z nami skontaktować
+        Drücken Sie den Knopf um mit uns Kontakt aufzunehmen
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <Link href={"tel: +49015237096939"}>
           <Button className="rounded-full">
             <BiSolidPhone className={"h-6 w-6"} />
-            Zadzwoń
+            Anrufen
           </Button>
         </Link>
         <Link href={"mailto:firemetal.eu"}>
@@ -38,13 +38,13 @@ export default function KontaktPage() {
         </Link>
       </div>
       <p className="mt-8 text-center lg:text-xl">
-        Lub uzupełnij formularz kontaktowy
+        Oder füllen Sie das Kontaktformular aus
       </p>
       <div className="mt-8 w-full max-w-lg">
         <ContactForm />
       </div>
       <div className="mt-8 pb-8 text-center">
-        <h2 className="mb-8 text-xl lg:text-xl">Informacje Kontaktowe</h2>
+        <h2 className="mb-8 text-xl lg:text-xl">Kontaktinformationen</h2>
         <h3 className="text-ring lg:text-xl">Telefon:</h3>
         <p className="lg:text-xl">
           +49 015237096939 <br className="flex sm:hidden" /> / +48 515466388
@@ -55,9 +55,9 @@ export default function KontaktPage() {
         <p className="lg:text-xl">www.facebook.com/firemetaleu</p>
         <h3 className="text-ring lg:text-xl">Google Profile:</h3>
         <p className="lg:text-xl">goo.gl/maps/BrZm7MDpNn8z7d5t9</p>
-        <h3 className="text-ring lg:text-xl">Adres frimy:</h3>
+        <h3 className="text-ring lg:text-xl">Firmenanschrift:</h3>
         <p className="lg:text-xl">Stargard Gubiński 37, 66-620 Gubin</p>
-        <h3 className="text-ring lg:text-xl">Właściciel FireMetal:</h3>
+        <h3 className="text-ring lg:text-xl">FireMetal-Besitzer:</h3>
         <p className="lg:text-xl">Przemysław Dereziński</p>
       </div>
     </section>

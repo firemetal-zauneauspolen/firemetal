@@ -22,11 +22,11 @@ export function HeroUberUns() {
           Über uns
         </h2>
         <p className="z-30 pt-4 text-center text-base xl:px-96 xl:text-xl">
-          Świadczymy dla Was najwyższej jakości usługi związane z produkcją oraz
-          montażem ogrodzeń. Specjalizujemy się w: Płotach, Sztabmatach,
-          Balustradach, Carpotach, Kratach okiennych oraz innych konstrukcjach z
-          metalu. Zapewniamy pomiary, demontaż starych ogrodzeń, przygotowanie
-          terenu, transport oraz montaż.
+          Wir bieten Ihnen Dienstleistungen von höchster Qualität im Bereich der
+          Herstellung und Montage von Zäunen. Wir spezialisieren uns auf :
+          Zäune,,Doppelstabmatten, Geländer , Carports , Fenstergitter und
+          andere Metallkonstruktionen. Wir bieten Aufmaß , Demontage alter
+          Zäune,Vorbereitung des Geländes, Transport und Montage an.
         </p>
       </div>
     </>

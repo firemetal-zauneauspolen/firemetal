@@ -7,12 +7,12 @@ export function CompaniesUberUns() {
     <>
       <section className="z-30 mt-8 flex flex-col items-center justify-center">
         <h2 className="z-30 text-center text-3xl font-bold text-primary transition-colors duration-500 group-hover:text-primary sm:text-4xl">
-          Współpracujemy z:
+          Wir kooperieren mit:
         </h2>
         <p className="z-30 pt-4 text-center xl:px-96 xl:text-xl">
-          Cenimy sobie współpracę z najlepszymi markami dostępnymi na rynku.
-          Wykorzystujemy tylko sprawdzone i wysokiej jakości produkty. W naszych
-          płotach i montażach korzystamy z produktów takich firm jak:
+          Wir legen Wert auf die Zusammenarbeit mit den besten Marken auf dem
+          Markt. Wir verwenden nur bewährte und qualitativ hochwertige Produkte.
+          In unseren Zäunen und Anlagen verwenden wir Produkte von Firmen wie:
         </p>
         <div className="flex flex-col items-center gap-12 pt-4 sm:flex-row">
           <Link href="https://www.sommer.eu/de-at">

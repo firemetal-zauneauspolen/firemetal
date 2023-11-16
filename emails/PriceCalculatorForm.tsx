@@ -35,7 +35,7 @@ export const PriceCalculatorForm = ({
   return (
     <Html>
       <Head />
-      <Preview> Dziękujemy za kontakt... </Preview>
+      <Preview> Vielen Dank für Ihre Kontaktaufnahme... </Preview>
       <Tailwind>
         <Body className="mx-auto bg-neutral-100 font-sans">
           <Container className="rounded-lg bg-white text-center shadow-lg">
@@ -53,28 +53,29 @@ export const PriceCalculatorForm = ({
             <Section style={content}>
               <Text style={paragraph}>Hallo {username} 🔥,</Text>
               <Text style={paragraph}>
-                Dziękujemy za kontakt z nami. Informujemy, że otrzymaliśmy maila
-                z twoim pytaniem o wycenę. Nie musisz odpowiadać na tą
-                wiadomość.
+                Vielen Dank für Ihre Kontaktaufnahme. Dies ist nur eine E-Mail
+                zur Bestätigung, dass wir Ihre Nachricht erhalten haben. Sie
+                müssen nicht darauf antworten.
               </Text>
               <Text style={paragraph}>
-                Twoja wiadomość została wysłana 🕓: {formattedDate}
+                Ihre Nachricht wurde gesendet 🕓: {formattedDate}
               </Text>
               <Text style={paragraph}>
-                Zrobimy wszystko co w naszej mocy aby odpowiedzieć najszybciej
-                jak to tylko możliwe 💪.
+                Wir werden alles tun, um so schnell wie möglich zu antworten 💪.
               </Text>
 
               <Text style={paragraph}>
-                Jeżeli masz jeszcze jakieś pytania lub wątpliwości prosimy o
-                kontakt w wybrany przez Ciebie sposób{" "}
+                Wenn Sie weitere Fragen oder Bedenken haben, kontaktieren Sie
+                uns bitte auf dem von Ihnen gewählten Weg{" "}
                 <Link href="firemetal.eu/kontakt" target="_blank" style={link}>
                   Kontakt
                 </Link>
                 .
               </Text>
               <Text style={paragraph}>
-                Dziękuję za uwagę,
+                Vielen Dank für Ihre Aufmerksamkeit, Wir möchten Sie darüber
+                informieren, dass wir eine E-Mail erhalten haben. Sie müssen
+                nicht auf diese Nachricht antworte.
                 <br />
                 Przemysław Dereziński, owner of FireMetal.
               </Text>

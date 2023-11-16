@@ -14,10 +14,10 @@ export function MusterHome() {
 
         <p className="z-30 pb-8 pt-4 text-center text-base xl:px-96 xl:text-xl">
           <Balancer>
-            In der Muster präsentieren wir unsere fertigen Muster und Projekte,
-            die Sie inspirieren können. Wählen Sie aus einer Vielzahl von
-            Mustern, die Ihnen helfen, einen Zaun oder eine andere Konstruktion
-            zu erstellen, die perfekt zu Ihrem Stil passt.
+            Im Musterbereich präsentieren wir Ihnen unsere fertigen Muster und
+            Projekte, die Sie inspirieren können. Wählen Sie aus einer Vielzahl
+            von Mustern, die Ihnen helfen, einen Zaun oder eine andere
+            Konstruktion zu entwerfen , die perfekt zu Ihrem Stil passt.
           </Balancer>
         </p>
         <Link href="/muster">
@@ -55,7 +55,7 @@ export function MusterHome() {
         </Link>
         <Link href={"/muster"}>
           <Button className="z-50 rounded-full pl-6 font-semibold sm:text-lg">
-            Prüfen Sie Muster
+            Muster Prüfen
             <ChevronRightIcon className="text-base sm:text-lg" />
           </Button>
         </Link>

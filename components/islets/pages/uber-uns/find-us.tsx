@@ -5,7 +5,7 @@ export function FindUsUberUns() {
   return (
     <section className="z-30 mt-8 flex flex-col items-center justify-center">
       <h2 className="z-30 py-8 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
-        Znajdziesz nas na:
+        Sie finden uns unter:
       </h2>
       <div className="flex w-full flex-col items-center gap-8 pt-8 2xl:flex-row">
         <Card

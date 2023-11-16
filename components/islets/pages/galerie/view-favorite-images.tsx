@@ -13,26 +13,33 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import { Button } from "@/components/ui/button";
 
 export function ViewFavoriteImages() {
   const lightboxRef = useRef<LightGallery | null>(null);
 
   const favoriteImages = useStore(
     useFavoriteImagesStore,
-    (state) => state.favoriteImages
+    (state) => state.favoriteImages,
   );
   const { clearFavoriteImages } = useFavoriteImagesStore();
 
   return (
     <div className="flex flex-col items-center">
-      <button onClick={clearFavoriteImages}>WYCZYSC LISTE</button>
-      <div className="space-y-4 sm:columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
+      <Button
+        onClick={clearFavoriteImages}
+        className="rounded-full text-base font-semibold"
+      >
+        Liste Löschen
+      </Button>
+      <div className="space-y-4 pt-8 sm:columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
         {favoriteImages?.map((favoriteImage, idx) => (
           <div className="relative" key={idx}>
             <CldImage
               src={favoriteImage.public_id}
               width={400}
               height={300}
+              quality={60}
               alt="photo"
               className="rounded-xl transition-all duration-500 hover:rounded-none"
             />

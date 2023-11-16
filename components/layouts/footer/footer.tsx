@@ -20,7 +20,7 @@ export function Footer() {
         </span>
       </div>
       <nav className="flex flex-col items-center text-center font-semibold leading-8 md:items-start md:text-left">
-        <p>Informacje kontaktowe</p>
+        <p>Kontaktdaten</p>
         <span className="font-normal text-muted-foreground">
           <p>Firemetal – Przemysław Dereziński</p>
           <p>Mail: info@firemetal.eu</p>
@@ -28,7 +28,7 @@ export function Footer() {
         </span>
       </nav>
       <nav className="flex flex-col items-center text-center font-semibold leading-8 md:items-start md:text-left">
-        <p>Strony</p>
+        <p>Seiten</p>
         <span className="flex flex-col font-normal text-muted-foreground">
           <Link
             href={"/"}

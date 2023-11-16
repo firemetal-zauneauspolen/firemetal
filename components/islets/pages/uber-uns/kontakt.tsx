@@ -7,16 +7,16 @@ export function KontaktUberUns() {
   return (
     <section className="z-30 mt-8 flex w-full flex-col items-center justify-center">
       <h2 className="z-30 pt-2 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
-        Skontaktuj się z nami:
+        Kontaktieren Sie uns:
       </h2>
       <p className="mt-8 text-center lg:text-xl">
-        Kliknij w przycisk aby się z nami skontaktować
+        Drücken Sie den Knopf um mit uns Kontakt aufzunehmen
       </p>
       <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <Link href={"tel: +49015237096939"}>
           <Button className="rounded-full">
             <BiSolidPhone className={"h-6 w-6"} />
-            Zadzwoń
+            Anrufen
           </Button>
         </Link>
         <Link href={"mailto:firemetal.eu"}>
@@ -33,7 +33,7 @@ export function KontaktUberUns() {
         </Link>
       </div>
       <p className="mt-8 text-center lg:text-xl">
-        Lub uzupełnij formularz kontaktowy
+        Oder füllen Sie das Kontaktformular aus
       </p>
       <div className="mt-8 w-full max-w-lg">
         <ContactForm />

@@ -6,9 +6,9 @@ export default function PreisKalkulkationPage() {
     <section className="mt-8 flex flex-col items-center justify-center">
       <h1 className="max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
         <Balancer>
-          Uzupełnij <span className="text-ring">formularz wyceny</span>.
-          Następnie my się z Tobą skanktujemy i przedstawimy Ci wszystkie
-          szczegóły.
+          Füllen Sie <span className="text-ring">das Angebotsformular aus</span>
+          . Anschließend werden wir mit Ihnen Kontakt aufnehmen und Ihnen alle
+          Details mitteilen.
         </Balancer>
       </h1>
       <div className="mt-8">

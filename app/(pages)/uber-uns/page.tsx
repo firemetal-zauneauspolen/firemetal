@@ -9,7 +9,7 @@ import { ProductsUberUns } from "@/components/islets/pages/uber-uns/products";
 export default function UberUnsPage() {
   return (
     <>
-      <section className="flex flex-col items-center justify-center px-2 xl:pt-20">
+      <section className="flex flex-col items-center justify-center px-2">
         <HeroUberUns />
         <ExperienceUberUns />
         <ProductsUberUns />

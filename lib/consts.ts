@@ -51,7 +51,7 @@ export const galerieLinks = [
     path: "/galerie/gitter",
   },
   {
-    label: "❤ Twoje Ulubione",
+    label: "❤ Deine Favoriten",
     path: "/galerie/favorites",
   },
 ] as const;

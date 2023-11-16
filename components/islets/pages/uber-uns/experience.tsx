@@ -5,16 +5,16 @@ export function ExperienceUberUns() {
   return (
     <section className="z-30 mt-8 flex flex-col items-center justify-center">
       <h2 className="z-30 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
-        Doświadczenie
+        Erfahrung
       </h2>
       <p className="z-30 pt-4 text-center xl:px-96 xl:text-xl">
-        Nasza firma sukcesywnie działa na rynku już od 5 lat. Przez ten czas
-        zrealizowaliśmy dla Was ogromną ilość zamówień i zdobyliśmy niesamowite
-        doświadczenie. Zawsze podchodzimy do każdego z Was indywidulanie.
-        Staramy się, dobrze doradzić i przede wszystkim spełnić wszystkie wasze
-        wymagania. Możemy pochwalić się szeroko rozbudowanym portfolio. Nasze
-        realizacje możecie zobaczyć w zakładce glaria oraz metamorfozy. Kto wie
-        może niedługo znajdzie się też tam Twój wymarzony projekt?
+        Unsere Firma ist seit 5 Jahren erfolgreich auf dem Markt tätig. In
+        dieser Zeit haben wir eine Vielzahl an Aufträgen für Sie abgewickelt und
+        sehr viele Erfahrungen gesammelt. Wir gehen immer individuell auf jeden
+        Kunden ein. Wir versuchen, Sie gut zu beraten und vor allem alle Ihre
+        Wünsche zu erfüllen. Unser Portfolio ist sehr umfangreich. Unsere
+        Projekte finden Sie unter Galerie und Metamorphosen. Wer weiß,
+        vielleicht ist Ihr Traumprojekt bald auch dabei?
       </p>
       <div className="flex flex-col items-center gap-8 pt-8 2xl:flex-row">
         <Card
@@ -27,7 +27,7 @@ export function ExperienceUberUns() {
 
           <CardBody className="flex items-center overflow-visible pt-4">
             <h3 className="text-center text-lg font-semibold md:text-xl">
-              Działamy już od 5 lat!
+              Wir sind seit 4 Jahren tätig!
             </h3>
           </CardBody>
         </Card>
@@ -42,7 +42,7 @@ export function ExperienceUberUns() {
 
           <CardBody className="flex items-center overflow-visible pt-4">
             <h3 className="text-center text-lg font-semibold md:text-xl">
-              Setki zrealizowanych projektów!
+              Hunderte realisierte Projekte
             </h3>
           </CardBody>
         </Card>
@@ -57,7 +57,7 @@ export function ExperienceUberUns() {
 
           <CardBody className="flex items-center overflow-visible pt-4">
             <h3 className="text-center text-lg font-semibold md:text-xl">
-              Setki zadowlonych klientów!
+              Hunderte zufriedene Kunden
             </h3>
           </CardBody>
         </Card>
