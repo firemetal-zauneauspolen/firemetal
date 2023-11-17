@@ -2,7 +2,7 @@ import Link from "next/link";
 import NextImage from "next/image";
 import Balancer from "react-wrap-balancer";
 
-import { MousePointerClickIcon } from "lucide-react";
+import { ChevronLeftIcon, MousePointerClickIcon } from "lucide-react";
 import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
@@ -13,20 +13,21 @@ export default function AnderePage() {
       <section className="flex flex-col items-start justify-start px-2 pl-2 sm:pl-12 lg:pl-24 xl:pl-48">
         <h1 className="z-30 pt-8 text-3xl font-bold text-primary sm:text-4xl">
           <Balancer>
-            🔥 Willkommen bei FireMetal - Ihre Quelle für Metallkunst im Garten.
-            🔥
+            🔥 Willkommen bei FireMetal - Ihre Quelle für Metallkunst im
+            Garten.🔥
           </Balancer>
         </h1>
         <p className="z-30 pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Willkommen bei FireMetal! Entdecken Sie unsere exquisiten dekoracje
-            z metalu do ogrodu und weitere hochwertige Konstruktionen aus
-            Metall, die Ihren Garten in ein Paradies verwandeln werden.
+            Willkommen bei FireMetal! Entdecken Sie unsere exquisiten
+            Metalldekorationen für Ihren Garten und weitere hochwertige
+            Konstruktionen aus Metall, die Ihren Garten in ein Paradies
+            verwandeln werden.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Sparwdz naszą galerie:
+            Schauen Sie sich unsere Galerie
           </h3>
           <div className="grid max-w-[1100px] grid-cols-1 place-items-center gap-4 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-4">
             <Card isPressable className="flex h-[350px] w-full">
@@ -114,15 +115,15 @@ export default function AnderePage() {
           </li>
           <li>
             <Balancer>
-              <strong>+ Professionelle Installation:</strong> Wir gewährleisten
-              eine fachgerechte Installation Ihrer Metallkonstruktionen im
-              Garten, um deren Haltbarkeit und Schönheit zu sichern.
+              <strong>+ Professionelle Montage:</strong> Wir garantieren eine
+              professionelle Montage Ihrer Metallkonstruktionen im Garten, um
+              deren Haltbarkeit und Schönheit zu sichern.
             </Balancer>
           </li>
           <li>
             <Balancer>
               <strong>+ Umfassende Gartenlösungen:</strong> Von Metallbänken bis
-              hin zu dekorativen Metallstrukturen bieten wir vielseitige
+              hin zu dekorativen Metallstrukturen. Wir bieten vielseitige
               Metallkonstruktionen für die Verschönerung Ihres Gartens.
             </Balancer>
           </li>
@@ -132,7 +133,7 @@ export default function AnderePage() {
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Unsere dekorationen aus Metall sind handgefertigte Meisterwerke, die
+            Unsere Dekorationen aus Metall sind handgefertigte Meisterwerke, die
             Ihrem Garten einen Hauch von Eleganz und Originalität verleihen. Von
             filigranen Skulpturen bis hin zu robusten Metallstrukturen – wir
             haben alles, was Sie brauchen, um Ihren Garten zu verschönern.
@@ -144,10 +145,10 @@ export default function AnderePage() {
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
             Spüren Sie Entspannung und Komfort im Freien mit unseren
-            Metallbänken und Metallbänken für den Garten. Unser Sortiment an
-            Metallbänken bietet stilvolle Sitzgelegenheiten für Ihren Garten,
-            während unsere Gartenschaukel und Gartenschaukel aus Metall für
-            sanfte Bewegung und Spaß im Freien sorgen.
+            Metallbänken für den Garten. Unser Sortiment an Metallbänken bietet
+            stilvolle Sitzgelegenheiten für Ihren Garten, während unsere
+            Gartenschaukel aus Metall für sanfte Bewegung und Spaß im Freien
+            sorgen.
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
@@ -166,7 +167,7 @@ export default function AnderePage() {
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skorzystaj z formularza wyceny:
+            Schauen Sie unsere Online Preiskalkulation
           </h3>
           <Link href={"/preiskalkulation"}>
             <Button className="z-30 rounded-full font-semibold">
@@ -189,9 +190,9 @@ export default function AnderePage() {
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skontaktuj sie:
+            Nehmen Sie Kontakt mit uns auf
           </h3>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pb-8">
             <Button variant={"icon"} size={"icon"}>
               <Link
                 href={"https://www.facebook.com/firemetaleu"}
@@ -215,6 +216,12 @@ export default function AnderePage() {
               </Button>
             </Link>
           </div>
+          <Link href={"/angebot"}>
+            <Button className="rounded-full border-2 border-white bg-neutral-950 pr-6 font-semibold">
+              <ChevronLeftIcon />
+              Zurück zum Angebot
+            </Button>
+          </Link>
         </div>
       </section>
     </>

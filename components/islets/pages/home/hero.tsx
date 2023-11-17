@@ -23,7 +23,7 @@ export function HeroHome() {
           Professionelle Zäune aus Polen
         </h1>
 
-        <p className="z-30 pt-4 text-center text-base xl:px-96 xl:text-xl">
+        <p className="z-30 pt-4 text-center text-base xl:text-xl">
           <Balancer>
             <strong>Wir sind Firemetal</strong> - Ihre vertrauenswürdige Quelle
             für hochwertige <strong>Metallzäune</strong>. Unsere Leidenschaft

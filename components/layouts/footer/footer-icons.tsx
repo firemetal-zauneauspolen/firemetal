@@ -17,9 +17,7 @@ export function FooterIcons() {
         </Link>
       </Button>
       <Link href={"/kontakt"}>
-        <Button className="z-30 hidden rounded-full font-semibold xl:flex">
-          Kontakt
-        </Button>
+        <Button className="z-30 rounded-full font-semibold">Kontakt</Button>
       </Link>
     </>
   );

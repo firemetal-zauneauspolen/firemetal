@@ -10,7 +10,7 @@ export function PreiskalkulationHome() {
         <h2 className="z-30 pt-8 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
           Sichern Sie sich ein erstes Angebot
         </h2>
-        <p className="z-30 pb-8 pt-4 text-center text-base xl:px-96 xl:text-xl">
+        <p className="z-30 pb-8 pt-4 text-center text-base xl:text-xl">
           <Balancer>
             Möchten Sie den Preis für Ihr Projekt erfahren? Füllen Sie das
             Preisanfrage-Formular aus, und wir erstellen für Sie eine Vorläufige

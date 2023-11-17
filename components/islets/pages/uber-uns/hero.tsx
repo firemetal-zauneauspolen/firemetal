@@ -21,11 +21,11 @@ export function HeroUberUns() {
         <h2 className="z-30 pt-8 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
           Über uns
         </h2>
-        <p className="z-30 pt-4 text-center text-base xl:px-96 xl:text-xl">
+        <p className="z-30 pt-4 text-center text-base md:px-12 xl:text-xl 2xl:px-52">
           Wir bieten Ihnen Dienstleistungen von höchster Qualität im Bereich der
-          Herstellung und Montage von Zäunen. Wir spezialisieren uns auf :
-          Zäune,,Doppelstabmatten, Geländer , Carports , Fenstergitter und
-          andere Metallkonstruktionen. Wir bieten Aufmaß , Demontage alter
+          Herstellung und Montage von Zäunen. Wir spezialisieren uns auf: Zäune,
+          Doppelstabmatten, Geländer , Carports , Fenstergitter und andere
+          Metallkonstruktionen. Wir bieten Aufmaß , Demontage alter
           Zäune,Vorbereitung des Geländes, Transport und Montage an.
         </p>
       </div>

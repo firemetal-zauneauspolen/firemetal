@@ -9,7 +9,7 @@ export default function MusterPage() {
   return (
     <section>
       <div className="flex flex-col items-center justify-center">
-        <h1 className="max-w-sm px-8 text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
+        <h1 className="max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
           <Balancer>
             Wir stellen unsere <span className="text-ring">Grundmuster</span>{" "}
             von Zäunen, Paneelen und Doppelstabmatten. Wir haben eine große

@@ -2,7 +2,7 @@ import Link from "next/link";
 import NextImage from "next/image";
 import Balancer from "react-wrap-balancer";
 
-import { MousePointerClickIcon } from "lucide-react";
+import { ChevronLeftIcon, MousePointerClickIcon } from "lucide-react";
 import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
@@ -13,21 +13,20 @@ export default function CarportsPage() {
       <section className="flex flex-col items-start justify-start px-2 pl-2 sm:pl-12 lg:pl-24 xl:pl-48">
         <h1 className="z-30 pt-8 text-3xl font-bold text-primary sm:text-4xl">
           <Balancer>
-            🔥 Willkommen bei Firemetal: Ihr Experte für Carports aus polen in
+            🔥 Willkommen bei Firemetal: Ihr Experte für Carports aus Polen in
             Deutschland. 🔥
           </Balancer>
         </h1>
         <p className="z-30 pl-2 pt-4 sm:pl-4">
           <Balancer>
             Herzlich willkommen bei Firemetal, Ihrem zuverlässigen Partner für
-            hochwertige Zäune und Carports. Wir bieten eine breite Palette von
-            Produkten und Lösungen, um Ihre Wünsche und Anforderungen zu
-            erfüllen.
+            hochwertige Zäune und Carports. Wir bieten eine große Palette von
+            Produkten und Lösungen für Ihre Wünsche und Anforderungen.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Sparwdz naszą galerie:
+            Schauen Sie sich unsere Galerie
           </h3>
           <div className="grid max-w-[1100px] grid-cols-1 place-items-center gap-4 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-4">
             <Card isPressable className="flex h-[350px] w-full">
@@ -107,33 +106,32 @@ export default function CarportsPage() {
           <li>
             <Balancer>
               <strong>+ Carport mit Schuppen:</strong> Unsere Carports mit
-              Schuppen bieten zusätzlichen Stauraum und schützen Ihr Auto vor
-              den Elementen.
+              Schuppen bieten zusätzlichen Stauraum und schützen Ihr Auto.
             </Balancer>
           </li>
           <li>
             <Balancer>
-              <strong>+ Carport aus Polen:</strong> Unser Standort in Polen
-              ermöglicht es uns, kostengünstige Carports anzubieten, die dennoch
-              höchste Qualitätsstandards erfüllen.
+              <strong>+ Carport aus Polen:</strong> Durch unseren Standort in
+              Polen können wir Ihnen preiswerte Carports anbieten, die dennoch
+              höchsten Qualitätsstandards entsprechen.
             </Balancer>
           </li>
           <li>
             <Balancer>
-              <strong>+ Aluminium Carport aus Polen:</strong> Wenn Sie nach
-              einem modernen und pflegeleichten Carport suchen, ist unser
-              Aluminium Carport aus Polen die richtige Wahl.
+              <strong>+ Aluminium Carport aus Polen:</strong> Wenn Sie einen
+              modernen und pflegeleichten Carport suchen, ist unser Aluminium
+              Carport aus Polen die richtige Wahl.
             </Balancer>
           </li>
         </ul>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          💰 Ein günstig Carport aus Polen lohnt sich
+          💰 Ein günstiger Carport aus Polen lohnt sich
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
             Bei Firemetal finden Sie erschwingliche Carport-Lösungen, die Ihren
             Bedürfnissen und Ihrem Budget entsprechen. Wir bieten eine
-            kostenlose montage.
+            kostenlose Montage.
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
@@ -147,20 +145,20 @@ export default function CarportsPage() {
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          🛠️ Hervorragende Qualität und breites Angebot an Carports
+          🛠️ Hervorragende Qualität und große Auswahl an Carports
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Unsere Carports sind bekannt für ihre erstklassige Qualität und
-            Vielfalt. Wir legen großen Wert auf Materialien und Verarbeitung, um
+            Unsere Carports zeichnen sich durch erstklassige Qualität und
+            Vielfalt. Wir legen großen Wert auf Material und Verarbeitung, um
             sicherzustellen, dass Ihr Carport langlebig und funktional ist.
-            Egal, ob Sie nach einem Aluminiumcarport oder einem Metallcarport
+            Egal, ob Sie nach einen Aluminiumcarport oder einem Metallcarport
             suchen, wir haben die perfekte Lösung für Sie.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skorzystaj z formularza wyceny:
+            Schauen Sie unsere Online Preiskalkulation
           </h3>
           <Link href={"/preiskalkulation"}>
             <Button className="z-30 rounded-full font-semibold">
@@ -175,15 +173,15 @@ export default function CarportsPage() {
             Wenn Sie auf der Suche nach hochwertigen Zäunen oder Carports sind,
             die Ihren Anforderungen entsprechen, sind Sie bei Firemetal genau
             richtig. Kontaktieren Sie uns noch heute, um mehr über unsere
-            Produkte und Dienstleistungen zu erfahren. Wir stehen Ihnen zur
+            Produkte und Dienstleistungen zu erfahren. Wir stehen zur Ihrer
             Verfügung, um Ihr Projekt in die Realität umzusetzen.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skontaktuj sie:
+            Nehmen Sie Kontakt mit uns auf
           </h3>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pb-8">
             <Button variant={"icon"} size={"icon"}>
               <Link
                 href={"https://www.facebook.com/firemetaleu"}
@@ -207,6 +205,12 @@ export default function CarportsPage() {
               </Button>
             </Link>
           </div>
+          <Link href={"/angebot"}>
+            <Button className="rounded-full border-2 border-white bg-neutral-950 pr-6 font-semibold">
+              <ChevronLeftIcon />
+              Zurück zum Angebot
+            </Button>
+          </Link>
         </div>
       </section>
     </>

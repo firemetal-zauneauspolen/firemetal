@@ -11,7 +11,7 @@ export function KontaktHome() {
         <h2 className="z-30 pt-8 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
           Kontaktieren Sie uns
         </h2>
-        <p className="z-30 pb-8 pt-4 text-center text-base xl:px-96 xl:text-xl">
+        <p className="z-30 pb-8 pt-4 text-center text-base xl:text-xl">
           <Balancer>
             Wir sind hier, um Ihnen zu helfen. Kontaktieren Sie uns per Telefon,
             E-Mail oder füllen Sie das Kontaktformular aus. Ihr Komfort und Ihre

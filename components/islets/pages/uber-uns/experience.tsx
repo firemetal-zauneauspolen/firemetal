@@ -7,7 +7,7 @@ export function ExperienceUberUns() {
       <h2 className="z-30 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
         Erfahrung
       </h2>
-      <p className="z-30 pt-4 text-center xl:px-96 xl:text-xl">
+      <p className="z-30 pt-4 text-center md:px-12 xl:text-xl 2xl:px-52">
         Unsere Firma ist seit 5 Jahren erfolgreich auf dem Markt tätig. In
         dieser Zeit haben wir eine Vielzahl an Aufträgen für Sie abgewickelt und
         sehr viele Erfahrungen gesammelt. Wir gehen immer individuell auf jeden

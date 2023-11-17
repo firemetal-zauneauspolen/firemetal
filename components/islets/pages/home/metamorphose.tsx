@@ -12,7 +12,7 @@ export function MetamorphoseHome() {
           Wir verändern Ihre Umgebung zum Besseren
         </h2>
 
-        <p className="z-30 pb-8 pt-4 text-center text-base xl:px-96 xl:text-xl">
+        <p className="z-30 pb-8 pt-4 text-center text-base xl:text-xl">
           <Balancer>
             In Metamorphosen zeigen wir die Veränderungen. Dieser faszinierende
             Transformationsprozess verwandelt vernachlässigte Zäune in

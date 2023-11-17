@@ -9,7 +9,7 @@ export function HeroAngebot() {
           Angebot
         </h1>
 
-        <p className="z-30 pt-4 text-center text-base xl:px-96 xl:text-xl">
+        <p className="z-30 pt-4 text-center text-base xl:text-xl ">
           <Balancer>
             Unser Angebot besteht aus einer großen Anzahl vorgefertigter
             Designs, wie z. B. klassisch, modern, Paneel und WPC. Wir können

@@ -2,7 +2,7 @@ import Link from "next/link";
 import NextImage from "next/image";
 import Balancer from "react-wrap-balancer";
 
-import { MousePointerClickIcon } from "lucide-react";
+import { ChevronLeftIcon, MousePointerClickIcon } from "lucide-react";
 import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
@@ -15,22 +15,21 @@ export default function ZaunePage() {
         <h1 className="z-30 pt-8 text-3xl font-bold text-primary sm:text-4xl">
           <Balancer>
             🔥 Hochwertige Zäune aus Polen von Firemetal - Preise, Montage und
-            Mehr, inklusive Kunststoffpaneelen und WPC. 🔥
+            mehr, inklusive Kunststoffpaneele und WPC. 🔥
           </Balancer>
         </h1>
         <p className="z-30 pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Sie suchen nach erstklassigen Zäunen aus Polen? Firemetal bietet
-            eine beeindruckende Auswahl an Zäunen und Toren, die Ihren
-            Bedürfnissen gerecht werden. Entdecken Sie Zäune aus Polen, die
-            nicht nur preiswert, sondern auch von herausragender Qualität sind.
-            Zusätzlich bieten wir auch moderne Zaunlösungen mit
-            Kunststoffpaneelen und WPC.
+            Sie suchen nach hochwertigen Zäunen aus Polen? Firemetal bietet eine
+            beeindruckende Auswahl an Zäunen und Toren, die Ihren Bedürfnissen
+            gerecht werden. Entdecken Sie Zäune aus Polen, die nicht nur
+            preiswert, sondern auch von hervorragender Qualität sind. Zusätzlich
+            bieten wir auch moderne Zaunlösungen mit Kunststoffpaneelen und WPC.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Sparwdz naszą galerie:
+            Schauen Sie sich unsere Galerie
           </h3>
           <div className="grid max-w-[1100px] grid-cols-1 place-items-center gap-4 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-4">
             <Card isPressable className="flex h-[350px] w-full">
@@ -132,19 +131,19 @@ export default function ZaunePage() {
         <ul className="pl-2 pt-4 leading-8 sm:pl-4">
           <li>
             <Balancer>
-              <strong>+ Metallzäune und tore:</strong> Unsere metallenen Zäune
-              und Tore aus Polen sind robust und stilvoll.
+              <strong>+ Metallzäune und Tore:</strong> Unsere Metallzäune und
+              Tore aus Polen sind robust und stilvoll.
             </Balancer>
           </li>
           <li>
             <Balancer>
-              <strong>+ Gartenzaun aus Polen:</strong> Schaffen Sie sich einen
+              <strong>+ Gartenzäune aus Polen:</strong> chaffen Sie sich einen
               schönen Gartenzaun aus Polen, der Ihre grüne Oase umgibt.
             </Balancer>
           </li>
           <li>
             <Balancer>
-              <strong>+ Kunststoffpaneelen und WPC:</strong> Entdecken Sie auch
+              <strong>+ Kunststoffpaneele und WPC:</strong> Entdecken Sie auch
               unsere Zäune mit Kunststoffpaneelen und WPC, die langlebig und
               pflegeleicht sind.
             </Balancer>
@@ -158,7 +157,7 @@ export default function ZaunePage() {
           <li>
             <Balancer>
               <strong>+ Erfahrung und Qualität:</strong> Unsere Erfahrung und
-              Qualität in Sachen Zäune aus Polen sprechen für sich.
+              die Qualität unserer Zäunen aus Polen sprechen für sich.
             </Balancer>
           </li>
         </ul>
@@ -168,8 +167,8 @@ export default function ZaunePage() {
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
             Bei Firemetal bieten wir nicht nur Zäune aus Polen an, sondern auch
-            die Möglichkeit der Montage. Entdecken Sie unsere konkurrenzfähigen
-            Preise für Zäune aus Polen mit Montage.
+            eine Möglichkeit der Montage. Entdecken Sie unsere konkurrenzfähigen
+            Preise.
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
@@ -178,13 +177,12 @@ export default function ZaunePage() {
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
             Neben Zäunen bieten wir auch eine Auswahl an Gartentoren und Toren
-            aus Polen. Unsere Tore aus Polen sind perfekte Ergänzungen zu Ihren
-            Zäunen.
+            aus Polen. Unsere Toren sind die perfekte Ergänzung zu Ihren Zäunen.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Sparwdz nasze wzory:
+            Schauen Sie sich unsere Designs an
           </h3>
           <Link href={"/muster"}>
             <Button className="z-30 rounded-full font-semibold">
@@ -198,9 +196,8 @@ export default function ZaunePage() {
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Unsere Kunden sind unsere beste Referenz. Erfahren Sie mehr über
-            unsere Zäune aus Polen durch die Erfahrungen unserer zufriedenen
-            Kunden.
+            Unsere Kunden sind die beste Referenz. Erfahren Sie mehr über unsere
+            Zäune aus Polen durch die Erfahrungen unserer zufriedenen Kunden.
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
@@ -209,7 +206,7 @@ export default function ZaunePage() {
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
             Entdecken Sie moderne Zaunlösungen aus Polen, die Funktionalität und
-            Design miteinander verbinden.
+            Design vereinen.
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
@@ -223,11 +220,11 @@ export default function ZaunePage() {
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skorzystaj z formularza wyceny:
+            Schauen Sie unsere Online Preiskalkulation
           </h3>
           <Link href={"/preiskalkulation"}>
             <Button className="z-30 rounded-full font-semibold">
-              <span className="pr-2">Preis Anfrage</span>
+              <span className="pr-2">Preisanfrage</span>
               <MousePointerClickIcon />
             </Button>
           </Link>
@@ -237,9 +234,9 @@ export default function ZaunePage() {
         </h2>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skontaktuj sie:
+            Nehmen Sie Kontakt mit uns auf:
           </h3>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pb-8">
             <Button variant={"icon"} size={"icon"}>
               <Link
                 href={"https://www.facebook.com/firemetaleu"}
@@ -263,6 +260,12 @@ export default function ZaunePage() {
               </Button>
             </Link>
           </div>
+          <Link href={"/angebot"}>
+            <Button className="rounded-full border-2 border-white bg-neutral-950 pr-6 font-semibold">
+              <ChevronLeftIcon />
+              Zurück zum Angebot
+            </Button>
+          </Link>
         </div>
       </section>
     </>

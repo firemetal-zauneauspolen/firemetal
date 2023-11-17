@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function KontaktPage() {
   return (
-    <section className="mt-8 flex flex-col items-center justify-center px-8">
+    <section className="mt-8 flex flex-col items-center justify-center">
       <h1 className="max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
         <Balancer>
           Wählen Sie die bequemste{" "}
@@ -37,13 +37,13 @@ export default function KontaktPage() {
           </Button>
         </Link>
       </div>
-      <p className="mt-8 text-center lg:text-xl">
+      <p className="mt-8 px-4 text-center lg:text-xl">
         Oder füllen Sie das Kontaktformular aus
       </p>
-      <div className="mt-8 w-full max-w-lg">
+      <div className="mt-8 w-full max-w-lg px-4">
         <ContactForm />
       </div>
-      <div className="mt-8 pb-8 text-center">
+      <div className="mt-8 text-center">
         <h2 className="mb-8 text-xl lg:text-xl">Kontaktinformationen</h2>
         <h3 className="text-ring lg:text-xl">Telefon:</h3>
         <p className="lg:text-xl">

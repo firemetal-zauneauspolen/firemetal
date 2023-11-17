@@ -2,7 +2,7 @@ import Link from "next/link";
 import NextImage from "next/image";
 import Balancer from "react-wrap-balancer";
 
-import { MousePointerClickIcon } from "lucide-react";
+import { ChevronLeftIcon, MousePointerClickIcon } from "lucide-react";
 import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
@@ -20,16 +20,16 @@ export default function GelanderPage() {
         <p className="z-30 pl-2 pt-4 sm:pl-4">
           <Balancer>
             Sie sind auf der Suche nach hochwertigen Balkongeländern und
-            Edelstahl-Geländern, die nicht nur preisgünstig sind, sondern auch
-            mit Montage geliefert werden können? Dann sind Sie bei Firemetal
-            genau richtig! Unser Sortiment bietet Ihnen eine breite Auswahl an
-            Balkongeländern und Edelstahl-Geländern, die höchsten
+            Edelstahlgeländern, die nicht nur preiswert sind, sondern auch
+            montiert geliefert werden können? Dann sind Sie bei Firemetal genau
+            richtig! Unser Sortiment bietet Ihnen eine große Auswahl an
+            Balkongeländern und Edelstahlgeländern, die höchsten
             Qualitätsstandards entsprechen.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Sparwdz naszą galerie:
+            Schauen Sie sich unsere Galerie
           </h3>
           <div className="grid max-w-[1100px] grid-cols-1 place-items-center gap-4 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-4">
             <Card isPressable className="flex h-[350px] w-full">
@@ -103,13 +103,13 @@ export default function GelanderPage() {
         <ul className="pl-2 pt-4 leading-8 sm:pl-4">
           <li>
             <Balancer>
-              <strong>+ Balkongeländer aus Edelstahl:</strong> Stilvolle und
-              langlebige Geländer für Ihre Balkone.
+              <strong>+ Balkongeländer aus Edelstahl:</strong> tilvolle und
+              langlebige Geländer für Ihren Balkon.
             </Balancer>
           </li>
           <li>
             <Balancer>
-              <strong>+ Metallgeländer für Balkon:</strong> Schaffen Sie einen
+              <strong>+ Metallgeländer für Balkone:</strong> Schaffen Sie einen
               modernen Look mit unseren Metallgeländern für Balkone, hergestellt
               aus verschiedenen Materialien wie Stahl oder Aluminium.
             </Balancer>
@@ -117,14 +117,14 @@ export default function GelanderPage() {
           <li>
             <Balancer>
               <strong>+ Treppengeländer:</strong> Sichere Treppengeländer sind
-              unerlässlich, und wir bieten eine Vielzahl von Optionen.
+              unverzichtbar, und wir bieten eine Vielzahl von Optionen.
             </Balancer>
           </li>
           <li>
             <Balancer>
-              <strong>+ Geländer aus Polen:</strong> Hochwertige Geländer
-              Produkte zu wettbewerbsfähigen Preisen mit frei montage, direkt
-              aus Polen.
+              <strong>+ Geländer aus Polen:</strong> Hochwertige
+              Geländerprodukte zu wettbewerbsfähigen Preisen mit kostenloser
+              Montage, direkt aus Polen.
             </Balancer>
           </li>
         </ul>
@@ -135,7 +135,7 @@ export default function GelanderPage() {
           <Balancer>
             Unsere Geländer und Balkongeländer sind nicht nur ästhetisch
             ansprechend, sondern auch äußerst langlebig. Firemetal setzt auf
-            hochwertige Materialien und modernes Design, um Ihren Anforderungen
+            hochwertige Materialien und modernes Design, um Ihren Ansprüchen
             gerecht zu werden.
           </Balancer>
         </p>
@@ -144,15 +144,15 @@ export default function GelanderPage() {
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Wir verstehen, dass individuelle Präferenzen wichtig sind. Firemetal
+            Wir wissen , dass individuelle Präferenzen wichtig sind. Firemetal
             arbeitet eng mit Ihnen zusammen, um Produkte nach Ihren Wünschen
             herzustellen. Ob Farbwahl, Form oder Design – wir passen uns Ihren
-            Anforderungen an.
+            Wünschen an.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skorzystaj z formularza wyceny:
+            Schauen Sie unsere Online Preiskalkulation
           </h3>
           <Link href={"/preiskalkulation"}>
             <Button className="z-30 rounded-full font-semibold">
@@ -171,9 +171,9 @@ export default function GelanderPage() {
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skontaktuj sie:
+            Nehmen Sie Kontakt mit uns auf
           </h3>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pb-8">
             <Button variant={"icon"} size={"icon"}>
               <Link
                 href={"https://www.facebook.com/firemetaleu"}
@@ -197,6 +197,12 @@ export default function GelanderPage() {
               </Button>
             </Link>
           </div>
+          <Link href={"/angebot"}>
+            <Button className="rounded-full border-2 border-white bg-neutral-950 pr-6 font-semibold">
+              <ChevronLeftIcon />
+              Zurück zum Angebot
+            </Button>
+          </Link>
         </div>
       </section>
     </>

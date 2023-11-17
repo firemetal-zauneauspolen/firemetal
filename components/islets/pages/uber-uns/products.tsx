@@ -8,7 +8,7 @@ export function ProductsUberUns() {
         <h3 className="pt-4 text-center text-2xl font-semibold text-ring">
           Metallzäune:
         </h3>
-        <p className="z-30 pt-2 text-center xl:px-96 xl:text-xl">
+        <p className="z-30 pt-2 text-center md:px-12 xl:text-xl 2xl:px-52">
           Unsere Metallzäune werden aus den besten Materialien hergestellt, was
           ihre Haltbarkeit und Wetterbeständigkeit garantiert . Wir bieten viele
           verschiedene Designs und Farben an, sodass jeder Kunde etwas für sich
@@ -17,7 +17,7 @@ export function ProductsUberUns() {
         <h3 className="pt-4 text-center text-2xl font-semibold text-ring">
           Carports:
         </h3>
-        <p className="z-30 pt-2 text-center xl:px-96 xl:text-xl">
+        <p className="z-30 pt-2 text-center md:px-12 xl:text-xl 2xl:px-52">
           Unsere Carports sind die perfekte Lösung . Wir bieten viele
           verschiedene Größen und Farben an, so dass jeder Kunde etwas für sich
           finden kann.
@@ -25,7 +25,7 @@ export function ProductsUberUns() {
         <h3 className="pt-4 text-center text-2xl font-semibold text-ring">
           Andere Metallkonstruktionen:
         </h3>
-        <p className="z-30 pt-2 text-center xl:px-96 xl:text-xl">
+        <p className="z-30 pt-2 text-center md:px-12 xl:text-xl 2xl:px-52">
           Außer Metallzäunen und Carports bieten wir viele andere
           Metallkonstruktionen an, wie zum Beispiel Tore, Geländer ,
           Fenstergitter, Doppelstabmatten, Metalldekorationen,

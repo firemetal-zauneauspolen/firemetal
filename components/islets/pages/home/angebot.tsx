@@ -13,7 +13,7 @@ export function AngebotHome() {
           Unser Angebot
         </h2>
 
-        <p className="z-30 pb-8 pt-4 text-center text-base xl:px-96 xl:text-xl">
+        <p className="z-30 pb-8 pt-4 text-center text-base xl:text-xl">
           <Balancer>
             Firemetal bietet sehr viele Metallkonstruktionen, die auf Ihre
             Bedürfnisse zugeschnitten sind. Unser Angebot umfasst

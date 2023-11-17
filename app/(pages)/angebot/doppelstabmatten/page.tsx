@@ -2,7 +2,7 @@ import Link from "next/link";
 import NextImage from "next/image";
 import Balancer from "react-wrap-balancer";
 
-import { MousePointerClickIcon } from "lucide-react";
+import { ChevronLeftIcon, MousePointerClickIcon } from "lucide-react";
 import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
@@ -19,17 +19,17 @@ export default function DoppelstabmattenPage() {
         </h1>
         <p className="z-30 pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Sie sind auf der Suche nach einem hochwertigen Doppelstabmattenzaun,
-            der nicht nur preisgünstig ist, sondern auch mit Montage geliefert
-            werden kann? Dann sind Sie bei Firemetal genau richtig! Unser
-            Sortiment bietet Ihnen eine breite Auswahl an
-            Doppelstabmattenzäunen, die aus Polen stammen und höchsten
-            Qualitätsstandards entsprechen.
+            Sie sind auf der Suche nach einem qualitativ hochwertigen
+            Doppelstabmattenzaun, der nicht nur günstig ist, sondern auch
+            montiert geliefert werden kann? Dann sind Sie bei Firemetal genau
+            richtig! Unser Sortiment bietet Ihnen eine große Auswahl an
+            Doppelstabmattenzäunen aus Polen, die höchsten Qualitätsstandards
+            entsprechen.
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Sparwdz naszą galerie:
+            Schauen Sie sich unsere Galerie
           </h3>
           <div className="grid max-w-[1100px] grid-cols-1 place-items-center gap-4 px-2 pb-4 sm:grid-cols-2 lg:grid-cols-4">
             <Card isPressable className="flex h-[350px] w-full">
@@ -122,16 +122,18 @@ export default function DoppelstabmattenPage() {
           <li>
             <Balancer>
               <strong>+ Komplette Sets inklusive Montage:</strong> Sie müssen
-              sich keine Gedanken über die Installation machen. Firemetal
-              liefert Ihnen alles, was Sie benötigen, und unser Expertenteam
-              installiert den Zaun für Sie.
+              sich keine Gedanken über die Montage machen. Firemetal liefert
+              Ihnen alles, was Sie benötigen, und unser Expertenteam montiert
+              den Zaun für Sie.
             </Balancer>
           </li>
           <li>
             <Balancer>
-              <strong>+ Vielfältige Konfigurationsmöglichkeiten:</strong> Mit
+              <strong>+ Zahlreiche Konfigurationsmöglichkeiten:</strong> Mit
               unserem Konfigurator können Sie Ihren Doppelstabmattenzaun nach
-              Ihren individuellen Anforderungen gestalten.
+              Ihren individuellen Wünschen gestalten. 8. + Attraktive Preise:
+              Wir bieten wettbewerbsfähige Preise für unsere
+              Doppelstabmattenzäune aus Polen.
             </Balancer>
           </li>
           <li>
@@ -142,13 +144,14 @@ export default function DoppelstabmattenPage() {
           </li>
         </ul>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
-          🏗️ Unsere Produktpalette
+          🏗️ Unser Sortiment
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Egal, ob Sie einen Doppelstabmattenzaun in Anthrazit, einen 2 Meter
-            hohen Zaun oder ein 50 Meter langes Komplettset suchen, Firemetal
-            hat die passende Lösung für Sie.
+            Egal , Ob Sie einen anthrazitfarbenen Doppelstabmattenzaun, einen
+            Zaun mit einer Höhe von 2 Metern oder ein komplettes Set mit einer
+            Länge von 50 Metern suchen, Firemetal hat die richtige Lösung für
+            Sie.
           </Balancer>
         </p>
         <h2 className="z-30 pt-4 text-3xl font-bold text-ring">
@@ -156,16 +159,16 @@ export default function DoppelstabmattenPage() {
         </h2>
         <p className="pl-2 pt-4 sm:pl-4">
           <Balancer>
-            Nutzen Sie unseren Preiskalkulation, um Ihren perfekten
-            Doppelstabmattenzaun zu erstellen und bestellen Sie bequem online.
-            Wir liefern nicht nur die Zaunfelder, sondern auch das Zubehör, das
-            Sie benötigen. Und das Beste daran: Die Montage ist im Preis
+            Nutzen Sie unseren Preiskalkulator, um Ihren perfekten
+            Doppelstabmattenzaun zu erstellen.Bestellen Sie bequem online. Wir
+            liefern nicht nur den Zaun, sondern auch das Zubehör, das Sie
+            benötigen. Und das Beste daran: Die Montage ist im Preis
             inbegriffen!
           </Balancer>
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skorzystaj z formularza wyceny:
+            Schauen Sie unsere Online Preiskalkulation
           </h3>
           <Link href={"/preiskalkulation"}>
             <Button className="z-30 rounded-full font-semibold">
@@ -186,9 +189,9 @@ export default function DoppelstabmattenPage() {
         </p>
         <div className="pl-2 pt-4 sm:pl-4">
           <h3 className="pb-4 text-xl font-bold text-primary">
-            Skontaktuj sie:
+            Nehmen Sie Kontakt mit uns auf
           </h3>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pb-8">
             <Button variant={"icon"} size={"icon"}>
               <Link
                 href={"https://www.facebook.com/firemetaleu"}
@@ -212,6 +215,12 @@ export default function DoppelstabmattenPage() {
               </Button>
             </Link>
           </div>
+          <Link href={"/angebot"}>
+            <Button className="rounded-full border-2 border-white bg-neutral-950 pr-6 font-semibold">
+              <ChevronLeftIcon />
+              Zurück zum Angebot
+            </Button>
+          </Link>
         </div>
       </section>
     </>
