@@ -52,7 +52,7 @@ export default function AnderePage() {
                   isZoomed
                   alt="anderezaun aus polen"
                   className="z-0 h-full w-full object-cover"
-                  src="/img/angebot/andere/angebot-andere-1.jpg"
+                  src="/img/angebot/andere/angebot-andere-2.jpg"
                   width={650}
                   height={650}
                 />
@@ -66,7 +66,7 @@ export default function AnderePage() {
                   isZoomed
                   alt="anderezaune aus polen"
                   className="z-0 h-full w-full object-cover"
-                  src="/img/angebot/andere/angebot-andere-1.jpg"
+                  src="/img/angebot/andere/angebot-andere-3.jpg"
                   width={650}
                   height={650}
                 />
@@ -80,7 +80,7 @@ export default function AnderePage() {
                   isZoomed
                   alt="anderezaun firemetal"
                   className="z-0 h-full w-full object-cover"
-                  src="/img/angebot/andere/angebot-andere-1.jpg"
+                  src="/img/angebot/andere/angebot-andere-4.jpg"
                   width={650}
                   height={650}
                 />

@@ -8,7 +8,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
@@ -54,8 +53,14 @@ export default function GaleriePage() {
                 Kontaktformular oder unser Preiskalkulation-Formular. Kopiere
                 den erhaltenen Code und sende ihn uns in deiner Nachricht.
               </DialogDescription>
-              <Button className="w-full rounded-full">Kontakt</Button>
-              <Button className="w-full rounded-full">Preiskalkulation</Button>
+              <Link href={"/kontakt"} className="w-full">
+                <Button className="w-full rounded-full">Kontakt</Button>
+              </Link>
+              <Link href={"/preiskalkulation"} className="w-full">
+                <Button className="w-full rounded-full">
+                  Preiskalkulation
+                </Button>
+              </Link>
             </DialogContent>
           </Dialog>
         </div>

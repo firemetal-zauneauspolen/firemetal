@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Spinner } from "@nextui-org/spinner";
 import { ZauneMenu } from "@/components/islets/pages/shared/zaune-menu";
 
-export default function GalerieFolderPage({
+export default async function GalerieFolderPage({
   params: { galerieFolder },
 }: {
   params: {

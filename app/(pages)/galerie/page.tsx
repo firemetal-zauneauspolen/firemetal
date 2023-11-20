@@ -4,15 +4,6 @@ import { GetFirstImages } from "@/components/islets/pages/galerie/get-first-imag
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-
 export default function GaleriePage() {
   return (
     <section>
