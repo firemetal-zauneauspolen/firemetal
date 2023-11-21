@@ -27,6 +27,7 @@ export function CompaniesUberUns() {
           </Link>
           <Link href="https://postal.pl/de/ueber-uns/" target="_blank">
             <Image
+              as={NextImage}
               src="/img/logo/postal-logo.png"
               alt="firemetal postal logo"
               width={200}

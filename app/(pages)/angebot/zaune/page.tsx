@@ -7,6 +7,62 @@ import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, Image } from "@nextui-org/react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Zäune aus Polen - Angebot - Beste Preise und Qualität.",
+  description:
+    "Wir bieten hohe Qualität und die besten Preise an Zäune aus Polen. Wir bieten: ✅Kostenlos Aufmaß , ✅Online Preiskalkulation ✅ und Hochwertige.",
+  applicationName: "Firemetal - Zäune aus Polen",
+  metadataBase: new URL("https://firemetal.eu/angebot/zaune"),
+  alternates: {
+    canonical: "/",
+  },
+  generator: "FireMetal - Metallzäune",
+  keywords: [
+    "Zäune aus Polen",
+    "Metallzäune",
+    "Gartenzäune",
+    "Zäune",
+    "Gartenzäunen",
+    "Doppelstabmatten",
+    "Geländer",
+    "Carports",
+    "Gitter",
+    "Fenstergitte",
+    "Metallkonstruktionen",
+    "Moderne zäune",
+    "Attraktiven Preisen",
+    "Günstige Preisen",
+  ],
+  openGraph: {
+    title: "Zäune aus Polen - Angebot - Beste Preise und Qualität.",
+    description:
+      "Wir bieten hohe Qualität und die besten Preise an Zäune aus Polen. Wir bieten: ✅Kostenlos Aufmaß , ✅Online Preiskalkulation ✅ und Hochwertige.",
+    locale: "de_DE",
+    type: "article",
+    url: "https://firemetal.eu/angebot/zaune",
+    siteName: "Firemetal - Zäune aus Polen",
+    images: [
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fzaune%2Fzaune-moderne.jpg&w=750&q=75",
+        alt: "Moderne Zäune aus Polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fzaune%2Fzaune-classic.jpg&w=750&q=75",
+        alt: "Classic Zäune aus Polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fzaune%2Fzaune-kunststoffpaneelen.jpg&w=750&q=75",
+        alt: "Kunststoffpaneelen aus polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fzaune%2Fzaune-wpc.jpg&w=750&q=75",
+        alt: "WPC Zäune aus Polen",
+      },
+    ],
+  },
+};
 
 export default function ZaunePage() {
   return (

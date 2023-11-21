@@ -2,6 +2,44 @@ import { Suspense } from "react";
 import { Balancer } from "react-wrap-balancer";
 import { Spinner } from "@nextui-org/spinner";
 import { GetMetamorphose } from "@/components/islets/pages/metamorphose/get-metamorphose";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Firemetal metamorphosen |  Zäune aus Polen",
+  description:
+    "Wir präsentieren Metamorphosen von 🔥 FireMetal unserer zufriedenen Kunden.  🔥 Überprüfen unsere Hausmetamorphosen. Online Preiskalkulation ✅ Hochwertige.",
+  applicationName: "Firemetal - Zäune aus Polen",
+  metadataBase: new URL("https://firemetal.eu/angebot/metamorphose"),
+  alternates: {
+    canonical: "/",
+  },
+  generator: "FireMetal - Metallzäune",
+  keywords: [
+    "Zäune aus Polen",
+    "Metallzäune",
+    "Gartenzäune",
+    "Zäune",
+    "Gartenzäunen",
+    "Doppelstabmatten",
+    "Geländer",
+    "Carports",
+    "Gitter",
+    "Fenstergitte",
+    "Metallkonstruktionen",
+    "Moderne zäune",
+    "Attraktiven Preisen",
+    "Günstige Preisen",
+  ],
+  openGraph: {
+    title: "Firemetal metamorphosen |  Zäune aus Polen",
+    description:
+      "Wir präsentieren Metamorphosen von 🔥 FireMetal unserer zufriedenen Kunden.  🔥 Überprüfen unsere Hausmetamorphosen. Online Preiskalkulation ✅ Hochwertige.",
+    locale: "de_DE",
+    type: "website",
+    url: "https://firemetal.eu/angebot/metamorphose",
+    siteName: "Firemetal - Zäune aus Polen",
+  },
+};
 
 export default function MetamorphosePage() {
   return (

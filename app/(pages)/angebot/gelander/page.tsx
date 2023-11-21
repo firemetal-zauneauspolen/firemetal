@@ -7,6 +7,63 @@ import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
 import { Card, Image } from "@nextui-org/react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Geländer aus polen angebot. Beste Preise und Qualität.",
+  description:
+    "Wir bieten hohe Qualität und die besten Preise an Geländer aus Polen. Wir bieten: ✅Kostenlos Aufmaß , ✅Online Preiskalkulation ✅ und Hochwertige.",
+  applicationName: "Firemetal - Zäune aus Polen",
+  metadataBase: new URL("https://firemetal.eu/angebot/gelander"),
+  alternates: {
+    canonical: "/",
+  },
+  generator: "FireMetal - Metallzäune",
+  keywords: [
+    "Zäune aus Polen",
+    "Metallzäune",
+    "Gartenzäune",
+    "Zäune",
+    "Gartenzäunen",
+    "Doppelstabmatten",
+    "Geländer",
+    "Carports",
+    "Gitter",
+    "Fenstergitte",
+    "Metallkonstruktionen",
+    "Moderne zäune",
+    "Attraktiven Preisen",
+    "Günstige Preisen",
+  ],
+  openGraph: {
+    title: "Geländer aus polen angebot. Beste Preise und Qualität.",
+    description:
+      "Wir bieten hohe Qualität und die besten Preise an Geländer aus Polen. Wir bieten: ✅Kostenlos Aufmaß , ✅Online Preiskalkulation ✅ und Hochwertige.",
+    locale: "de_DE",
+    type: "article",
+    url: "https://firemetal.eu/angebot/gelander",
+    siteName: "Firemetal - Zäune aus Polen",
+    images: [
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fgelander%2Fangebot-gelander-1.jpg&w=750&q=75",
+        alt: "Geländer aus polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fgelander%2Fangebot-gelander-2.jpg&w=750&q=75",
+        alt: "Moderne schwarze Geländer aus polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fgelander%2Fangebot-gelander-3.jpg&w=750&q=75",
+        alt: "Moderne brau Geländer aus polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fgelander%2Fangebot-gelander-4.jpg&w=750&q=75",
+        alt: "Moderne holz und stahl Geländer aus polen.",
+      },
+    ],
+  },
+};
+
 export default function GelanderPage() {
   return (
     <>

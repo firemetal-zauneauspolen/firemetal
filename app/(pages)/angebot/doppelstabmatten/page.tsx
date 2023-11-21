@@ -7,6 +7,63 @@ import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
 import { Card, Image } from "@nextui-org/react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Doppelstabmatten aus polen. Beste Gartenzäune.",
+  description:
+    "Doppelstabmatten aus polen, Einstabmatten:  ✅  Günstige hochwertige Stabmattenzaun. ✅ Mit montage und Kostenlos Aufmaß. ✅ Beste Preise und hohe Qualität.",
+  applicationName: "Firemetal - Zäune aus Polen",
+  metadataBase: new URL("https://firemetal.eu/angebot/doppelstabmatten"),
+  alternates: {
+    canonical: "/",
+  },
+  generator: "FireMetal - Metallzäune",
+  keywords: [
+    "Zäune aus Polen",
+    "Metallzäune",
+    "Gartenzäune",
+    "Zäune",
+    "Gartenzäunen",
+    "Doppelstabmatten",
+    "Geländer",
+    "Carports",
+    "Gitter",
+    "Fenstergitte",
+    "Metallkonstruktionen",
+    "Moderne zäune",
+    "Attraktiven Preisen",
+    "Günstige Preisen",
+  ],
+  openGraph: {
+    title: "Doppelstabmatten aus polen. Beste Gartenzäune.",
+    description:
+      "Doppelstabmatten aus polen, Einstabmatten:  ✅  Günstige hochwertige Stabmattenzaun. ✅ Mit montage und Kostenlos Aufmaß. ✅ Beste Preise und hohe Qualität.",
+    locale: "de_DE",
+    type: "article",
+    url: "https://firemetal.eu/angebot/doppelstabmatten",
+    siteName: "Firemetal - Zäune aus Polen",
+    images: [
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fdoppelstabmatten%2Fangebot-doppelstabmatten-1.jpg&w=750&q=75",
+        alt: "Einstabmatten aus polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fdoppelstabmatten%2Fangebot-doppelstabmatten-2.jpg&w=750&q=75",
+        alt: "Doppelstabmatten aus polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fdoppelstabmatten%2Fangebot-doppelstabmatten-3.jpg&w=750&q=75",
+        alt: "Stabmattenzaun aus polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fdoppelstabmatten%2Fangebot-doppelstabmatten-4.jpg&w=750&q=75",
+        alt: "Stabmattenzaun Beste Preise und hohe Qualität",
+      },
+    ],
+  },
+};
+
 export default function DoppelstabmattenPage() {
   return (
     <>

@@ -3,6 +3,44 @@ import { Button } from "@/components/ui/button";
 import Balancer from "react-wrap-balancer";
 import { BiSolidPhone, BiLogoWhatsapp, BiEnvelope } from "react-icons/bi";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Firemetal Zäune aus Polen Kontakt",
+  description:
+    "Wir präsentieren Ihnen die Kontaktmöglichkeiten zu Firemetal. Wählen Sie eine bequeme Art und warten Sie nicht. Kontaktieren Sie uns jetzt gleich",
+  applicationName: "Firemetal - Zäune aus Polen",
+  metadataBase: new URL("https://firemetal.eu/kontakt"),
+  alternates: {
+    canonical: "/",
+  },
+  generator: "FireMetal - Metallzäune",
+  keywords: [
+    "Zäune aus Polen",
+    "Metallzäune",
+    "Gartenzäune",
+    "Zäune",
+    "Gartenzäunen",
+    "Doppelstabmatten",
+    "Geländer",
+    "Carports",
+    "Gitter",
+    "Fenstergitte",
+    "Metallkonstruktionen",
+    "Moderne zäune",
+    "Attraktiven Preisen",
+    "Günstige Preisen",
+  ],
+  openGraph: {
+    title: "Firemetal Zäune aus Polen Online Preiskalkulation",
+    description:
+      "Wir präsentieren Ihnen die Kontaktmöglichkeiten zu Firemetal. Wählen Sie eine bequeme Art und warten Sie nicht. Kontaktieren Sie uns jetzt gleich",
+    locale: "de_DE",
+    type: "website",
+    url: "https://firemetal.eu/kontakt",
+    siteName: "Firemetal - Zäune aus Polen",
+  },
+};
 
 export default function KontaktPage() {
   return (

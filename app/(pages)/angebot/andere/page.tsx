@@ -7,6 +7,63 @@ import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
 import { Card, Image } from "@nextui-org/react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gartenzäune aus Polen. Beste Preise und Qualität.",
+  description:
+    "Wir bieten hohe Qualität und die besten Preise an Gartenzäune aus Polen. Wir bieten: ✅Kostenlos Aufmaß , ✅Online Preiskalkulation ✅ und Hochwertige.",
+  applicationName: "Firemetal - Zäune aus Polen",
+  metadataBase: new URL("https://firemetal.eu/angebot/andere"),
+  alternates: {
+    canonical: "/",
+  },
+  generator: "FireMetal - Metallzäune",
+  keywords: [
+    "Zäune aus Polen",
+    "Metallzäune",
+    "Gartenzäune",
+    "Zäune",
+    "Gartenzäunen",
+    "Doppelstabmatten",
+    "Geländer",
+    "Carports",
+    "Gitter",
+    "Fenstergitte",
+    "Metallkonstruktionen",
+    "Moderne zäune",
+    "Attraktiven Preisen",
+    "Günstige Preisen",
+  ],
+  openGraph: {
+    title: "Gartenzäune aus Polen. Beste Preise und Qualität.",
+    description:
+      "Wir bieten hohe Qualität und die besten Preise an Gartenzäune aus Polen. Wir bieten: ✅Kostenlos Aufmaß , ✅Online Preiskalkulation ✅ und Hochwertige.",
+    locale: "de_DE",
+    type: "article",
+    url: "https://firemetal.eu/angebot/andere",
+    siteName: "Firemetal - Zäune aus Polen",
+    images: [
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fandere%2Fangebot-andere-1.jpg&w=750&q=75",
+        alt: "Gartenzäune Zäune aus Polen - Fahrrad",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fandere%2Fangebot-andere-2.jpg&w=750&q=75",
+        alt: "Metallische Dekorationen - Tisch",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fandere%2Fangebot-andere-3.jpg&w=750&q=75",
+        alt: "Dekorationen aus metall - Stühle",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fandere%2Fangebot-andere-4.jpg&w=750&q=75",
+        alt: "Gartenzäune Dekorationen - Schaukel mit Tisch",
+      },
+    ],
+  },
+};
+
 export default function AnderePage() {
   return (
     <>

@@ -7,6 +7,63 @@ import { BiLogoFacebook, BiLogoGooglePlus } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
 import { Card, Image } from "@nextui-org/react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gitter aus Polen angebot - Beste Preise und Qualität.",
+  description:
+    "Wir bieten hohe Qualität und besten Preise an Gitter und Fenstergitter aus Polen. Wir bieten: ✅Kostenlos Aufmaß , ✅Online Preiskalkulation.",
+  applicationName: "Firemetal - Zäune aus Polen",
+  metadataBase: new URL("https://firemetal.eu/angebot/gitter"),
+  alternates: {
+    canonical: "/",
+  },
+  generator: "FireMetal - Metallzäune",
+  keywords: [
+    "Zäune aus Polen",
+    "Metallzäune",
+    "Gartenzäune",
+    "Zäune",
+    "Gartenzäunen",
+    "Doppelstabmatten",
+    "Geländer",
+    "Carports",
+    "Gitter",
+    "Fenstergitte",
+    "Metallkonstruktionen",
+    "Moderne zäune",
+    "Attraktiven Preisen",
+    "Günstige Preisen",
+  ],
+  openGraph: {
+    title: "Gitter aus Polen angebot - Beste Preise und Qualität.",
+    description:
+      "Wir bieten hohe Qualität und besten Preise an Gitter und Fenstergitter aus Polen. Wir bieten: ✅Kostenlos Aufmaß , ✅Online Preiskalkulation.",
+    locale: "de_DE",
+    type: "article",
+    url: "https://firemetal.eu/angebot/gitter",
+    siteName: "Firemetal - Zäune aus Polen",
+    images: [
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fgitter%2Fangebot-gitter-1.jpg&w=750&q=75",
+        alt: "Gitter Zäune aus Polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fgitter%2Fangebot-gitter-2.jpg&w=750&q=75",
+        alt: "Gitter aus Polen mit blumen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fgitter%2Fangebot-gitter-3.jpg&w=750&q=75",
+        alt: "Fenstergitter aus polen",
+      },
+      {
+        url: "https://firemetal.eu/_next/image?url=%2Fimg%2Fangebot%2Fgitter%2Fangebot-gitter-4.jpg&w=750&q=75",
+        alt: "Fenstergitter mit blumen",
+      },
+    ],
+  },
+};
+
 export default function GitterPage() {
   return (
     <>
