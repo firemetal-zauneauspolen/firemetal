@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://firemetal.eu
+
+# Sitemaps
+Sitemap: https://firemetal.eu/sitemap.xml
+Sitemap: https://firemetal.eu/server-sitemap.xml
