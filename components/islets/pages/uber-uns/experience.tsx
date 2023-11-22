@@ -8,7 +8,7 @@ export function ExperienceUberUns() {
         Erfahrung
       </h2>
       <p className="z-30 pt-4 text-center md:px-12 xl:text-xl 2xl:px-52">
-        Unsere Firma ist seit 5 Jahren erfolgreich auf dem Markt tätig. In
+        Unsere Firma ist seit 4 Jahren erfolgreich auf dem Markt tätig. In
         dieser Zeit haben wir eine Vielzahl an Aufträgen für Sie abgewickelt und
         sehr viele Erfahrungen gesammelt. Wir gehen immer individuell auf jeden
         Kunden ein. Wir versuchen, Sie gut zu beraten und vor allem alle Ihre

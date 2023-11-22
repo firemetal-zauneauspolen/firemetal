@@ -19,9 +19,7 @@ interface Props {
   updatedDate?: Date;
 }
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
+const baseUrl = process.env.SITE_URL ? `${process.env.SITE_URL}` : "";
 
 export const ConfirmContactForm = ({
   username,

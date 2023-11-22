@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://firemetal.eu
+Host: https://www.firemetal.eu
 
 # Sitemaps
-Sitemap: https://firemetal.eu/sitemap.xml
-Sitemap: https://firemetal.eu/server-sitemap.xml
+Sitemap: https://www.firemetal.eu/sitemap.xml
+Sitemap: https://www.firemetal.eu/server-sitemap.xml

@@ -9,7 +9,7 @@ export default function NotFoundPage() {
         <p>Zostaniesz automatycznie przekierowany za kilka sekund...</p>
         <meta
           http-equiv="refresh"
-          content={`3;url=https://${process.env.DOMAIN_ADDRESS}`}
+          content={`3;url=https://${process.env.SITE_URL}`}
         />
       </div>
     </main>
