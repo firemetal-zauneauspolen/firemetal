@@ -25,9 +25,6 @@ export function ViewMetamorphose({
   const NUMBER_OF_IMAGE_SHIFT = 1;
 
   const lightboxRef = useRef<LightGallery | null>(null);
-  const [mergeMetamorphoses, setMergeMetamorphoses] = useState<
-    Images[] | undefined
-  >();
 
   function mergeArrays(vorMetamorphose: Images[], nachMetamorphose: Images[]) {
     const mergedArray = vorMetamorphose.map((element, idx) => {
@@ -41,9 +38,7 @@ export function ViewMetamorphose({
     return mergedArray.flat();
   }
 
-  useEffect(() => {
-    setMergeMetamorphoses(mergeArrays(vorMetamorphose, nachMetamorphose));
-  }, [vorMetamorphose, nachMetamorphose]);
+  const mergeMetamorphoses = mergeArrays(vorMetamorphose, nachMetamorphose);
 
   return (
     <div className="flex flex-col items-center">
