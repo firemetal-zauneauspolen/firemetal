@@ -1,4 +1,5 @@
 import { FireBlobGradient } from "@/components/islets/blobs/fire-blob-gradient";
+import { Testimonials } from "@/components/islets/pages/home/testimonials";
 import { CompaniesUberUns } from "@/components/islets/pages/uber-uns/companies";
 import { ExperienceUberUns } from "@/components/islets/pages/uber-uns/experience";
 import { FindUsUberUns } from "@/components/islets/pages/uber-uns/find-us";
@@ -77,6 +78,7 @@ export default function UberUnsPage() {
         <HeroUberUns />
         <ExperienceUberUns />
         <ProductsUberUns />
+        <Testimonials />
         <CompaniesUberUns />
         <FindUsUberUns />
         <KontaktUberUns />
