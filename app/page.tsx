@@ -4,6 +4,7 @@ import { KontaktHome } from "@/components/islets/pages/home/kontakt";
 import { MetamorphoseHome } from "@/components/islets/pages/home/metamorphose";
 import { MusterHome } from "@/components/islets/pages/home/muster";
 import { PreiskalkulationHome } from "@/components/islets/pages/home/preiskalkulation";
+import { Testimonials } from "@/components/islets/pages/home/testimonials";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <MetamorphoseHome />
       <AngebotHome />
       <MusterHome />
+      <Testimonials />
       <PreiskalkulationHome />
       <KontaktHome />
     </main>
