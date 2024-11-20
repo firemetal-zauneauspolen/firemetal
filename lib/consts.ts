@@ -56,6 +56,17 @@ export const galerieLinks = [
   },
 ] as const;
 
+export const musterLinks = [
+  {
+    label: "Muster Classic",
+    path: "/muster",
+  },
+  {
+    label: "Muster CNC",
+    path: "/muster/cnc",
+  },
+] as const;
+
 export const angebotLinks = [
   {
     label: "Zäune",

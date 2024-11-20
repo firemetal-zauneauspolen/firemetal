@@ -3,7 +3,6 @@
 import type { Images } from "@/lib/types";
 import { CldImage } from "next-cloudinary";
 import { ViewHeartIcon } from "../shared/view-heart-icon";
-import { ViewMusterName } from "./view-muster-name-";
 import { useRef } from "react";
 
 import LightGalleryComponent from "lightgallery/react";
@@ -13,30 +12,31 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import { ViewCNCMusterName } from './view-cnc-muster-name';
 
 type Props = {
   images: Images[];
 };
 
-export function ViewMuster(props: Props) {
+export function ViewCNCMuster(props: Props) {
   const lightboxRef = useRef<LightGallery | null>(null);
 
   return (
     <div className="flex flex-col items-center">
-      <div className="columns-1 space-y-4">
+      <div className="columns-2 space-y-4">
         {props.images.map((image, idx) => (
           <div
-            className="relative rounded-xl bg-white px-4 py-6 transition-all duration-500 hover:rounded-none sm:px-6"
+            className="relative rounded-xl bg-white transition-all duration-500 hover:rounded-none"
             key={idx}
           >
             <CldImage
               src={image.public_id}
-              width={800}
-              height={300}
+              width={350}
+              height={236}
               alt="photo"
             />
-            <ViewHeartIcon image={image} className="right-2.5 top-1" />
-            <ViewMusterName fileName={image.filename} />
+            <ViewHeartIcon image={image} className="right-2.5 top-0.5" />
+            <ViewCNCMusterName fileName={image.filename} />
             <div
               className="absolute inset-0 h-full w-full cursor-pointer bg-transparent hover:bg-stone-900 hover:bg-opacity-10"
               onClick={() => {
