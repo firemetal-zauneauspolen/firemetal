@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/layouts/footer/footer";
 import { ScrollToTopButton } from "@/components/islets/pages/shared/scroll-to-top-button";
+import { Analytics } from '@vercel/analytics/next';
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -96,6 +97,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+           <Analytics />
           <ScrollToTopButton />
           <Footer />
         </Providers>

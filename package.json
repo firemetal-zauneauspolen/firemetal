@@ -41,6 +41,7 @@
     "@types/node": "20.8.6",
     "@types/react": "18.2.28",
     "@types/react-dom": "18.2.13",
+    "@vercel/analytics": "^1.4.1",
     "autoprefixer": "10.4.16",
     "class-variance-authority": "^0.7.0",
     "cloudinary": "^1.41.0",
@@ -75,7 +76,7 @@
   "overrides": {
     "@react-email/render": "^0.0.9"
   },
-   "resolutions": {
+  "resolutions": {
     "@react-email/render": "^0.0.9"
   },
   "devDependencies": {
