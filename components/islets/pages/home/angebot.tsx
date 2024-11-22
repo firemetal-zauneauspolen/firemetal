@@ -93,7 +93,7 @@ export function AngebotHome() {
           Oder vielleicht Carports, Fenstergitter beziehungsweise eine andere
           Metallkonstruktion?
         </h3>
-        <Link href="/metamorphose">
+        <Link href="/angebot">
           <Button className="z-50 rounded-full pl-6 font-semibold sm:text-lg">
             Angebot Prüfen
             <ChevronRightIcon className="text-base sm:text-lg" />
