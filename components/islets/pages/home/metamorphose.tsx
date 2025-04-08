@@ -29,7 +29,7 @@ export function MetamorphoseHome() {
                 </p>
                 <div className="relative">
                   <Image
-                    src={"/img/metamorphose/home-vor-metamorphose.webp"}
+                    src={"/img/metamorphose/home-vor-metamorphose-v2.webp"}
                     quality={25}
                     width={500}
                     height={100}
@@ -44,7 +44,7 @@ export function MetamorphoseHome() {
                 </p>
                 <div className="relative">
                   <Image
-                    src={"/img/metamorphose/home-nach-metamorphose.webp"}
+                    src={"/img/metamorphose/home-nach-metamorphose-v2.webp"}
                     quality={25}
                     width={500}
                     height={100}
