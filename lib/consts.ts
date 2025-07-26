@@ -71,6 +71,17 @@ export const musterLinks = [
   },
 ] as const;
 
+export const grottenLinks = [
+  {
+    label: "Grotten",
+    path: "/grotten-und-rosetten",
+  },
+  {
+    label: "Rosetten",
+    path: "/grotten-und-rosetten/rosetten",
+  },
+] as const;
+
 export const angebotLinks = [
   {
     label: "Zäune",

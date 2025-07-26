@@ -9,7 +9,7 @@ export function MusterHomeCNC() {
     <>
       <section className="flex flex-col items-center">
         <h2 className="z-30 pt-8 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
-        Muster CNC
+          Muster CNC
         </h2>
 
         <p className="z-30 pt-4 text-center text-base xl:text-xl">
@@ -18,9 +18,9 @@ export function MusterHomeCNC() {
           </Balancer>
         </p>
         <Link href="/muster/cnc">
-        <div className="flex flex-col items-center pb-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2">
-                <div className="relative rounded-xl bg-white px-4 transition-all duration-500 hover:rounded-none sm:px-6">
+          <div className="flex flex-col items-center py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="relative rounded-xl bg-white px-4 transition-all duration-500 hover:rounded-none sm:px-6">
                 <Image
                   src={"/img/muster-cnc/cnc-muster-1.jpg"}
                   quality={69}
