@@ -21,7 +21,6 @@ export function ViewMetamorphose({
   nachMetamorphose: Images[];
 }) {
   const NUMBER_OF_IMAGES_TO_SKIP = 2;
-  const NUMBER_OF_LETTERS_TO_REMOVE = -2;
   const NUMBER_OF_IMAGE_SHIFT = 1;
 
   const lightboxRef = useRef<LightGallery | null>(null);
@@ -48,7 +47,7 @@ export function ViewMetamorphose({
             <div key={idx} className="flex flex-col items-center">
               <h2 className="mb-5 mt-8 text-xl font-bold sm:text-2xl lg:text-4xl">
                 <span className="text-ring">#</span>Projekte{" "}
-                {image.filename.slice(NUMBER_OF_LETTERS_TO_REMOVE)}
+                {image.filename.match(/\d+/g)?.pop() || ""}
               </h2>
               <div className="gap-4 space-y-4 lg:flex lg:space-y-0">
                 <div className="relative">
