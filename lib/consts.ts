@@ -54,6 +54,10 @@ export const galerieLinks = [
     label: "CNC",
     path: "/galerie/cnc",
   },
+   {
+    label: "Terrassen",
+    path: "/galerie/terrassen",
+  },
   {
     label: "❤ Deine Favoriten",
     path: "/galerie/favorites",
