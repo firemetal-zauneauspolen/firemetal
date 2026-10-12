@@ -74,20 +74,20 @@ export const galerieLinks = [
 
 export const musterLinks = [
   {
-    label: "Muster Classic",
-    path: "/muster",
-  },
-  {
-    label: "Muster CNC",
-    path: "/muster/cnc",
-  },
-  {
     label: "Muster Premium",
     path: "/muster/premium",
   },
   {
+    label: "Muster Classic",
+    path: "/muster",
+  },
+  {
     label: "Beton",
     path: "/muster/beton",
+  },
+  {
+    label: "Muster CNC",
+    path: "/muster/cnc",
   },
 ] as const;
 

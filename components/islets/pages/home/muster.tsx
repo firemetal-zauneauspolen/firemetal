@@ -77,7 +77,7 @@ export function MusterHome() {
             >
               <GetMuster
                 galerieFolder={muster.folder}
-                maxResults={3}
+                maxResults={muster.columns === "double" ? 4 : 3}
                 columns={muster.columns}
               />
             </Suspense>
