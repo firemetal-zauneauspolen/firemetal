@@ -1,13 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRightIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
+import { Suspense } from "react";
+import { Spinner } from "@nextui-org/spinner";
+import { GetMuster } from "@/components/islets/pages/muster/get-muster";
+
+const musterSections = [
+  {
+    title: "Muster Premium",
+    folder: "muster/premium",
+    href: "/muster/premium",
+    description:
+      "Entdecken Sie ausgewählte Premium-Muster mit hochwertigen Oberflächen und individuellen Designs für Ihren Außenbereich.",
+    buttonLabel: "Premium-Muster ansehen",
+    columns: "single" as const,
+  },
+  {
+    title: "Muster Classic",
+    folder: "muster",
+    href: "/muster",
+    description:
+      "Unsere klassischen Muster verbinden zeitlose Formen mit vielseitigen Möglichkeiten für Zäune, Paneele und Doppelstabmatten.",
+    buttonLabel: "Classic-Muster ansehen",
+    columns: "single" as const,
+  },
+  {
+    title: "Muster Beton",
+    folder: "muster/beton",
+    href: "/muster/beton",
+    description:
+      "Robuste Betonmuster bieten eine markante Optik und langlebigen Sichtschutz, passend zu Ihrem Grundstück.",
+    buttonLabel: "Beton-Muster ansehen",
+    columns: "double" as const,
+  },
+];
 
 export function MusterHome() {
   return (
-    <>
-      <section className="flex flex-col items-center">
+    <section className="flex w-full flex-col items-center">
         <h2 className="z-30 pt-8 text-center text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-primary">
           Unsere Muster
         </h2>
@@ -20,46 +51,36 @@ export function MusterHome() {
             Konstruktion zu entwerfen , die perfekt zu Ihrem Stil passt.
           </Balancer>
         </p>
-        <Link href="/muster">
-          <div className="flex flex-col items-center pb-8">
-            <div className="columns-1 space-y-4">
-              <div className="relative rounded-xl bg-white px-4 py-6 transition-all duration-500 hover:rounded-none sm:px-6">
-                <Image
-                  src={"/img/muster/home-muster-1.webp"}
-                  quality={1}
-                  width={800}
-                  height={300}
-                  alt="muster metallbau firemetal"
+        {musterSections.map((muster) => (
+          <section
+            className="flex w-full flex-col items-center pb-8"
+            key={muster.href}
+          >
+            <h3 className="z-30 pt-4 text-center text-3xl font-bold text-primary">
+              {muster.title}
+            </h3>
+            <p className="z-30 px-2 pt-4 text-center text-base xl:text-xl">
+              <Balancer>{muster.description}</Balancer>
+            </p>
+            <div className="flex justify-center py-6">
+              <Suspense
+                fallback={<Spinner label="Loading..." aria-label="Loding..." />}
+              >
+                <GetMuster
+                  galerieFolder={muster.folder}
+                  maxResults={3}
+                  columns={muster.columns}
                 />
-              </div>
-              <div className="relative rounded-xl bg-white px-4 py-6 transition-all duration-500 hover:rounded-none sm:px-6">
-                <Image
-                  src={"/img/muster/home-muster-2.webp"}
-                  quality={1}
-                  width={800}
-                  height={300}
-                  alt="muster metallbau firemetal"
-                />
-              </div>
-              <div className="relative rounded-xl bg-white px-4 py-6 transition-all duration-500 hover:rounded-none sm:px-6">
-                <Image
-                  src={"/img/muster/home-muster-3.webp"}
-                  quality={1}
-                  width={800}
-                  height={300}
-                  alt="muster metallbau firemetal"
-                />
-              </div>
+              </Suspense>
             </div>
-          </div>
-        </Link>
-        <Link href={"/muster"}>
-          <Button className="z-50 rounded-full pl-6 font-semibold sm:text-lg">
-            Muster Prüfen
-            <ChevronRightIcon className="text-base sm:text-lg" />
-          </Button>
-        </Link>
+            <Link href={muster.href}>
+              <Button className="z-50 rounded-full pl-6 font-semibold sm:text-lg">
+                {muster.buttonLabel}
+                <ChevronRightIcon className="text-base sm:text-lg" />
+              </Button>
+            </Link>
+          </section>
+        ))}
       </section>
-    </>
   );
 }

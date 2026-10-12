@@ -16,6 +16,7 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 type Props = {
   images: Images[];
+  columns?: "single" | "double";
 };
 
 export function ViewMuster(props: Props) {
@@ -23,7 +24,13 @@ export function ViewMuster(props: Props) {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="columns-1 space-y-4">
+      <div
+        className={
+          props.columns === "double"
+            ? "columns-2 space-y-4"
+            : "columns-1 space-y-4"
+        }
+      >
         {props.images.map((image, idx) => (
           <div
             className="relative rounded-xl bg-white px-4 py-6 transition-all duration-500 hover:rounded-none sm:px-6"
@@ -31,8 +38,8 @@ export function ViewMuster(props: Props) {
           >
             <CldImage
               src={image.public_id}
-              width={800}
-              height={300}
+              width={props.columns === "double" ? 350 : 800}
+              height={props.columns === "double" ? 236 : 300}
               alt="photo"
             />
             <ViewHeartIcon image={image} className="right-2.5 top-1" />

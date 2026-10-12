@@ -43,6 +43,10 @@ export const galerieLinks = [
     path: "/galerie/gelander",
   },
   {
+    label: "Garagentore",
+    path: "/galerie/garagentore",
+  },
+  {
     label: "Carports",
     path: "/galerie/carports",
   },
@@ -57,6 +61,10 @@ export const galerieLinks = [
    {
     label: "Terrassen",
     path: "/galerie/terrassen",
+  },
+  {
+    label: "Beton",
+    path: "/galerie/beton",
   },
   {
     label: "❤ Deine Favoriten",
@@ -76,6 +84,10 @@ export const musterLinks = [
   {
     label: "Muster Premium",
     path: "/muster/premium",
+  },
+  {
+    label: "Beton",
+    path: "/muster/beton",
   },
 ] as const;
 
@@ -98,6 +110,10 @@ export const angebotLinks = [
   {
     label: "Doppelstabmatten",
     path: "/angebot/doppelstabmatten",
+  },
+  {
+    label: "Beton",
+    path: "/angebot/beton",
   },
   {
     label: "Geländer",

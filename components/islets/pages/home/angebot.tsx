@@ -86,6 +86,26 @@ export function AngebotHome() {
                   </h3>
                 </div>
               </div>
+              <div className="group relative w-full">
+                <Card isPressable className="flex h-[350px] w-full">
+                  <Image
+                    as={NextImage}
+                    removeWrapper
+                    isZoomed
+                    quality={25}
+                    alt="Betonzaun von Firemetal"
+                    className="z-0 h-full w-full object-cover"
+                    src="/img/angebot/angebot-beton.jpg"
+                    width={650}
+                    height={650}
+                  />
+                </Card>
+                <div className="absolute left-3 top-5 z-50 flex-col !items-start group-hover:cursor-pointer">
+                  <h3 className="rounded-full bg-neutral-950/60 p-2 px-4 text-center text-lg font-semibold text-white backdrop-blur-sm md:text-xl">
+                    Beton
+                  </h3>
+                </div>
+              </div>
             </div>
           </Link>
         </div>

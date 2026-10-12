@@ -49,6 +49,25 @@ export function CardsAngebot() {
           </Link>
         </Card>
         <Card isPressable className="flex h-[350px] w-full">
+          <Link href="/angebot/beton" className="flex h-[350px] w-full">
+            <CardHeader className="absolute top-1 z-10 flex-col !items-start">
+              <h3 className="rounded-full bg-neutral-950/60 p-2 px-4 text-center text-lg font-semibold text-white backdrop-blur-sm md:text-xl">
+                Beton
+              </h3>
+            </CardHeader>
+            <Image
+              as={NextImage}
+              removeWrapper
+              isZoomed
+              alt="Betonzaun von Firemetal"
+              className="z-0 h-full w-full object-cover"
+              src="/img/angebot/angebot-beton.jpg"
+              width={650}
+              height={650}
+            />
+          </Link>
+        </Card>
+        <Card isPressable className="flex h-[350px] w-full">
           <Link href="/angebot/gelander" className="flex h-[350px] w-full">
             <CardHeader className="absolute top-1 z-10 flex-col !items-start">
               <h3 className="rounded-full bg-neutral-950/60 p-2 px-4 text-center text-lg font-semibold text-white backdrop-blur-sm md:text-xl">
