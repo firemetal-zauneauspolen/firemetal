@@ -25,9 +25,9 @@ export function AngebotHome() {
         </p>
         <div className="z-30 pb-8">
           <Link href="/angebot">
-            <div className="grid max-w-[1100px] grid-cols-1 place-items-center gap-4 px-2 sm:grid-cols-2 md:grid-cols-3">
-              <div className="group relative">
-                <Card isPressable className="flex h-[350px] w-full">
+            <div className="grid max-w-[1100px] grid-cols-1 place-items-center gap-4 px-2 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="group relative w-full">
+                <Card isPressable className="flex h-[250px] w-full">
                   <Image
                     as={NextImage}
                     removeWrapper
@@ -47,7 +47,7 @@ export function AngebotHome() {
                 </div>
               </div>
               <div className="group relative w-full">
-                <Card isPressable className="flex h-[350px] w-full">
+                <Card isPressable className="flex h-[250px] w-full">
                   <Image
                     as={NextImage}
                     removeWrapper
@@ -67,7 +67,7 @@ export function AngebotHome() {
                 </div>
               </div>
               <div className="group relative w-full">
-                <Card isPressable className="flex h-[350px] w-full">
+                <Card isPressable className="flex h-[250px] w-full">
                   <Image
                     as={NextImage}
                     removeWrapper
@@ -87,7 +87,7 @@ export function AngebotHome() {
                 </div>
               </div>
               <div className="group relative w-full">
-                <Card isPressable className="flex h-[350px] w-full">
+                <Card isPressable className="flex h-[250px] w-full">
                   <Image
                     as={NextImage}
                     removeWrapper
