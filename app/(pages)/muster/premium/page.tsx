@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Spinner } from "@nextui-org/spinner";
-import { GetCNCMuster } from "@/components/islets/pages/muster/get-cnc-muster";
+import { GetMuster } from "@/components/islets/pages/muster/get-muster";
 import Balancer from "react-wrap-balancer";
 
 export default function MusterPremiumPage() {
@@ -23,7 +23,7 @@ export default function MusterPremiumPage() {
           <Suspense
             fallback={<Spinner label="Loading..." aria-label="Loding..." />}
           >
-            <GetCNCMuster galerieFolder={musterFolder} />
+            <GetMuster galerieFolder={musterFolder} />
           </Suspense>
         </div>
       </div>
