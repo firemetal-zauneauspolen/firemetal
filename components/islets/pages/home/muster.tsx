@@ -41,7 +41,7 @@ const musterSections = [
     description:
       "Entdecken Sie präzise gefertigte CNC-Muster mit individuellen Motiven für moderne und klassische Zaunlösungen.",
     buttonLabel: "Muster CNC Prüfen",
-    columns: "single" as const,
+    columns: "double" as const,
   },
 ];
 
