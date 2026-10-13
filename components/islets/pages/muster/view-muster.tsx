@@ -23,7 +23,13 @@ export function ViewMuster(props: Props) {
   const lightboxRef = useRef<LightGallery | null>(null);
 
   return (
-    <div className="grid w-full max-w-4xl grid-cols-1 gap-4">
+    <div
+      className={
+        props.columns === "double"
+          ? "grid w-full max-w-6xl grid-cols-2 gap-4"
+          : "grid w-full max-w-4xl grid-cols-1 gap-4"
+      }
+    >
       {props.images.map((image, idx) => (
         <div
           className="min-w-0 overflow-hidden rounded-xl bg-white transition-all duration-500 hover:rounded-none"
