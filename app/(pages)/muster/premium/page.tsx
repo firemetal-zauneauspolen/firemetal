@@ -7,9 +7,9 @@ export default function MusterPremiumPage() {
   const musterFolder = "muster/premium";
 
   return (
-    <section>
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
+    <section className="w-full">
+      <div className="flex w-full justify-center px-4">
+        <h1 className="w-full max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
           <Balancer>
             Unsere <span className="text-ring">Premium-Muster</span> vereinen
             zeitloses Design mit <span className="text-ring">hochwertiger
@@ -19,13 +19,13 @@ export default function MusterPremiumPage() {
             Ihre Wünsche anpassen.
           </Balancer>
         </h1>
-        <div className="flex justify-center py-8">
-          <Suspense
-            fallback={<Spinner label="Loading..." aria-label="Loding..." />}
-          >
-            <GetMuster galerieFolder={musterFolder} />
-          </Suspense>
-        </div>
+      </div>
+      <div className="flex w-full justify-center px-4 py-8">
+        <Suspense
+          fallback={<Spinner label="Loading..." aria-label="Loding..." />}
+        >
+          <GetMuster galerieFolder={musterFolder} />
+        </Suspense>
       </div>
     </section>
   );

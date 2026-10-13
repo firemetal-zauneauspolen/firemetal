@@ -7,9 +7,9 @@ export default function MusterPage() {
   const musterFolder = "muster";
 
   return (
-    <section>
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
+    <section className="w-full">
+      <div className="flex w-full justify-center px-4">
+        <h1 className="w-full max-w-sm text-center text-xl font-extrabold sm:max-w-xl sm:text-2xl lg:max-w-4xl lg:text-4xl">
           <Balancer>
             Wir stellen unsere <span className="text-ring">Grundmuster</span>{" "}
             von Zäunen, Paneelen und Doppelstabmatten. Wir haben eine große
@@ -20,13 +20,13 @@ export default function MusterPage() {
             Kunden anzupassen oder zu erstellen.{" "}
           </Balancer>
         </h1>
-        <div className="flex justify-center px-4 py-8">
-          <Suspense
-            fallback={<Spinner label="Loading..." aria-label="Loding..." />}
-          >
-            <GetMuster galerieFolder={musterFolder} />
-          </Suspense>
-        </div>
+      </div>
+      <div className="flex w-full justify-center px-4 py-8">
+        <Suspense
+          fallback={<Spinner label="Loading..." aria-label="Loding..." />}
+        >
+          <GetMuster galerieFolder={musterFolder} />
+        </Suspense>
       </div>
     </section>
   );

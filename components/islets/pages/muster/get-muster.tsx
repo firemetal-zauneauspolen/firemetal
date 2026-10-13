@@ -17,8 +17,8 @@ export async function GetMuster(props: Props) {
     .execute()) as { resources: Images[] };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex justify-center">
+    <div className="flex w-full justify-center">
+      <div className="flex w-full justify-center">
         <ViewMuster images={images.resources} columns={props.columns} />
       </div>
     </div>

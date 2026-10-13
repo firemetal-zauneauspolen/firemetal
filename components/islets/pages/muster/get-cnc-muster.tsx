@@ -1,6 +1,6 @@
 import cloudinary from "cloudinary";
 import type { Images } from "@/lib/types";
-import { ViewCNCMuster } from './view-cnc-muster';
+import { ViewCNCMuster } from "./view-cnc-muster";
 
 type Props = {
   galerieFolder: string;
@@ -15,8 +15,8 @@ export async function GetCNCMuster(props: Props) {
     .execute()) as { resources: Images[] };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex justify-center">
+    <div className="flex w-full justify-center">
+      <div className="flex w-full justify-center">
         <ViewCNCMuster images={images.resources} />
       </div>
     </div>
